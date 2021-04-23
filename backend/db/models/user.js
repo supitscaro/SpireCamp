@@ -33,7 +33,21 @@ module.exports = (sequelize, DataTypes) => {
     profilePhoto: {
       type: DataTypes.TEXT,
     },
-  }, {});
+  }, {
+    defaultScope: {
+      attributes: {
+        exclude: ['hashedPassword', 'email', 'createdAt', 'updatedAt'],
+      },
+    },
+    scopes: {
+      currentUser: {
+        attributes: { excludue: ['hashedPassword'] }
+      },
+      loginUser: {
+        attributes: {},
+      },
+    },
+  });
   User.associate = function (models) {
     // associations can be defined here
   };
