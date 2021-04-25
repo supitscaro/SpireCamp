@@ -14,9 +14,35 @@ module.exports = {
     */
     return queryInterface.bulkInsert('Activities', [
       {
-        icon: 'John Doe',
-        name: '',
+        icon: 'fas fa-dove',
+        name: 'Wildlife Watching',
+        description: 'Enjoy the wildlife nearby your location.',
+      },
+      {
+        icon: 'fas fa-swimmer',
+        name: 'Swimming',
         description: '',
+      },
+      {
+        icon: 'fas fa-spa',
+        name: 'Spa',
+        description: ''
+      },
+      {
+        icon: 'fas fa-hiking',
+        name: 'Hiking',
+      },
+      {
+        icon: 'fas fa-biking',
+        name: 'Biking'
+      },
+      {
+        icon: 'fas fa-fish',
+        name: 'Fishing'
+      },
+      {
+        icon: 'fas fa-running',
+        name: 'Running'
       }
     ], {});
   },
