@@ -8,18 +8,51 @@ module.exports = {
       {
         email: 'demo@user.io',
         username: 'Demo-lition',
+        name: 'Demo',
         hashedPassword: bcrypt.hashSync('password'),
       },
       {
         email: faker.internet.email(),
-        username: 'FakeUser1',
+        username: 'SaraMarin',
+        name: 'Sara Marin',
         hashedPassword: bcrypt.hashSync(faker.internet.password()),
       },
       {
         email: faker.internet.email(),
-        username: 'FakeUser2',
+        username: 'KyloFuentes',
+        name: 'Kylo Fuentes',
         hashedPassword: bcrypt.hashSync(faker.internet.password()),
       },
+      {
+        email: faker.internet.email(),
+        username: 'BrodyAdams',
+        name: 'Brody Adams',
+        hashedPassword: bcrypt.hash(faker.internet.password()),
+      },
+      {
+        email: faker.internet.email(),
+        username: 'EllieLogan',
+        name: 'Ellie Logan',
+        hashedPassword: bcrypt.hash(faker.internet.password()),
+      },
+      {
+        email: faker.internet.email(),
+        username: 'MichelleWilliams2',
+        name: 'Michelle Williams',
+        hashedPassword: bcrypt.hash(faker.internet.password())
+      },
+      {
+        email: faker.internet.email(),
+        username: 'LouisBrown',
+        name: 'Louis Brown',
+        hashedPassword: bcrypt.hash(faker.internet.password())
+      },
+      {
+        email: faker.internet.email(),
+        username: 'HarryPhillips',
+        name: 'Harry Phillips',
+        hashedPassword: bcrypt.hash(faker.internet.password())
+      }
     ], {});
   },
 
