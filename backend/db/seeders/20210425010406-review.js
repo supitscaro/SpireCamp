@@ -14,11 +14,29 @@ module.exports = {
     */
     return queryInterface.bulkInsert('Reviews', [
       {
-        title: 'Perfect Getaway',
+        title: 'Perfect getaway',
         review: 'Amazing place to get away for a few days. Beautiful scenery and relaxing activities to do nearby.',
         recommended: true,
         hostings_id: 2,
         user_id: 2,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        title: 'Great experience!',
+        review: 'Had a lot of fun seeing the four lakes nearby. Great spots to go hiking and take in the beautiful views.',
+        recommended: true,
+        hostings_id: 1,
+        user_id: 4,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        title: 'Awesome little tent',
+        review: 'Awesome way of going camping and getting away for a few things. All the amenities you could need or want.',
+        recommended: true,
+        hostings_id: 2,
+        user_id: 1,
         createdAt: new Date(),
         updatedAt: new Date()
       },
