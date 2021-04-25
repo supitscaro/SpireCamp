@@ -17,36 +17,57 @@ module.exports = {
         icon: 'fas fa-dove', // 1
         name: 'Wildlife Watching',
         description: 'Enjoy the wildlife nearby your location.',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
         icon: 'fas fa-swimmer', // 2
         name: 'Swimming',
         description: '',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
         icon: 'fas fa-spa', // 3
         name: 'Spa',
-        description: ''
+        description: '',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
         icon: 'fas fa-hiking', // 4
         name: 'Hiking',
+        description: '',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
         icon: 'fas fa-biking', // 5
-        name: 'Biking'
+        name: 'Biking',
+        description: '',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
         icon: 'fas fa-fish', // 6
-        name: 'Fishing'
+        name: 'Fishing',
+        description: '',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
         icon: 'fas fa-running', // 7
-        name: 'Running'
+        name: 'Running',
+        description: '',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
         icon: 'fas fa-seedling', // 8
-        name: 'Gardening'
+        name: 'Gardening',
+        description: '',
+        createdAt: new Date(),
+        updatedAt: new Date()
       }
     ], {});
   },
