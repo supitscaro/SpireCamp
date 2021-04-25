@@ -24,6 +24,22 @@ module.exports = {
       {
         hostings_id: 1,
         activities_id: 7
+      },
+      {
+        hostings_id: 2,
+        activities_id: 4,
+      },
+      {
+        hostings_id: 2,
+        activities_id: 7
+      },
+      {
+        hostings_id: 2,
+        activities_id: 5
+      },
+      {
+        hostings_id: 2,
+        activities_id: 1
       }
     ], {});
   },
