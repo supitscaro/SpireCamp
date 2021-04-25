@@ -6,60 +6,66 @@ module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.bulkInsert('Users', [
       {
-        email: 'demo@user.io',
         username: 'Demo-lition',
         name: 'Demo',
+        email: 'demo@user.io',
         hashedPassword: bcrypt.hashSync('password'),
+        profilePhoto: null,
       },
       {
-        email: faker.internet.email(),
         username: 'SaraMarin',
         name: 'Sara Marin',
-        hashedPassword: bcrypt.hashSync(faker.internet.password()),
+        email: faker.internet.email(),
+        hashedPassword: bcrypt.hashSync('password2'),
+        profilePhoto: null,
       },
       {
-        email: faker.internet.email(),
         username: 'KyloFuentes',
         name: 'Kylo Fuentes',
-        hashedPassword: bcrypt.hashSync(faker.internet.password()),
+        email: faker.internet.email(),
+        hashedPassword: bcrypt.hashSync('password3'),
+        profilePhoto: null,
       },
       {
-        email: faker.internet.email(),
         username: 'BrodyAdams',
         name: 'Brody Adams',
-        hashedPassword: bcrypt.hash(faker.internet.password()),
+        email: faker.internet.email(),
+        hashedPassword: bcrypt.hashSync('password4'),
+        profilePhoto: null,
       },
       {
-        email: faker.internet.email(),
         username: 'EllieLogan',
         name: 'Ellie Logan',
-        hashedPassword: bcrypt.hash(faker.internet.password()),
+        email: faker.internet.email(),
+        hashedPassword: bcrypt.hashSync('password5'),
+        profilePhoto: null,
       },
       {
-        email: faker.internet.email(),
         username: 'MichelleWilliams2',
         name: 'Michelle Williams',
-        hashedPassword: bcrypt.hash(faker.internet.password())
+        email: faker.internet.email(),
+        hashedPassword: bcrypt.hashSync('password6'),
+        profilePhoto: null,
       },
       {
-        email: faker.internet.email(),
         username: 'LouisBrown',
         name: 'Louis Brown',
-        hashedPassword: bcrypt.hash(faker.internet.password())
+        email: faker.internet.email(),
+        hashedPassword: bcrypt.hashSync('password7'),
+        profilePhoto: null,
       },
       {
-        email: faker.internet.email(),
         username: 'HarryPhillips',
         name: 'Harry Phillips',
-        hashedPassword: bcrypt.hash(faker.internet.password())
+        email: faker.internet.email(),
+        hashedPassword: bcrypt.hashSync('password8'),
+        profilePhoto: null,
       }
     ], {});
   },
 
   down: (queryInterface, Sequelize) => {
     const Op = Sequelize.Op;
-    return queryInterface.bulkDelete('Users', {
-      username: { [Op.in]: ['Demo-lition', 'FakeUser1', 'FakeUser2'] }
-    }, {});
+    return queryInterface.bulkDelete('Users', null, {});
   }
 };
