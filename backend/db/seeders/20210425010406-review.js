@@ -18,8 +18,10 @@ module.exports = {
         review: 'Amazing place to get away for a few days. Beautiful scenery and relaxing activities to do nearby.',
         recommended: true,
         hostings_id: 2,
-        user_id: 2
-      }
+        user_id: 2,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
     ], {});
   },
 
