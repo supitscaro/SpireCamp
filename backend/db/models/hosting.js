@@ -11,6 +11,7 @@ module.exports = (sequelize, DataTypes) => {
     // associations can be defined here
     Hosting.hasMany(models.Reviews, { foreignKey: 'hostings_id' });
     Hosting.hasMany(models.Bookings, { foreignKey: 'hosting_id' });
+    Hosting.belongsTo(model.States, { foreignKey: 'states_id' });
   };
   return Hosting;
 };
