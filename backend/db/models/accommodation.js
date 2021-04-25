@@ -4,8 +4,9 @@ module.exports = (sequelize, DataTypes) => {
     name: DataTypes.STRING,
     description: DataTypes.STRING
   }, {});
-  Accommodation.associate = function(models) {
+  Accommodation.associate = function (models) {
     // associations can be defined here
+    Accommodation.hasMany(model.Accommodation_Lists, { foreignKey: 'activities_id' });
   };
   return Accommodation;
 };
