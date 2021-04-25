@@ -12,12 +12,20 @@ module.exports = {
         isBetaMember: false
       }], {});
     */
-    // return queryInterface.bulkInsert('Activities_Lists', [
-    //   {
-    //     name: 'John Doe',
-    //     isBetaMember: false
-    //   }
-    // ], {});
+    return queryInterface.bulkInsert('Activities_Lists', [
+      {
+        hostings_id: 1,
+        activities_id: 2
+      },
+      {
+        hostings_id: 1,
+        activities_id: 6,
+      },
+      {
+        hostings_id: 1,
+        activities_id: 7
+      }
+    ], {});
   },
 
   down: (queryInterface, Sequelize) => {

@@ -14,35 +14,39 @@ module.exports = {
     */
     return queryInterface.bulkInsert('Activities', [
       {
-        icon: 'fas fa-dove',
+        icon: 'fas fa-dove', // 1
         name: 'Wildlife Watching',
         description: 'Enjoy the wildlife nearby your location.',
       },
       {
-        icon: 'fas fa-swimmer',
+        icon: 'fas fa-swimmer', // 2
         name: 'Swimming',
         description: '',
       },
       {
-        icon: 'fas fa-spa',
+        icon: 'fas fa-spa', // 3
         name: 'Spa',
         description: ''
       },
       {
-        icon: 'fas fa-hiking',
+        icon: 'fas fa-hiking', // 4
         name: 'Hiking',
       },
       {
-        icon: 'fas fa-biking',
+        icon: 'fas fa-biking', // 5
         name: 'Biking'
       },
       {
-        icon: 'fas fa-fish',
+        icon: 'fas fa-fish', // 6
         name: 'Fishing'
       },
       {
-        icon: 'fas fa-running',
+        icon: 'fas fa-running', // 7
         name: 'Running'
+      },
+      {
+        icon: 'fas fa-seedling', // 8
+        name: 'Gardening'
       }
     ], {});
   },
