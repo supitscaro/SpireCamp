@@ -35,5 +35,14 @@ router.get(
     })
 );
 
+router.delete(
+    '/:id',
+    asyncHandler(async (req, res, next) => {
+        let id = parseInt(req.params.id, 10);
+        let review = await Review.findByPk(id);
+        await review.destroy();
+        res.status(204).end();
+    })
+)
 
 module.exports = router;
