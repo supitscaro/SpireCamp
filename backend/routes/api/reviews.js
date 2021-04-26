@@ -13,22 +13,21 @@ let reviewsNotFound = () => {
     return err;
 }
 
-// get reviews
-router.get('/hosting/:id(\\d+)', asyncHandler(async (req, res, next) => {
-
-    let hostingsId = parseInt(req.params.id, 10);
-    let reviews = await Review.findAll({
-        include: { model: User },
-        where: {
-            hostingsId
-        }
-    });
-    if (reviews === null) {
-        next(reviewsNotFound());
-    } else {
+// get all reviews
+router.get(
+    '/',
+    asyncHandler(async (req, res, next) => {
+        let reviews = await Review.findAll({
+            include: { model: User },
+        });
         res.json({ reviews });
-    }
-}));
+    })
+);
+
+// router.get(
+//     '/:id',
+
+// )
 
 
 module.exports = router;
