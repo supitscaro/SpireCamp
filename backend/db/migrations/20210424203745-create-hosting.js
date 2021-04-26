@@ -25,7 +25,7 @@ module.exports = {
         allowNull: false,
         references: { model: 'States' }
       },
-      owners_id: {
+      user_id: {
         type: Sequelize.INTEGER,
         references: { model: 'Users' }
       },

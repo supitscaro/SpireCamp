@@ -1,25 +1,26 @@
 const express = require('express');
 const asyncHandler = require('express-async-handler');
+const { requireAuth } = require('../../utils/auth');
 
-const { Hosting, User, State, Accommodations, Activities, Review } = require('../../db/models');
+const { Hosting, User, State, Accommodations_List, Activities_List, Review } = require('../../db/models');
 const { check } = require('express-validator');
 
 const router = express.Router();
 
 // get hosting post - an individual one
 router.get(
-    '/', // unsure of route if I want every post
+    '/:id', // unsure of route if I want every post
     asyncHandler(async (req, res, next) => {
         let hostId = parseInt(req.params.id, 10);
         let hosting = await Hosting.findByPk(hostId,
             {
-                include: [User, State, Accommodations, Activities]
+                include: [User, State, Activities_List]
             }
         );
         let reviews = await Review.findAll({
-            where: {
-                hostingsId: hostId
-            },
+            // where: {
+            //     hostingsId: hostId
+            // },
             include: { model: User }
         });
         res.json({ hosting, reviews });
@@ -50,6 +51,7 @@ let hostingValidator = [
 // create a hosting
 router.get(
     '/create',
+    requireAuth,
     asyncHandler(async (req, res, next) => {
         let host = Hosting.build();
         let activities = Activities.findAll();
@@ -67,8 +69,8 @@ router.post(
         let userId = res.locals.user.id;
         // let activities  // ?
         // let accommodations // ?
-        let state = parseInt(state, 10);
-        let host = Hosting.build({ name, description, locationDetails, state_id: state, cost });
+        let states = parseInt(state, 10);
+        let host = Hosting.build({ name, description, locationDetails, state_id: states, cost });
 
     })
 );

@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   State.associate = function (models) {
     // associations can be defined here
-    State.hasMany(model.Hostings, { foreignKey: 'states_id' });
+    State.hasMany(models.Hosting, { foreignKey: 'states_id' });
   };
   return State;
 };

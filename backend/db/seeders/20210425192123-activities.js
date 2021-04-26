@@ -23,49 +23,49 @@ module.exports = {
       {
         icon: 'fas fa-swimmer', // 2
         name: 'Swimming',
-        description: '',
+        description: 'test',
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         icon: 'fas fa-spa', // 3
         name: 'Spa',
-        description: '',
+        description: 'test',
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         icon: 'fas fa-hiking', // 4
         name: 'Hiking',
-        description: '',
+        description: 'test',
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         icon: 'fas fa-biking', // 5
         name: 'Biking',
-        description: '',
+        description: 'test',
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         icon: 'fas fa-fish', // 6
         name: 'Fishing',
-        description: '',
+        description: 'test',
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         icon: 'fas fa-running', // 7
         name: 'Running',
-        description: '',
+        description: 'test',
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         icon: 'fas fa-seedling', // 8
         name: 'Gardening',
-        description: '',
+        description: 'test',
         createdAt: new Date(),
         updatedAt: new Date()
       }
