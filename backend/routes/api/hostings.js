@@ -6,7 +6,7 @@ const { check } = require('express-validator');
 
 const router = express.Router();
 
-// get hosting posts - should be every post available?
+// get hosting post - an individual one
 router.get(
     '/', // unsure of route if I want every post
     asyncHandler(async (req, res, next) => {
@@ -22,7 +22,7 @@ router.get(
             },
             include: { model: User }
         });
-        res.json('post', { hosting, reviews });
+        res.json({ hosting, reviews });
     })
 );
 
@@ -50,12 +50,28 @@ let hostingValidator = [
 // create a hosting
 router.get(
     '/create',
-    hostingValidator,
     asyncHandler(async (req, res, next) => {
         let host = Hosting.build();
+        let activities = Activities.findAll();
+        let accommodations = Accommodations.findAll();
+        res.json({ host, activities, accommodations });
+    })
+);
+
+// post host
+router.post(
+    '/create',
+    hostingValidator,
+    asyncHandler(async (req, res, next) => {
+        let { name, description, locationDetails, state, cost } = req.body;
+        let userId = res.locals.user.id;
+        // let activities  // ?
+        // let accommodations // ?
+        let state = parseInt(state, 10);
+        let host = Hosting.build({ name, description, locationDetails, state_id: state, cost });
 
     })
-)
+);
 
 
 module.exports = router;
