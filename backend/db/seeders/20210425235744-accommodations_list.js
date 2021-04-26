@@ -14,7 +14,8 @@ module.exports = {
     */
     return queryInterface.bulkInsert('Accommodations_List', [
       {
-        name: 'John Doe',
+        icon: '',
+        name: '',
         isBetaMember: false
       }
     ], {});
