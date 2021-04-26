@@ -12,13 +12,6 @@ module.exports = {
         isBetaMember: false
       }], {});
     */
-    return queryInterface.bulkInsert('Accommodations_List', [
-      {
-        icon: '',
-        name: '',
-        isBetaMember: false
-      }
-    ], {});
   },
 
   down: (queryInterface, Sequelize) => {

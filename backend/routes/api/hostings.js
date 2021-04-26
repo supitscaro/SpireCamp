@@ -7,7 +7,7 @@ const { check } = require('express-validator');
 
 const router = express.Router();
 
-// get hosting post - an individual one
+// get hosting post - individual one
 router.get(
     '/:id', // unsure of route if I want every post
     asyncHandler(async (req, res, next) => {
@@ -18,9 +18,6 @@ router.get(
             }
         );
         let reviews = await Review.findAll({
-            // where: {
-            //     hostingsId: hostId
-            // },
             include: { model: User }
         });
         res.json({ hosting, reviews });
@@ -51,29 +48,29 @@ let hostingValidator = [
 // create a hosting
 router.get(
     '/create',
-    requireAuth,
+    // requireAuth,
     asyncHandler(async (req, res, next) => {
         let host = Hosting.build();
-        let activities = Activities.findAll();
-        let accommodations = Accommodations.findAll();
-        res.json({ host, activities, accommodations });
+        let activities = Activities_List.findAll();
+        // let accommodations = Accommodations.findAll();
+        res.json({ host, activities });
     })
 );
 
 // post host
-router.post(
-    '/create',
-    hostingValidator,
-    asyncHandler(async (req, res, next) => {
-        let { name, description, locationDetails, state, cost } = req.body;
-        let userId = res.locals.user.id;
-        // let activities  // ?
-        // let accommodations // ?
-        let states = parseInt(state, 10);
-        let host = Hosting.build({ name, description, locationDetails, state_id: states, cost });
+// router.post(
+//     '/create',
+//     hostingValidator,
+//     asyncHandler(async (req, res, next) => {
+//         let { name, description, locationDetails, state, cost } = req.body;
+//         let userId = res.locals.user.id;
+//         // let activities  // ?
+//         // let accommodations // ?
+//         let states = parseInt(state, 10);
+//         let host = Hosting.build({ name, description, locationDetails, state_id: states, cost });
 
-    })
-);
+//     })
+// );
 
 
 module.exports = router;

@@ -12,60 +12,46 @@ module.exports = {
         isBetaMember: false
       }], {});
     */
-    return queryInterface.bulkInsert('Activities', [
+    return queryInterface.bulkInsert('Activities_Lists', [
       {
-        icon: 'fas fa-dove', // 1
-        name: 'Wildlife Watching',
-        description: 'Enjoy the wildlife nearby your location.',
+        hostings_id: 1,
+        activities_id: 2,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        icon: 'fas fa-swimmer', // 2
-        name: 'Swimming',
-        description: 'test',
+        hostings_id: 1,
+        activities_id: 6,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        icon: 'fas fa-spa', // 3
-        name: 'Spa',
-        description: 'test',
+        hostings_id: 1,
+        activities_id: 7,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        icon: 'fas fa-hiking', // 4
-        name: 'Hiking',
-        description: 'test',
+        hostings_id: 2,
+        activities_id: 4,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        icon: 'fas fa-biking', // 5
-        name: 'Biking',
-        description: 'test',
+        hostings_id: 2,
+        activities_id: 7,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        icon: 'fas fa-fish', // 6
-        name: 'Fishing',
-        description: 'test',
+        hostings_id: 2,
+        activities_id: 5,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        icon: 'fas fa-running', // 7
-        name: 'Running',
-        description: 'test',
-        createdAt: new Date(),
-        updatedAt: new Date()
-      },
-      {
-        icon: 'fas fa-seedling', // 8
-        name: 'Gardening',
-        description: 'test',
+        hostings_id: 2,
+        activities_id: 2,
         createdAt: new Date(),
         updatedAt: new Date()
       }
@@ -80,6 +66,6 @@ module.exports = {
       Example:
       return queryInterface.bulkDelete('People', null, {});
     */
-    return queryInterface.bulkDelete('Activities', null, {});
+    return queryInterface.bulkDelete('Activities_Lists', null, {});
   }
 };
