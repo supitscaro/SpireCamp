@@ -24,10 +24,16 @@ router.get(
     })
 );
 
-// router.get(
-//     '/:id',
-
-// )
+router.get(
+    '/:id',
+    asyncHandler(async (req, res, next) => {
+        let id = parseInt(req.params.id, 10);
+        let review = await Review.findByPk(id, {
+            include: { model: User }
+        });
+        res.json({ review });
+    })
+);
 
 
 module.exports = router;
