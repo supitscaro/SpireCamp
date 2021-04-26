@@ -8,7 +8,7 @@ const router = express.Router();
 
 // get hosting posts - should be every post available?
 router.get(
-    '/hosting', // unsure of route if I want every post
+    '/', // unsure of route if I want every post
     asyncHandler(async (req, res, next) => {
         let hostId = parseInt(req.params.id, 10);
         let hosting = await Hosting.findByPk(hostId,
@@ -22,7 +22,7 @@ router.get(
             },
             include: { model: User }
         });
-        res.render('post', { hosting, reviews });
+        res.json('post', { hosting, reviews });
     })
 );
 
@@ -46,3 +46,16 @@ let hostingValidator = [
         .exists({ checkFalsy: true })
         .withMessage("Please provide the cost of stay.")
 ];
+
+// create a hosting
+router.get(
+    '/create',
+    hostingValidator,
+    asyncHandler(async (req, res, next) => {
+        let host = Hosting.build();
+
+    })
+)
+
+
+module.exports = router;
