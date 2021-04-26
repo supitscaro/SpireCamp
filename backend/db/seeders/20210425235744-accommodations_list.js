@@ -12,6 +12,12 @@ module.exports = {
         isBetaMember: false
       }], {});
     */
+    return queryInterface.bulkInsert('Accommodations_List', [
+      {
+        name: 'John Doe',
+        isBetaMember: false
+      }
+    ], {});
   },
 
   down: (queryInterface, Sequelize) => {
