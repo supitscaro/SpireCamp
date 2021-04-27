@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
   Activity.associate = function (models) {
     // associations can be defined here
     Activity.belongsTo(models.Activities_List, { foreignKey: 'activities_id' })
-
+    Activity.belongsTo(models.Hosting, { foreignKey: 'hostings_id' });
   };
   return Activity;
 };

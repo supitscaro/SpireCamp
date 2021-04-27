@@ -12,6 +12,7 @@ module.exports = (sequelize, DataTypes) => {
     Hosting.hasMany(models.Review, { foreignKey: 'hostings_id' });
     Hosting.hasMany(models.Booking, { foreignKey: 'hostings_id' });
     Hosting.hasMany(models.Activities_List, { foreignKey: 'hostings_id' });
+    Hosting.hasMany(models.Activity, { foreignKey: 'hostings_id' });
     Hosting.belongsTo(models.State, { foreignKey: 'states_id' });
     Hosting.belongsTo(models.User, { foreignKey: 'user_id' });
   };
