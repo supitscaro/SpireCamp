@@ -1,17 +1,19 @@
 import { csrfFetch } from './csrf';
 
-const GET_HOSTING = "hostings/GET_HOSTING";
+const GET_HOSTINGS = "hostings/GET_HOSTINGS";
+const GET_HOST = "oneHosting/GET_HOST";
 
 const findHostings = (list) => {
     return {
-        type: GET_HOSTING,
+        type: GET_HOSTINGS,
         list
     }
 };
 
-// for the individual hosting
-export const getHosting = () => async (dispatch) => {
-    const res = await fetch('/api/hostings');
+
+// for the list of hostings
+export const getHostings = () => async (dispatch) => {
+    const res = await csrfFetch('/api/hostings');
     if (res.ok) {
         let hostings = await res.json();
         dispatch(findHostings(hostings));
@@ -25,34 +27,30 @@ let initialState = {
 const hostingReducer = (state = initialState, action) => {
     let newState = {};
     switch (action.type) {
-        case GET_HOSTING:
+        case GET_HOSTINGS:
             let allHostings = [];
-            Array.from(action.list).forEach(hosting => {
+            action.list.forEach(hosting => {
                 allHostings[hosting.id] = hosting;
             });
             return {
-                ...allHostings,
+                allHostings,
                 ...state,
                 list: action.list
             };
+        // case GET_HOST:
+        //     let hosting = [];
+        //     action.list.forEach(hosting => {
+        //         hosting[hosting.id] = hosting;
+        //     });
+        //     return {
+        //         hosting,
+        //         ...state,
+        //         list: action.list
+        //     }
         default:
             return state;
     }
 };
 
-// switch (action.type) {
-//     case LOAD:
-//         const allSpots = [];
-//         action.list.forEach(spot => {
-//             allSpots[spot.id] = spot;
-//         });
-//         return {
-//             allSpots,
-//             ...state,
-//             list: action.list,
-//         }
-//     default:
-//         return state;
-// }
 
 export default hostingReducer;

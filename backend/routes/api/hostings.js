@@ -12,7 +12,7 @@ router.get(
             include: [State, Activities_List]
         });
 
-        res.json({ hostings });
+        res.json(hostings);
     })
 );
 

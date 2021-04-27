@@ -46,16 +46,16 @@ let hostingValidator = [
 ];
 
 // create a hosting
-router.get(
-    '/create',
-    // requireAuth,
-    asyncHandler(async (req, res, next) => {
-        let host = Hosting.build();
-        let activities = Activities_List.findAll();
-        // let accommodations = Accommodations_List.findAll();
-        res.json({ host, activities });
-    })
-);
+// router.get(
+//     '/create',
+//     // requireAuth,
+//     asyncHandler(async (req, res, next) => {
+//         let host = Hosting.build();
+//         let activities = Activities_List.findAll();
+//         // let accommodations = Accommodations_List.findAll();
+//         res.json({ host, activities });
+//     })
+// );
 
 // post host
 // router.post(

@@ -2,20 +2,26 @@ import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import { Redirect } from "react-router-dom";
 import * as sessionActions from "../../store/session";
-import { getHosting } from "../../store/hostings";
+import { getHostings, oneHosting } from "../../store/hostings";
 
 function SignupFormPage() {
     const dispatch = useDispatch();
     const sessionUser = useSelector((state) => state.session.user);
     const testHosting = useSelector((state) => state.hosting.list);
+
+    // const hosting = useSelector((state) => {
+    //     return Object.keys(state.hosting.list).map(hostId => state.hosting[hostId])
+    // });
+
     const [email, setEmail] = useState('');
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [errors, setErrors] = useState([]);
 
+
     useEffect(() => {
-        dispatch(getHosting());
+        dispatch(getHostings());
     }, [dispatch]);
 
     if (sessionUser) return <Redirect to="/" />;
@@ -37,9 +43,9 @@ function SignupFormPage() {
 
     return (
         <form onSubmit={handleSubmit}>
+            {console.log(testHosting)}
             <ul>
                 {errors.map((err, idx) => <li key={idx}>{err}</li>)}
-                {console.log(testHosting)}
             </ul>
             <label>
                 Email
