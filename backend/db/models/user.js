@@ -31,9 +31,10 @@ module.exports = (sequelize, DataTypes) => {
         len: [60, 60],
       },
     },
-    profilePhoto: {
-      type: DataTypes.TEXT,
-    },
+    // profilePhoto: {
+    //   type: DataTypes.TEXT,
+    //   allowNull: true
+    // },
   }, {
     defaultScope: {
       attributes: {

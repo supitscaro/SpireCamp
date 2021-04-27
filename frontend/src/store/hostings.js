@@ -5,7 +5,7 @@ const GET_HOSTING = "hosting/GET_HOSTING";
 const findHosting = (hostingPost) => {
     return {
         type: GET_HOSTING,
-        payload: hostingPost
+        hostingPost
     }
 };
 
@@ -31,6 +31,54 @@ const hostingReducer = (state = initialState, action) => {
         default:
             return state;
     }
-}
+};
 
 export default hostingReducer;
+
+// const pokemonReducer = (state = initialState, action) => {
+    // switch (action.type) {
+    //   case LOAD: {
+    //     const allPokemon = {};
+    //     action.list.forEach(pokemon => {
+    //       allPokemon[pokemon.id] = pokemon;
+    //     });
+    //     return {
+    //       ...allPokemon,
+    //       ...state,
+    //       list: sortList(action.list),
+    //     };
+    //   }
+    //   case LOAD_TYPES: {
+    //     return {
+    //       ...state,
+    //       types: action.types,
+    //     };
+    //   }
+    //   case ADD_ONE: {
+    //     if (!state[action.pokemon.id]) {
+    //       const newState = {
+    //         ...state,
+    //         [action.pokemon.id]: action.pokemon
+    //       };
+    //       const pokemonList = newState.list.map(id => newState[id]);
+    //       pokemonList.push(action.pokemon);
+    //       newState.list = sortList(pokemonList);
+    //       return newState;
+    //     }
+    //     return {
+    //       ...state,
+    //       [action.pokemon.id]: {
+    //         ...state[action.pokemon.id],
+    //         ...action.pokemon,
+    //       }
+    //     };
+    //   }
+    //   case LOAD_ITEMS: {
+    //     return {
+    //       ...state,
+    //       [action.pokemonId]: {
+    //         ...state[action.pokemonId],
+    //         items: action.items.map(item => item.id),
+    //       }
+    //     };
+    //   }

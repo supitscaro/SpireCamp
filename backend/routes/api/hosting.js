@@ -74,3 +74,16 @@ router.get(
 
 
 module.exports = router;
+
+// fetch('/api/users', {
+//     method: 'POST',
+//     headers: {
+//         "Content-Type": "application/json",
+//         "XSRF-TOKEN": "jd0T8Ozi-7gbN7_JTQUlglJmfcVRW-MWtDvs"
+//     },
+//     body: JSON.stringify({
+//         email: 'spidey@spider.man',
+//         username: 'Spidey',
+//         password: 'password'
+//     })
+// }).then(res => res.json()).then(data => console.log(data));

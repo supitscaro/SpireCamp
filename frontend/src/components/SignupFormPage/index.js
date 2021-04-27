@@ -6,8 +6,10 @@ import * as sessionActions from "../../store/session";
 function SignupFormPage() {
     const dispatch = useDispatch();
     const sessionUser = useSelector((state) => state.session.user);
+    const testHosting = useSelector((state) => state.hosting.hostingPost);
     const [email, setEmail] = useState('');
     const [username, setUsername] = useState('');
+    // const [name, setName] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [errors, setErrors] = useState([]);
@@ -32,6 +34,7 @@ function SignupFormPage() {
         <form onSubmit={handleSubmit}>
             <ul>
                 {errors.map((err, idx) => <li key={idx}>{err}</li>)}
+                {console.log(testHosting)}
             </ul>
             <label>
                 Email
@@ -43,6 +46,7 @@ function SignupFormPage() {
             </label>
             <label>
                 Username
+                {/* {console.log(testHosting)} */}
                 <input
                     type="text"
                     value={username}
@@ -50,6 +54,15 @@ function SignupFormPage() {
                     required
                 />
             </label>
+            {/* <label>
+                Name
+                <input
+                    type="text"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    required
+                />
+            </label> */}
             <label>
                 Password
                 <input

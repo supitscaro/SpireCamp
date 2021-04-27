@@ -13,10 +13,6 @@ module.exports = {
         allowNull: false,
         unique: true,
       },
-      name: {
-        type: Sequelize.STRING(25),
-        allowNull: false,
-      },
       email: {
         type: Sequelize.STRING(256),
         allowNull: false,
@@ -26,9 +22,10 @@ module.exports = {
         type: Sequelize.STRING.BINARY,
         allowNull: false
       },
-      profilePhoto: {
-        type: Sequelize.TEXT
-      },
+      // profilePhoto: {
+      //   type: Sequelize.TEXT,
+      //   allowNull: true
+      // },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
