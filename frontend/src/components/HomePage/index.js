@@ -7,7 +7,6 @@ function HomePage() {
     return (
         <div>
             <HostingComponent />
-            {/* {console.log(hostingLists)} */}
         </div>
     )
 }

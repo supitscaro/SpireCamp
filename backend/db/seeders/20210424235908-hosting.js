@@ -42,6 +42,26 @@ module.exports = {
         cost: 85,
         createdAt: new Date(),
         updatedAt: new Date()
+      },
+      {
+        name: 'Black Burro Ranch', // 4
+        description: 'This location is in a private area and a perfect location to have fun adventures. The entire lot will be yours to explore during your time. Fire pits are available.',
+        locationDetails: 'Located in Colorado',
+        states_id: 6,
+        user_id: 1,
+        cost: 35,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        name: 'Stone Mill Camping', // 3
+        description: 'Perfect place for those seeking to completely disappear for a few days. Cell phone coverage is poor and there is no internet. There are hiking trails and a lake for fishing.',
+        locationDetails: 'Located in North Carolina',
+        states_id: 10,
+        user_id: 5,
+        cost: 45,
+        createdAt: new Date(),
+        updatedAt: new Date()
       }
     ], {});
   },
