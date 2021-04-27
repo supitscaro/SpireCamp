@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { getHostings, oneHosting } from "../../store/hostings";
+import { getHostings } from "../../store/hostings";
 
 function HostingComponent() {
     const dispatch = useDispatch();

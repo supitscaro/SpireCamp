@@ -1,7 +1,6 @@
 import { csrfFetch } from './csrf';
 
 const GET_HOSTINGS = "hostings/GET_HOSTINGS";
-const GET_HOST = "oneHosting/GET_HOST";
 
 const findHostings = (list) => {
     return {
@@ -9,7 +8,6 @@ const findHostings = (list) => {
         list
     }
 };
-
 
 // for the list of hostings
 export const getHostings = () => async (dispatch) => {
@@ -25,7 +23,6 @@ let initialState = {
 };
 
 const hostingReducer = (state = initialState, action) => {
-    let newState = {};
     switch (action.type) {
         case GET_HOSTINGS:
             let allHostings = [];
@@ -37,16 +34,7 @@ const hostingReducer = (state = initialState, action) => {
                 ...state,
                 list: action.list
             };
-        // case GET_HOST:
-        //     let hosting = [];
-        //     action.list.forEach(hosting => {
-        //         hosting[hosting.id] = hosting;
-        //     });
-        //     return {
-        //         hosting,
-        //         ...state,
-        //         list: action.list
-        //     }
+
         default:
             return state;
     }

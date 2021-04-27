@@ -46,44 +46,31 @@ let hostingValidator = [
 ];
 
 // create a hosting
-// router.get(
-//     '/create',
-//     // requireAuth,
-//     asyncHandler(async (req, res, next) => {
-//         let host = Hosting.build();
-//         let activities = Activities_List.findAll();
-//         // let accommodations = Accommodations_List.findAll();
-//         res.json({ host, activities });
-//     })
-// );
+router.get(
+    '/create',
+    // requireAuth,
+    asyncHandler(async (req, res, next) => {
+        let host = Hosting.build();
+        let activities = Activities_List.findAll();
+        let accommodations = Accommodations_List.findAll();
+        res.json({ host, activities, accommodations });
+    })
+);
 
 // post host
-// router.post(
-//     '/create',
-//     hostingValidator,
-//     asyncHandler(async (req, res, next) => {
-//         let { name, description, locationDetails, state, cost } = req.body;
-//         let userId = res.locals.user.id;
-//         // let activities  // ?
-//         // let accommodations // ?
-//         let states = parseInt(state, 10);
-//         let host = Hosting.build({ name, description, locationDetails, state_id: states, cost });
+router.post(
+    '/create',
+    hostingValidator,
+    asyncHandler(async (req, res, next) => {
+        let { name, description, locationDetails, state, cost } = req.body;
+        let userId = res.locals.user.id;
+        // let activities  // ?
+        // let accommodations // ?
+        let states = parseInt(state, 10);
+        let host = Hosting.build({ name, description, locationDetails, state_id: states, cost });
 
-//     })
-// );
+    })
+);
 
 
 module.exports = router;
-
-// fetch('/api/users', {
-//     method: 'POST',
-//     headers: {
-//         "Content-Type": "application/json",
-//         "XSRF-TOKEN": "jd0T8Ozi-7gbN7_JTQUlglJmfcVRW-MWtDvs"
-//     },
-//     body: JSON.stringify({
-//         email: 'spidey@spider.man',
-//         username: 'Spidey',
-//         password: 'password'
-//     })
-// }).then(res => res.json()).then(data => console.log(data));
