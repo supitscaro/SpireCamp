@@ -1,10 +1,18 @@
 import { csrfFetch } from './csrf';
 
 const GET_HOSTINGS = "hostings/GET_HOSTINGS";
+const STATES = "hostings/STATES";
 
 const findHostings = (list) => {
     return {
         type: GET_HOSTINGS,
+        list
+    }
+};
+
+const stateFilters = (list) => {
+    return {
+        type: STATES,
         list
     }
 };
@@ -20,9 +28,10 @@ export const getHostings = () => async (dispatch) => {
 
 export const stateHostings = () => async (dispatch) => {
     const res = await csrfFetch('/api/states');
-    // if (res.ok) {
-
-    // }
+    if (res.ok) {
+        let stateHosts = await res.json();
+        dispatch(stateFilters(stateHosts));
+    }
 }
 
 let initialState = {

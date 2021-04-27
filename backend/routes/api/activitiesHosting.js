@@ -1,7 +1,8 @@
 const express = require('express');
 const asyncHandler = require('express-async-handler');
 
-const { Hosting, User, State, Accommodations_List, Activities_List, Review } = require('../../db/models');
+const { Hosting, User, State, Accommodations_List, Activities_List, Activity, Review } = require('../../db/models');
+// const activity = require('../../db/models/activity');
 
 const router = express.Router();
 
@@ -11,9 +12,12 @@ router.get(
     asyncHandler(async (req, res, next) => {
         let id = parseInt(req.params.id, 10);
         let hosting = await Hosting.findAll({
-            where: {
-                activities_id: id
-            }
+            include: {
+                model: Activities_List,
+                where: {
+                    activities_id: id
+                }
+            },
         });
         res.json(hosting);
     })
