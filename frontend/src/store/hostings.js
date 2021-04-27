@@ -18,6 +18,13 @@ export const getHostings = () => async (dispatch) => {
     }
 };
 
+export const stateHostings = () => async (dispatch) => {
+    const res = await csrfFetch('/api/states');
+    // if (res.ok) {
+
+    // }
+}
+
 let initialState = {
     list: []
 };
