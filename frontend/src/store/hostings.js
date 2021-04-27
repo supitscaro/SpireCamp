@@ -13,32 +13,46 @@ const findHostings = (list) => {
 export const getHosting = () => async (dispatch) => {
     const res = await fetch('/api/hostings');
     if (res.ok) {
-        let list = await res.json();
-        dispatch(findHostings(list));
+        let hostings = await res.json();
+        dispatch(findHostings(hostings));
     }
-}
+};
 
 let initialState = {
-    list: {}
+    list: []
 };
 
 const hostingReducer = (state = initialState, action) => {
     let newState = {};
     switch (action.type) {
         case GET_HOSTING:
-            let allHostings = {};
-            action.list.forEach(hosting => {
+            let allHostings = [];
+            Array.from(action.list).forEach(hosting => {
                 allHostings[hosting.id] = hosting;
             });
             return {
                 ...allHostings,
                 ...state,
-                // list: action.list
+                list: action.list
             };
         default:
             return state;
     }
 };
 
+// switch (action.type) {
+//     case LOAD:
+//         const allSpots = [];
+//         action.list.forEach(spot => {
+//             allSpots[spot.id] = spot;
+//         });
+//         return {
+//             allSpots,
+//             ...state,
+//             list: action.list,
+//         }
+//     default:
+//         return state;
+// }
 
 export default hostingReducer;
