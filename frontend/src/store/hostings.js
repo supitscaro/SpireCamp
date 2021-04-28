@@ -94,7 +94,7 @@ const hostingReducer = (state = initialState, action) => {
         case STATES:
             let stateHostings = {};
             action.hosting.forEach(hosting => {
-                stateHostings[hosting.states_id] = hosting;
+                stateHostings[hosting.id] = hosting;
             });
             return {
                 ...state,

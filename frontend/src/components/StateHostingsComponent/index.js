@@ -9,21 +9,26 @@ function StateHostings() {
     const dispatch = useDispatch();
     // const hostingLists = useSelector((state) => state.hosting.list);
 
-    const state = useSelector((state) => state.hosting?.hostings?.state?.[id]);
+    const states = useSelector((state) => state.hosting?.hostings?.state);
 
     useEffect(() => {
         dispatch(stateHostings(id));
     }, [dispatch, id]);
 
-    if (!state) return null;
+    if (!states) return null;
 
     return (
         <div>
             state hosting page
-            <div>{state.name}</div>
-            <div>{state.description}</div>
-            <div>{state.locationDetails}</div>
+            {states.map((state) => (
+                <div>
+                    <div>{state.name}</div>
+                    <div>{state.description}</div>
+                    <div>{state.locationDetails}</div>
+                </div>
+            ))}
             {/* <div>{state.locationDetails}</div> */}
+            {/* {console.log('test', state)} */}
         </div>
     )
 }

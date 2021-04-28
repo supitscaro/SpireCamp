@@ -10,6 +10,7 @@ function HostingPage() {
     const { id } = useParams();
     const dispatch = useDispatch();
     const post = useSelector((state) => state.hosting[id]);
+    const reviews = useSelector((state) => state.hosting.reviews);
 
     useEffect(() => {
         dispatch(oneHosting(id));
@@ -22,8 +23,12 @@ function HostingPage() {
             <div>{post.name}</div>
             <div>{post.description}</div>
             <div>{post.locationDetails}</div>
-            {/* <div>{post.reviews}</div> */}
-            {/* {console.log('post[id]', post.reviews)} */}
+            <div>
+                {reviews.map((review) => (
+                    <div>{review.title}</div>
+                ))}
+            </div>
+            {/* {console.log('post[id]', reviews)} */}
             {/* <Calendar /> */}
         </div>
     )
