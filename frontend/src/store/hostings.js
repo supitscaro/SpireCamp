@@ -101,7 +101,7 @@ const hostingReducer = (state = initialState, action) => {
             });
             return {
                 ...state,
-                hostings: { ...action.hostings, ...allHostings }
+                hostings: { ...action.hostings, ...allHostings, ...state.hostings }
             };
         case HOSTING_PAGE:
             return {

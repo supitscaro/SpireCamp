@@ -23,4 +23,13 @@ router.get(
     })
 );
 
+router.get(
+    '/',
+    asyncHandler(async (req, res, next) => {
+        let activities = await Activities_List.findAll();
+
+        return res.json(activities);
+    })
+);
+
 module.exports = router;
