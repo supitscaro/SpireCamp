@@ -74,22 +74,22 @@ module.exports = {
         updatedAt: new Date()
       },
       {
-        name: 'Stone Mill Camping', // 7
-        description: 'Perfect place for those seeking to completely disappear for a few days. Cell phone coverage is poor and there is no internet. There are hiking trails and a lake for fishing.',
-        locationDetails: 'Located in North Carolina',
-        states_id: 10,
+        name: 'Lakefront Paradise Tent Site', // 7
+        description: 'Bustling location near the lakes. Plenty of activities to do nearby, with multiple tent sites available. People love to come here and enjoy each other\'s company.',
+        locationDetails: 'Located in Colorado',
+        states_id: 6,
         user_id: 8,
-        cost: 45,
+        cost: 35,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        name: 'Stone Mill Camping', // 8
-        description: 'Perfect place for those seeking to completely disappear for a few days. Cell phone coverage is poor and there is no internet. There are hiking trails and a lake for fishing.',
-        locationDetails: 'Located in North Carolina',
-        states_id: 10,
+        name: 'Crystal Creek Cabin', // 8
+        description: 'Nice sized cabin set with amenities. Located near other cabins, this place allows for visitors to join in on community events created to help everyone relax.',
+        locationDetails: 'Located in Colorado',
+        states_id: 6,
         user_id: 9,
-        cost: 45,
+        cost: 30,
         createdAt: new Date(),
         updatedAt: new Date()
       },
