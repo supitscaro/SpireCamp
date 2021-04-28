@@ -1,0 +1,30 @@
+.filters {
+    display: flex;
+    flex-direction: row;
+}
+
+.states {
+    background-color: lightcoral;
+    width: 33%;
+    margin-right: 30px;
+}
+
+.states-title {
+    font-size: 20px;
+    margin-right: 30px;
+}
+
+.activities {
+    background-color: lightcoral;
+    width: 33%;
+    margin-right: 30px;
+}
+
+.acc {
+    background-color: lightcoral;
+    width: 33%;
+}
+
+.hosting-post {
+    background-color: lightslategray;
+}

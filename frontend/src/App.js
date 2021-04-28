@@ -26,7 +26,7 @@ function App() {
           <Route path="/signup">
             <SignupFormPage />
           </Route>
-          {/* <Route path="/posts">
+          {/* <Route path="/">
             <HostingComponent />
           </Route> */}
           <Route path="/postings/:id">
