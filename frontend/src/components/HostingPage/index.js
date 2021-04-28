@@ -2,6 +2,9 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { oneHosting } from "../../store/hostings";
+import Calendar from 'react-calendar';
+import 'react-calendar/dist/Calendar.css';
+
 
 function HostingPage() {
     const { id } = useParams();
@@ -14,7 +17,8 @@ function HostingPage() {
 
     return (
         <div>
-            {console.log(post)}
+            {/* {console.log(post)} */}
+            <Calendar />
         </div>
     )
 }
