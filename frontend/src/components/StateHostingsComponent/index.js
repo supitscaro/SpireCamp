@@ -7,7 +7,7 @@ function StateHostings() {
     const { id } = useParams();
     // console.log("states", user_id);
     const dispatch = useDispatch();
-    const hostingLists = useSelector((state) => state.hosting[id]);
+    const hostingLists = useSelector((state) => state.hosting);
 
     useEffect(() => {
         dispatch(stateHostings(id));

@@ -6,6 +6,15 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   Activity.associate = function (models) {
     // associations can be defined here
+
+    // let hostingMapping = {
+    //   through: 'Acivities_List',
+    //   foreignKey: 'activities_id',
+    //   otherKey: 'hostings_id'
+    // };
+
+    // Activity.belongsToMany(models.Hosting, hostingMapping);
+
     Activity.belongsTo(models.Activities_List, { foreignKey: 'activities_id' })
     Activity.belongsTo(models.Hosting, { foreignKey: 'hostings_id' });
   };

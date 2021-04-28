@@ -27,9 +27,6 @@ function App() {
           <Route path="/signup">
             <SignupFormPage />
           </Route>
-          {/* <Route path="/">
-            <HostingComponent />
-          </Route> */}
           <Route path="/postings/:id">
             <HostingPage />
           </Route>
