@@ -83,7 +83,7 @@ const hostingReducer = (state = initialState, action) => {
             return {
                 stateHostings,
                 ...state,
-                // list: action.hosting
+                list: action.hosting
             };
         default:
             return state;
