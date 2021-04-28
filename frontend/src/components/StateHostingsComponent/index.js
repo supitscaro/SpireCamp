@@ -4,14 +4,16 @@ import { useDispatch, useSelector } from "react-redux";
 import { stateHostings } from "../../store/hostings";
 
 function StateHostings() {
-    const { states_id } = useParams();
+    const { id } = useParams();
     // console.log("states", user_id);
     const dispatch = useDispatch();
-    const hostingLists = useSelector((state) => state.hosting[states_id]);
+    const hostingLists = useSelector((state) => state.hosting[id]);
 
     useEffect(() => {
-        dispatch(stateHostings(states_id));
-    }, [states_id])
+        dispatch(stateHostings(id));
+    }, [id])
+
+    // if (!hostingLists) return null;
 
     return (
         <div>

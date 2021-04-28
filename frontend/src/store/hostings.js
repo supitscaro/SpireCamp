@@ -18,10 +18,10 @@ const individualHosting = (hosting) => {
     }
 };
 
-const stateFilters = (list) => {
+const stateFilters = (hosting) => {
     return {
         type: STATES,
-        list
+        hosting
     }
 };
 
@@ -75,18 +75,20 @@ const hostingReducer = (state = initialState, action) => {
                 list: [...state.list, action.hosting.hosting],
                 reviews: action.hosting.reviews,
             };
-        // let hostingList = newState.list.map(id => newState[id]);
-        // hostingList.push(action.hosting);
-        // return newState;
         case STATES:
-            let stateHostings = [];
-            action.list.forEach(hosting => {
-                stateHostings[hosting.id] = hosting;
-            });
+            // let stateHostings = [];
+            // action.list.forEach(hosting => {
+            //     stateHostings[hosting.id] = hosting;
+            // });
+            // return {
+            //     stateHostings,
+            //     ...state,
+            //     list: action.list
+            // };
             return {
-                stateHostings,
                 ...state,
-                list: action.list
+                [action.hosting.id]: action.hosting,
+                list: [...state.list, action.hosting]
             };
         default:
             return state;

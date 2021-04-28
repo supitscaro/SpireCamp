@@ -7,6 +7,7 @@ import HomePage from "./components/HomePage";
 import HostingComponent from './components/HostingComponent';
 import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
+import StateHostings from "./components/StateHostingsComponent";
 
 function App() {
   const dispatch = useDispatch();
@@ -31,6 +32,9 @@ function App() {
           </Route> */}
           <Route path="/postings/:id">
             <HostingPage />
+          </Route>
+          <Route path="/states/:id">
+            <StateHostings />
           </Route>
         </Switch>
       )}
