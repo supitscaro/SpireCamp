@@ -16,9 +16,15 @@ module.exports = {
       {
         start_date: "2021-05-10",
         end_date: "2021-05-14",
-        user_id: 2,
+        user_id: 3,
         hostings_id: 3,
-      }
+      },
+      {
+        start_date: "2021-05-12",
+        end_date: "2021-05-14",
+        user_id: 7,
+        hostings_id: 5,
+      },
     ], {});
   },
 
