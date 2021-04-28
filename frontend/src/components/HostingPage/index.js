@@ -25,7 +25,12 @@ function HostingPage() {
             <div>{post.locationDetails}</div>
             <div>
                 {reviews.map((review) => (
-                    <div>{review.title}</div>
+                    <div>
+                        <div>{review.title}</div>
+                        <div>{review.review}</div>
+                        <div>{review.recommended ? '💜' : '🤚🏼'}</div>
+                        <div>{review.User.username}</div>
+                    </div>
                 ))}
             </div>
             {/* {console.log('post[id]', reviews)} */}
