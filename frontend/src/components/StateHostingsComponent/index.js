@@ -5,9 +5,7 @@ import { stateHostings } from "../../store/hostings";
 
 function StateHostings() {
     const { id } = useParams();
-    // console.log("states", user_id);
     const dispatch = useDispatch();
-    // const hostingLists = useSelector((state) => state.hosting.list);
 
     const states = useSelector((state) => Object.values(state.hosting?.hostings?.state));
 

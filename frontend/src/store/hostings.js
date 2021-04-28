@@ -86,7 +86,8 @@ export const activityFilter = (id) => async (dispatch) => {
 
 let initialState = {
     hostings: {
-        state: {}
+        state: {},
+        activities: {}
     },
     states: {}
 };
@@ -130,6 +131,7 @@ const hostingReducer = (state = initialState, action) => {
         case ACTIVITIES:
             let activitiesList = {};
             action.list.forEach(activity => {
+                console.log(activity);
                 activitiesList[activity.id] = activity;
             });
             return {

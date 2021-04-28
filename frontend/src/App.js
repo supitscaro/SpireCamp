@@ -9,6 +9,7 @@ import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
 import StateHostings from "./components/StateHostingsComponent";
 import { findAllStates } from "./store/hostings";
+import ActivityHostings from "./components/ActivitiesComponent";
 
 function App() {
   const dispatch = useDispatch();
@@ -38,6 +39,9 @@ function App() {
           </Route>
           <Route path="/states/:id">
             <StateHostings />
+          </Route>
+          <Route path="/activities/:id">
+            <ActivityHostings />
           </Route>
         </Switch>
       )}

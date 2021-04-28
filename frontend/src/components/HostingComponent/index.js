@@ -17,6 +17,10 @@ function HostingComponent() {
         history.push(`/states/${e.target.id}`);
     };
 
+    const handleActivities = (e) => {
+        history.push(`/activities/${e.target.id}`);
+    };
+
     return (
         <div>
             <div class="filters">
@@ -24,13 +28,13 @@ function HostingComponent() {
                     <div onClick={handleSearch} id="6" className="states-title">Search For Colorado</div>
                 </div>
                 <div className="states">
-                    <div onClick={handleSearch} id="10" className="states-title">Search For Georgia</div>
+                    <div onClick={handleSearch} id="2" className="states-title">Search For Georgia</div>
                 </div>
                 <div className="states">
                     <div onClick={handleSearch} id="33" className="states-title">Search For North Carolina</div>
                 </div>
                 <div className="activities">
-                    <div>Search By Activities</div>
+                    <div onClick={handleActivities} id="10" >Search For Activity</div>
                 </div>
                 <div className="acc">
                     <div>Search By Accommodations</div>
