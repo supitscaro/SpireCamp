@@ -10,6 +10,7 @@ import Navigation from "./components/Navigation";
 import StateHostings from "./components/StateHostingsComponent";
 import { findAllStates } from "./store/hostings";
 import ActivityHostings from "./components/ActivitiesComponent";
+import HostingForm from "./components/HostingFormPage";
 
 function App() {
   const dispatch = useDispatch();
@@ -42,6 +43,9 @@ function App() {
           </Route>
           <Route path="/activities/:id">
             <ActivityHostings />
+          </Route>
+          <Route path="/start-hosting">
+            <HostingForm />
           </Route>
         </Switch>
       )}

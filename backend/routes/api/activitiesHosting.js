@@ -1,7 +1,7 @@
 const express = require('express');
 const asyncHandler = require('express-async-handler');
 
-const { Hosting, Activities_List } = require('../../db/models');
+const { Hosting, Activities_List, Activity } = require('../../db/models');
 // const activity = require('../../db/models/activity');
 
 const router = express.Router();
@@ -26,9 +26,9 @@ router.get(
 router.get(
     '/',
     asyncHandler(async (req, res, next) => {
-        let activities = await Activities_List.findAll();
+        let activities = await Activity.findAll();
 
-        return res.json(activities);
+        res.json(activities);
     })
 );
 

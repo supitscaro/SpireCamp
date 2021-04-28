@@ -27,7 +27,7 @@ function Navigation({ isLoaded }) {
         <ul>
             <li>
                 <NavLink exact to="/">Home</NavLink>
-                <NavLink exact to="/">Start Hosting</NavLink>
+                <NavLink exact to="/start-hosting">Start Hosting</NavLink>
                 {isLoaded && sessionLinks}
             </li>
         </ul>

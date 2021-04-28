@@ -5,6 +5,7 @@ const HOSTING_PAGE = "hostings/HOSTING_PAGE";
 const STATES = "hostings/STATES";
 const STATE = "hostings/STATE";
 const ACTIVITIES = "hostings/ACTIVITIES";
+const ALL_ACTIVITIES = "hostings/ALL_ACTIVITIES";
 
 const findHostings = (list) => {
     return {
@@ -41,6 +42,13 @@ const activitiesFilter = (list) => {
     }
 };
 
+const getAllActivities = (list) => {
+    return {
+        type: ALL_ACTIVITIES,
+        list
+    }
+};
+
 // for the list of hostings
 export const getHostings = () => async (dispatch) => {
     const res = await csrfFetch('/api/hostings');
@@ -68,6 +76,7 @@ export const stateHostings = (id) => async (dispatch) => {
     }
 };
 
+// for list of all states
 export const findAllStates = () => async (dispatch) => {
     const res = await csrfFetch('/api/state');
     if (res.ok) {
@@ -76,6 +85,7 @@ export const findAllStates = () => async (dispatch) => {
     }
 };
 
+// filtered list of activities
 export const activityFilter = (id) => async (dispatch) => {
     const res = await csrfFetch(`/api/activities/${id}`);
     if (res.ok) {
@@ -84,10 +94,20 @@ export const activityFilter = (id) => async (dispatch) => {
     }
 };
 
+// list for all activities
+export const allActivities = () => async (dispatch) => {
+    const res = await csrfFetch('/api/activities');
+    if (res.ok) {
+        let activities = await res.json();
+        dispatch(getAllActivities(activities));
+    }
+};
+
 let initialState = {
     hostings: {
         state: {},
-        activities: {}
+        activities: {},
+        allActivities: {},
     },
     states: {}
 };
@@ -131,13 +151,21 @@ const hostingReducer = (state = initialState, action) => {
         case ACTIVITIES:
             let activitiesList = {};
             action.list.forEach(activity => {
-                console.log(activity);
                 activitiesList[activity.id] = activity;
             });
             return {
                 ...state,
                 hostings: { ...state.hostings, activities: activitiesList }
             };
+        case ALL_ACTIVITIES:
+            let listOfActivities = {};
+            action.list.forEach(activity => {
+                listOfActivities[activity.id] = activity;
+            });
+            return {
+                ...state,
+                hostings: { ...state.hostings, allActivities: listOfActivities }
+            }
         default:
             return state;
     }

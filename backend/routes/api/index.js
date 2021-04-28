@@ -1,7 +1,6 @@
 const router = require('express').Router();
 const sessionRouter = require('./session.js');
 const usersRouter = require('./users.js');
-const hostingRouter = require('./oneHosting.js');
 const hostingsRouter = require('./hostings.js');
 const reviewsRouter = require('./reviews.js');
 const statesRouter = require('./stateHostings');
@@ -12,7 +11,6 @@ router.use('/session', sessionRouter);
 
 router.use('/users', usersRouter);
 
-router.use('/oneHosting', hostingRouter);
 router.use('/hostings', hostingsRouter);
 router.use('/reviews', reviewsRouter);
 router.use('/states', statesRouter);

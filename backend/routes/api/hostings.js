@@ -1,7 +1,9 @@
 const express = require('express');
 const asyncHandler = require('express-async-handler');
+const { check } = require('express-validator');
+const { requireAuth } = require('../../utils/auth');
 
-const { Hosting, User, State, Activities_List, Review } = require('../../db/models');
+const { Hosting, User, State, Activities_List, Review, Activity, Accommodation } = require('../../db/models');
 
 const router = express.Router();
 
@@ -29,6 +31,38 @@ router.get(
             include: { model: User }
         });
         res.json({ hosting, reviews });
+    })
+);
+
+let hostingValidator = [
+    check('name')
+        .exists({ checkFalsy: true })
+        .notEmpty()
+        .withMessage("Your hosting must have a name provided."),
+    check('description')
+        .exists({ checkFalsy: true })
+        .notEmpty()
+        .withMessage("You must provide some description about the location."),
+    check('locationDetails')
+        .exists({ checkFalsy: true })
+        .notEmpty()
+        .withMessage("Please provide the name of the city where this hosting is located."),
+    check("state")
+        .exists({ checkFalsy: true })
+        .withMessage("Please select a state."),
+    check("cost")
+        .exists({ checkFalsy: true })
+        .withMessage("Please provide the cost of stay.")
+];
+
+router.get(
+    '/create',
+    requireAuth,
+    asyncHandler(async (req, res, next) => {
+        let host = Hosting.build();
+        let activities = Activity.findAll();
+        let accommodations = Accommodation.findAll();
+        res.json({ host, activities, accommodations });
     })
 );
 

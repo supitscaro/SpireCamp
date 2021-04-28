@@ -1,17 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Redirect } from 'react-router-dom';
+import { allActivities } from '../../store/hostings';
 
-function LoginFormPage() {
+function HostingForm() {
     const dispatch = useDispatch();
-    const sessionUser = useSelector(state => state.session.user);
+    const activitiesList = useSelector(state => Object.values(state.hosting?.hostings?.allActivities));
+
     const [name, setName] = useState('');
     const [desc, setDesc] = useState('');
     const [errors, setErrors] = useState([]);
 
-    if (sessionUser) return (
-        <Redirect to="/" />
-    );
+    useEffect(() => {
+        dispatch(allActivities());
+    }, [dispatch])
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -20,6 +22,7 @@ function LoginFormPage() {
 
     return (
         <form onSubmit={handleSubmit}>
+            {console.log('activities', activitiesList)}
             <ul>
                 {errors.map((error, idx) => <li key={idx}>{error}</li>)}
             </ul>
@@ -46,4 +49,4 @@ function LoginFormPage() {
     );
 }
 
-export default LoginFormPage;
+export default HostingForm;
