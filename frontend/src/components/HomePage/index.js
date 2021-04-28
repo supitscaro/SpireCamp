@@ -1,12 +1,13 @@
 import React from 'react';
-import HostingComponent from '../HostingComponent';
+// import HostingComponent from '../HostingComponent';
+import StateHostingsComponent from '../StateHostingsComponent';
 
 function HomePage() {
 
 
     return (
         <div>
-            <HostingComponent />
+            <StateHostingsComponent />
         </div>
     )
 }

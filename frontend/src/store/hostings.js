@@ -26,8 +26,8 @@ export const getHostings = () => async (dispatch) => {
     }
 };
 
-export const stateHostings = () => async (dispatch) => {
-    const res = await csrfFetch('/api/states');
+export const stateHostings = (id) => async (dispatch) => {
+    const res = await csrfFetch(`/api/states/${id}`);
     if (res.ok) {
         let stateHosts = await res.json();
         dispatch(stateFilters(stateHosts));
@@ -50,7 +50,16 @@ const hostingReducer = (state = initialState, action) => {
                 ...state,
                 list: action.list
             };
-
+        case STATES:
+            let stateHostings = [];
+            action.list.forEach(hosting => {
+                stateHostings[hosting.id] = hosting;
+            });
+            return {
+                stateHostings,
+                ...state,
+                list: action.list
+            }
         default:
             return state;
     }
