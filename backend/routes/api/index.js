@@ -5,6 +5,7 @@ const hostingRouter = require('./oneHosting.js');
 const hostingsRouter = require('./hostings.js');
 const reviewsRouter = require('./reviews.js');
 const statesRouter = require('./stateHostings');
+const stateRouter = require('./states');
 const activitiesRouter = require('./activitiesHosting');
 
 router.use('/session', sessionRouter);
@@ -15,6 +16,7 @@ router.use('/oneHosting', hostingRouter);
 router.use('/hostings', hostingsRouter);
 router.use('/reviews', reviewsRouter);
 router.use('/states', statesRouter);
+router.use('/state', stateRouter);
 router.use('/activities', activitiesRouter);
 
 router.post('/test', function (req, res) {

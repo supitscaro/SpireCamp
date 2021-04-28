@@ -3,6 +3,7 @@ import { csrfFetch } from './csrf';
 const GET_HOSTINGS = "hostings/GET_HOSTINGS";
 const HOSTING_PAGE = "hostings/HOSTING_PAGE";
 const STATES = "hostings/STATES";
+const STATE = "hostings/STATE";
 
 const findHostings = (list) => {
     return {
@@ -22,6 +23,13 @@ const stateFilters = (hosting) => {
     return {
         type: STATES,
         hosting
+    }
+};
+
+const getAllStates = (list) => {
+    return {
+        type: STATE,
+        list
     }
 };
 
@@ -50,41 +58,57 @@ export const stateHostings = (id) => async (dispatch) => {
         let stateHosts = await res.json();
         dispatch(stateFilters(stateHosts));
     }
-}
+};
+
+export const findAllStates = () => async (dispatch) => {
+    const res = await csrfFetch('/api/state');
+    if (res.ok) {
+        let state = await res.json();
+        dispatch(getAllStates(state));
+    }
+};
 
 let initialState = {
-    list: []
+    hostings: {},
+    states: {}
 };
 
 const hostingReducer = (state = initialState, action) => {
     switch (action.type) {
         case GET_HOSTINGS:
-            let allHostings = [];
+            let allHostings = {};
             action.list.forEach(hosting => {
                 allHostings[hosting.id] = hosting;
             });
             return {
-                allHostings,
                 ...state,
-                list: action.list
+                hostings: { ...action.hostings, ...allHostings }
             };
         case HOSTING_PAGE:
             return {
                 ...state,
                 [action.hosting.hosting.id]: action.hosting.hosting,
-                list: [...state.list, action.hosting.hosting],
+                hostings: [...state.list, action.hosting.hosting],
                 reviews: action.hosting.reviews,
             };
         case STATES:
-            let stateHostings = [];
+            let stateHostings = {};
             action.hosting.forEach(hosting => {
-                stateHostings.push(hosting);
+                stateHostings[hosting.states_id] = hosting;
             });
             return {
-                stateHostings,
                 ...state,
-                list: action.hosting
+                hostings: { ...state.hostings, state: stateHostings }
             };
+        case STATE:
+            let newStates = {};
+            action.list.forEach(state => {
+                newStates[state.id] = state;
+            });
+            return {
+                ...state,
+                states: { ...state.states, ...newStates }
+            }
         default:
             return state;
     }

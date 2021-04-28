@@ -8,10 +8,16 @@ import HostingComponent from './components/HostingComponent';
 import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
 import StateHostings from "./components/StateHostingsComponent";
+import { findAllStates } from "./store/hostings";
 
 function App() {
   const dispatch = useDispatch();
   const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    dispatch(findAllStates());
+  }, [dispatch]);
+
   useEffect(() => {
     dispatch(sessionActions.restoreUser()).then(() => setIsLoaded(true));
   }, [dispatch]);

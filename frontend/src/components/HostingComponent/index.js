@@ -1,22 +1,33 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { getHostings } from "../../store/hostings";
 import "./hostingComponent.css";
 
 function HostingComponent() {
     const dispatch = useDispatch();
-    const hostingLists = useSelector((state) => state.hosting.list);
+    const history = useHistory();
+    const hostingLists = useSelector((state) => Object.values(state.hosting.hostings));
 
     useEffect(() => {
         dispatch(getHostings());
     }, [dispatch]);
 
+    const handleSearch = (e) => {
+        history.push(`/states/${e.target.id}`);
+    };
+
     return (
         <div>
             <div class="filters">
                 <div className="states">
-                    <div className="states-title">Search By States</div>
+                    <div onClick={handleSearch} id="6" className="states-title">Search For Colorado</div>
+                </div>
+                <div className="states">
+                    <div onClick={handleSearch} id="10" className="states-title">Search For Georgia</div>
+                </div>
+                <div className="states">
+                    <div onClick={handleSearch} id="33" className="states-title">Search For North Carolina</div>
                 </div>
                 <div className="activities">
                     <div>Search By Activities</div>
@@ -27,7 +38,7 @@ function HostingComponent() {
             </div>
             <div className="hosting-post">
                 {hostingLists.map((host => (
-                    <div className="indiv-post">
+                    <div className="indiv-post" key={host.name}>
                         <Link to={`/postings/${host.id}`}>
                             <div className="post-title">{host.name}</div>
                             <div className="post-desc">{host.description}</div>
