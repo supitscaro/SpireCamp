@@ -27,14 +27,14 @@ function HostingComponent() {
             </div>
             <div className="hosting-post">
                 {hostingLists.map((host => (
-                    <Link to={`/postings/${host.id}`}>
-                        <div>{host.name}</div>
-                        <div>{host.description}</div>
-                        <div>{host.locationDetails}</div>
-                        <div>{host.State.name}</div>
-                    </Link>
+                    <div className="indiv-post">
+                        <Link to={`/postings/${host.id}`}>
+                            <div className="post-title">{host.name}</div>
+                            <div className="post-desc">{host.description}</div>
+                            <div className="post-location">{host.locationDetails}</div>
+                        </Link>
+                    </div>
                 )))}
-
             </div>
         </div>
     )

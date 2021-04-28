@@ -9,7 +9,7 @@ import 'react-calendar/dist/Calendar.css';
 function HostingPage() {
     const { id } = useParams();
     const dispatch = useDispatch();
-    const post = useSelector((state) => state.hosting);
+    const post = useSelector((state) => state.hosting[id]);
 
     useEffect(() => {
         dispatch(oneHosting(id));
@@ -19,11 +19,11 @@ function HostingPage() {
 
     return (
         <div>
-            <div>{post[id].name}</div>
-            <div>{post[id].description}</div>
-            <div>{post[id].locationDetails}</div>
+            <div>{post.name}</div>
+            <div>{post.description}</div>
+            <div>{post.locationDetails}</div>
             {/* <div>{post.reviews}</div> */}
-            {console.log('post[id]', post.reviews)}
+            {/* {console.log('post[id]', post.reviews)} */}
             {/* <Calendar /> */}
         </div>
     )

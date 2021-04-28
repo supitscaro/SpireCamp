@@ -27,4 +27,10 @@
 
 .hosting-post {
     background-color: lightslategray;
+    display: flex;
+    flex-direction: row;
+}
+
+.indiv-post {
+    padding-right: 30px;
 }
