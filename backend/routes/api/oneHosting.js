@@ -8,21 +8,21 @@ const { check } = require('express-validator');
 const router = express.Router();
 
 // get hosting post - individual one
-router.get(
-    '/:id', // unsure of route if I want every post
-    asyncHandler(async (req, res, next) => {
-        let hostId = parseInt(req.params.id, 10);
-        let hosting = await Hosting.findByPk(hostId,
-            {
-                include: [User, State, Activities_List]
-            }
-        );
-        let reviews = await Review.findAll({
-            include: { model: User }
-        });
-        res.json({ hosting, reviews });
-    })
-);
+// router.get(
+//     '/:id', // unsure of route if I want every post
+//     asyncHandler(async (req, res, next) => {
+//         let hostId = parseInt(req.params.id, 10);
+//         let hosting = await Hosting.findByPk(hostId,
+//             {
+//                 include: [User, State, Activities_List]
+//             }
+//         );
+//         let reviews = await Review.findAll({
+//             include: { model: User }
+//         });
+//         res.json({ hosting, reviews });
+//     })
+// );
 
 let hostingValidator = [
     check('name')
