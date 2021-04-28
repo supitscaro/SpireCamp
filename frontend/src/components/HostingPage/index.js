@@ -15,10 +15,16 @@ function HostingPage() {
         dispatch(oneHosting(id));
     }, [id]);
 
+    if (!post) return null;
+
     return (
         <div>
-            {console.log(post.list.name)}
-            <Calendar />
+            <div>{post[id].name}</div>
+            <div>{post[id].description}</div>
+            <div>{post[id].locationDetails}</div>
+            {/* <div>{post.reviews}</div> */}
+            {console.log('post[id]', post.reviews)}
+            {/* <Calendar /> */}
         </div>
     )
 }
