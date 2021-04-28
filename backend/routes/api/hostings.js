@@ -50,6 +50,12 @@ let hostingValidator = [
     check("state")
         .exists({ checkFalsy: true })
         .withMessage("Please select a state."),
+    check("activities")
+        .exists({ checkFalsy: true })
+        .withMessage("Please select activities."),
+    check("accommodations")
+        .exists({ checkFalsy: true })
+        .withMessage("Please select accommodations."),
     check("cost")
         .exists({ checkFalsy: true })
         .withMessage("Please provide the cost of stay.")
@@ -63,6 +69,19 @@ router.get(
         let activities = Activity.findAll();
         let accommodations = Accommodation.findAll();
         res.json({ host, activities, accommodations });
+    })
+);
+
+router.post(
+    '/create',
+    requireAuth,
+    hostingValidator,
+    asyncHandler(async (req, res, next) => {
+        const { name, description, locationDetails, state, accommodations, activities, cost } = req.body;
+        let stateId = parseInt(state, 10);
+        let post = Hosting.build({ name, description, locationDetails, state: stateId, accommodations, activities, cost });
+
+        res.json(post);
     })
 );
 
