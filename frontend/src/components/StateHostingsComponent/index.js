@@ -9,8 +9,7 @@ function StateHostings() {
     const dispatch = useDispatch();
     // const hostingLists = useSelector((state) => state.hosting.list);
 
-    const state = useSelector((state) => state.hosting?.hostings.state[id]);
-
+    const state = useSelector((state) => state.hosting?.hostings?.state?.[id]);
 
     useEffect(() => {
         dispatch(stateHostings(id));
@@ -24,9 +23,9 @@ function StateHostings() {
             <div>{state.name}</div>
             <div>{state.description}</div>
             <div>{state.locationDetails}</div>
+            {/* <div>{state.locationDetails}</div> */}
         </div>
     )
-
 }
 
 export default StateHostings;

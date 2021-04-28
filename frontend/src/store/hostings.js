@@ -88,7 +88,7 @@ const hostingReducer = (state = initialState, action) => {
             return {
                 ...state,
                 [action.hosting.hosting.id]: action.hosting.hosting,
-                hostings: [...state.list, action.hosting.hosting],
+                hostings: { ...state.hostings, ...action.hosting.hosting },
                 reviews: action.hosting.reviews,
             };
         case STATES:

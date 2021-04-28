@@ -14,7 +14,8 @@ router.get(
         let hosting = await Hosting.findAll({
             where: {
                 states_id: id
-            }
+            },
+            include: [User, Accommodations_List, Activities_List, Review]
         });
         res.json(hosting);
     })

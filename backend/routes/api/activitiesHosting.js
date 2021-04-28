@@ -1,7 +1,7 @@
 const express = require('express');
 const asyncHandler = require('express-async-handler');
 
-const { Hosting, User, State, Accommodations_List, Activities_List, Activity, Review } = require('../../db/models');
+const { Hosting, Activities_List } = require('../../db/models');
 // const activity = require('../../db/models/activity');
 
 const router = express.Router();
