@@ -127,6 +127,15 @@ const hostingReducer = (state = initialState, action) => {
                 ...state,
                 states: { ...state.states, ...newStates }
             }
+        case ACTIVITIES:
+            let activitiesList = {};
+            action.list.forEach(activity => {
+                activitiesList[activity.id] = activity;
+            });
+            return {
+                ...state,
+                hostings: { ...state.hostings, activities: activitiesList }
+            };
         default:
             return state;
     }
