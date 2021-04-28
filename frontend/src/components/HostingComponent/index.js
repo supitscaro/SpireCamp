@@ -15,7 +15,7 @@ function HostingComponent() {
         <div>
             Hello
             {hostingLists.map((host => (
-                <Link to={`/posts/${host.id}`}>
+                <Link to={`/postings/${host.id}`}>
                     <div>{host.name}</div>
                     <div>{host.description}</div>
                     <div>{host.locationDetails}</div>

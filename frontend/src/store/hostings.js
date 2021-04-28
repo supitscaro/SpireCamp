@@ -69,13 +69,15 @@ const hostingReducer = (state = initialState, action) => {
                 list: action.list
             };
         case HOSTING_PAGE:
-            let newState = {
+            return {
                 ...state,
-                [action.hosting.id]: action.hosting
+                [action.hosting.hosting.id]: action.hosting.hosting,
+                list: [...state.list, action.hosting.hosting],
+                reviews: action.hosting.reviews,
             };
-            let hostingList = newState.list.map(id => newState[id]);
-            hostingList.push(action.hosting);
-            return newState;
+        // let hostingList = newState.list.map(id => newState[id]);
+        // hostingList.push(action.hosting);
+        // return newState;
         case STATES:
             let stateHostings = [];
             action.list.forEach(hosting => {
