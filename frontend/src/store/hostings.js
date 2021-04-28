@@ -4,6 +4,7 @@ const GET_HOSTINGS = "hostings/GET_HOSTINGS";
 const HOSTING_PAGE = "hostings/HOSTING_PAGE";
 const STATES = "hostings/STATES";
 const STATE = "hostings/STATE";
+const ACTIVITIES = "hostings/ACTIVITIES";
 
 const findHostings = (list) => {
     return {
@@ -29,6 +30,13 @@ const stateFilters = (hosting) => {
 const getAllStates = (list) => {
     return {
         type: STATE,
+        list
+    }
+};
+
+const activitiesFilter = (list) => {
+    return {
+        type: ACTIVITIES,
         list
     }
 };
@@ -68,8 +76,18 @@ export const findAllStates = () => async (dispatch) => {
     }
 };
 
+export const activityFilter = (id) => async (dispatch) => {
+    const res = await csrfFetch(`/api/activities/${id}`);
+    if (res.ok) {
+        let activity = await res.json();
+        dispatch(activitiesFilter(activity));
+    }
+};
+
 let initialState = {
-    hostings: {},
+    hostings: {
+        state: {}
+    },
     states: {}
 };
 

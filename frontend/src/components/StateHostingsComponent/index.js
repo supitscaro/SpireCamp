@@ -9,7 +9,7 @@ function StateHostings() {
     const dispatch = useDispatch();
     // const hostingLists = useSelector((state) => state.hosting.list);
 
-    const states = useSelector((state) => state.hosting?.hostings?.state);
+    const states = useSelector((state) => Object.values(state.hosting?.hostings?.state));
 
     useEffect(() => {
         dispatch(stateHostings(id));
