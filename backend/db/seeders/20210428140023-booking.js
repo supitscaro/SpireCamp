@@ -18,12 +18,16 @@ module.exports = {
         end_date: "2021-05-14",
         user_id: 3,
         hostings_id: 3,
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
         start_date: "2021-05-12",
         end_date: "2021-05-14",
         user_id: 7,
         hostings_id: 5,
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
     ], {});
   },
@@ -36,5 +40,6 @@ module.exports = {
       Example:
       return queryInterface.bulkDelete('People', null, {});
     */
+    return queryInterface.bulkDelete('Bookings', null, {});
   }
 };
