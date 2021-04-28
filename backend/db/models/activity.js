@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
     // associations can be defined here
 
     let hostingMapping = {
-      through: 'Acivities_List',
+      through: 'Activities_List',
       foreignKey: 'activities_id',
       otherKey: 'hostings_id'
     };

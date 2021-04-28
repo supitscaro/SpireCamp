@@ -54,7 +54,31 @@ module.exports = {
         activities_id: 2,
         createdAt: new Date(),
         updatedAt: new Date()
-      }
+      },
+      {
+        hostings_id: 4,
+        activities_id: 1,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        hostings_id: 4,
+        activities_id: 4,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        hostings_id: 4,
+        activities_id: 6,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        hostings_id: 4,
+        activities_id: 5,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
     ], {});
   },
 
