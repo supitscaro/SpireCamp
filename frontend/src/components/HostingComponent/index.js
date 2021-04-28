@@ -28,13 +28,19 @@ function HostingComponent() {
                     <div onClick={handleSearch} id="6" className="states-title">Search For Colorado</div>
                 </div>
                 <div className="states">
-                    <div onClick={handleSearch} id="2" className="states-title">Search For Georgia</div>
+                    <div onClick={handleSearch} id="10" className="states-title">Search For Georgia</div>
                 </div>
                 <div className="states">
                     <div onClick={handleSearch} id="33" className="states-title">Search For North Carolina</div>
                 </div>
                 <div className="activities">
-                    <div onClick={handleActivities} id="10" >Search For Activity</div>
+                    <div onClick={handleActivities} id="2" >Search By Hiking</div>
+                </div>
+                <div className="activities">
+                    <div onClick={handleActivities} id="7" >Search By Running</div>
+                </div>
+                <div className="activities">
+                    <div onClick={handleActivities} id="5" >Search By Biking</div>
                 </div>
                 <div className="acc">
                     <div>Search By Accommodations</div>

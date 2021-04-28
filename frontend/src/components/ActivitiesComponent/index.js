@@ -13,6 +13,7 @@ function ActivityHostings() {
         dispatch(activityFilter(id));
     }, [dispatch, id]);
 
+    if (!activities) return null;
 
     return (
         <div>
