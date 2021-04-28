@@ -12,6 +12,12 @@ module.exports = {
         isBetaMember: false
       }], {});
     */
+    return queryInterface.bulkInsert('Accommodations_Lists', [
+      {
+        hostings_id: 'John Doe',
+        accommodations_id: false
+      }
+    ], {});
   },
 
   down: (queryInterface, Sequelize) => {
