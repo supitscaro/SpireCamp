@@ -62,6 +62,56 @@ module.exports = {
         cost: 45,
         createdAt: new Date(),
         updatedAt: new Date()
+      },
+      {
+        name: 'Camping By The River', // 6
+        description: 'Perfect place for those seeking to completely disappear for a few days. Cell phone coverage is poor and there is no internet. There are hiking trails and a lake for fishing.',
+        locationDetails: 'Located in North Carolina',
+        states_id: 47,
+        user_id: 3,
+        cost: 70,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        name: 'Stone Mill Camping', // 7
+        description: 'Perfect place for those seeking to completely disappear for a few days. Cell phone coverage is poor and there is no internet. There are hiking trails and a lake for fishing.',
+        locationDetails: 'Located in North Carolina',
+        states_id: 10,
+        user_id: 8,
+        cost: 45,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        name: 'Stone Mill Camping', // 8
+        description: 'Perfect place for those seeking to completely disappear for a few days. Cell phone coverage is poor and there is no internet. There are hiking trails and a lake for fishing.',
+        locationDetails: 'Located in North Carolina',
+        states_id: 10,
+        user_id: 9,
+        cost: 45,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        name: 'Stone Mill Camping', // 9
+        description: 'Perfect place for those seeking to completely disappear for a few days. Cell phone coverage is poor and there is no internet. There are hiking trails and a lake for fishing.',
+        locationDetails: 'Located in North Carolina',
+        states_id: 10,
+        user_id: 10,
+        cost: 45,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        name: 'Stone Mill Camping', // 10
+        description: 'Perfect place for those seeking to completely disappear for a few days. Cell phone coverage is poor and there is no internet. There are hiking trails and a lake for fishing.',
+        locationDetails: 'Located in North Carolina',
+        states_id: 10,
+        user_id: 7,
+        cost: 45,
+        createdAt: new Date(),
+        updatedAt: new Date()
       }
     ], {});
   },
