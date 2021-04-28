@@ -54,7 +54,7 @@ module.exports = {
         updatedAt: new Date()
       },
       {
-        name: 'Stone Mill Camping', // 3
+        name: 'Stone Mill Camping', // 5
         description: 'Perfect place for those seeking to completely disappear for a few days. Cell phone coverage is poor and there is no internet. There are hiking trails and a lake for fishing.',
         locationDetails: 'Located in North Carolina',
         states_id: 10,

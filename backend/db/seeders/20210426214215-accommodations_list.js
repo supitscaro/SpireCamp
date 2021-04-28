@@ -14,8 +14,94 @@ module.exports = {
     */
     return queryInterface.bulkInsert('Accommodations_Lists', [
       {
-        hostings_id: 'John Doe',
-        accommodations_id: false
+        hostings_id: 2,
+        accommodations_id: 4,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        hostings_id: 2,
+        accommodations_id: 1,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        hostings_id: 1,
+        accommodations_id: 2,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        hostings_id: 2,
+        accommodations_id: 4,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        hostings_id: 2,
+        accommodations_id: 5,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        hostings_id: 3,
+        accommodations_id: 4,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        hostings_id: 3,
+        accommodations_id: 6,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        hostings_id: 3,
+        accommodations_id: 1,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        hostings_id: 3,
+        accommodations_id: 5,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        hostings_id: 4,
+        accommodations_id: 1,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        hostings_id: 4,
+        accommodations_id: 6,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        hostings_id: 4,
+        accommodations_id: 4,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        hostings_id: 5,
+        accommodations_id: 1,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        hostings_id: 5,
+        accommodations_id: 4,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        hostings_id: 5,
+        accommodations_id: 6,
+        createdAt: new Date(),
+        updatedAt: new Date()
       }
     ], {});
   },
