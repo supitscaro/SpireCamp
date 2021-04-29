@@ -6,6 +6,7 @@ const reviewsRouter = require('./reviews.js');
 const statesRouter = require('./stateHostings');
 const stateRouter = require('./states');
 const activitiesRouter = require('./activitiesHosting');
+const bookingsRouter = require('./bookings');
 
 router.use('/session', sessionRouter);
 
@@ -16,6 +17,7 @@ router.use('/reviews', reviewsRouter);
 router.use('/states', statesRouter);
 router.use('/state', stateRouter);
 router.use('/activities', activitiesRouter);
+// router.use('/bookings', bookingsRouter);
 
 router.post('/test', function (req, res) {
     res.json({ requestBody: req.body });

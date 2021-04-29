@@ -184,6 +184,14 @@ const hostingReducer = (state = initialState, action) => {
                 ...state,
                 hostings: { ...state.hostings, ...listOfActivities }
             }
+        case DELETE:
+            return {
+                ...state,
+                [action.id]: {
+                    ...state[action.id],
+                    hostings: state[action.id].filter((spot) => spot.id !== action.id)
+                }
+            }
         default:
             return state;
     }
