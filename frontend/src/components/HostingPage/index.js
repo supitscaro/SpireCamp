@@ -12,9 +12,11 @@ function HostingPage() {
     const dispatch = useDispatch();
     const post = useSelector((state) => state.hosting[id]);
     const reviews = useSelector((state) => state.hosting.reviews);
+    const bookings = useSelector((state) => state.bookings.listOfBookings[id]);
+    console.log('bookings', bookings)
 
     useEffect(() => {
-        dispatch(getBookings());
+        dispatch(getBookings(id));
         dispatch(oneHosting(id));
     }, [dispatch, id]);
 
@@ -39,7 +41,7 @@ function HostingPage() {
                 ))}
             </div>
             {/* {console.log('post[id]', reviews)} */}
-            {/* <Calendar /> */}
+            <Calendar />
         </div>
     )
 }
