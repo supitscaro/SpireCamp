@@ -26,11 +26,19 @@ module.exports = (sequelize, DataTypes) => {
       otherKey: 'accommodations_id'
     }
 
+    let bookingMapping = {
+      through: 'Booking',
+      as: 'Bookings',
+      foreignKey: 'hostings_id',
+      otherKey: 'user_id'
+    };
+
     Hosting.belongsToMany(models.Activity, activitiesMapping);
     Hosting.belongsToMany(models.Accommodation, accommodationsMapping);
+    Hosting.belongsToMany(models.User, bookingMapping);
 
     Hosting.hasMany(models.Review, { foreignKey: 'hostings_id' });
-    Hosting.hasMany(models.Booking, { foreignKey: 'hostings_id' });
+    // Hosting.hasMany(models.Booking, { foreignKey: 'hostings_id' });
     Hosting.hasMany(models.Activities_List, { foreignKey: 'hostings_id' });
     // Hosting.hasMany(models.Activity, { foreignKey: 'hostings_id' });
     Hosting.hasMany(models.Accommodations_List, { foreignKey: 'hostings_id' });

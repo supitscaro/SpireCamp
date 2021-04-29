@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { oneHosting } from "../../store/hostings";
+import { getBookings } from "../../store/bookings";
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import './hosting.css';
@@ -13,8 +14,9 @@ function HostingPage() {
     const reviews = useSelector((state) => state.hosting.reviews);
 
     useEffect(() => {
+        dispatch(getBookings());
         dispatch(oneHosting(id));
-    }, [id]);
+    }, [dispatch, id]);
 
     if (!post) return null;
 

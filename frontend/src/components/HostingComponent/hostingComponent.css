@@ -8,43 +8,78 @@
 }
 
 img {
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-    height: auto;
-    max-width: 100%;
+    border-radius: 10px;
+    /* border-top-left-radius: 10px; */
+    height: 100%;
+    width: 100%;
     vertical-align: middle;
+    z-index: -1;
 }
 
 .states {
-    background-color: #B56576;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    width: 30%;
+    width: 40%;
+    height: 80%;
     border-radius: 10px;
-    margin: 10px;
     box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
 }
 
+.states-expo {
+    width: 50%;
+    height: 10%;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.states-phrase {
+    color: #161616;
+    width: 70%;
+    margin-left: 20px;
+}
+
+.states-card {
+    position: relative;
+}
+
+.states-info-card {
+    background-color: #5C6D70;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-bottom: 150px;
+    position: absolute;
+    width: 20%;
+    bottom: 0;
+    left: 0;
+
+}
+
+.title {
+    color: white;
+    font-weight: lighter;
+}
+
 .states-title {
-    color: #ffffff;
+    /* color: #ffffff; */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: #B7B7A4;
     padding: 0.8rem;
     font-size: 14px;
     text-transform: uppercase;
     border-radius: 4px;
     font-weight: 400;
     display: block;
+    height: 10%;
     width: 90%;
-    cursor: pointer;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    background: transparent;
     justify-content: center;
     text-align: center;
 }
 
 .states-title:hover {
-    background-color: rgba(255, 255, 255, 0.12);
+    background-color: rgba(255, 255, 255, 0.137);
 }
 
 .activities {

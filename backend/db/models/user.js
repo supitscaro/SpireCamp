@@ -52,9 +52,18 @@ module.exports = (sequelize, DataTypes) => {
   });
   User.associate = function (models) {
     // associations can be defined here
+    let bookingMapping = {
+      through: 'Booking',
+      as: 'Bookings',
+      foreignKey: 'user_id',
+      otherKey: 'hostings_id'
+    };
+
+    User.belongsToMany(models.Hosting, bookingMapping);
+
     User.hasMany(models.Review, { foreignKey: 'user_id' });
-    User.hasMany(models.Booking, { foreignKey: 'user_id' });
-    User.hasOne(models.Hosting, { foreignKey: 'user_id' });
+    // User.hasMany(models.Booking, { foreignKey: 'user_id' });
+    // User.hasOne(models.Hosting, { foreignKey: 'user_id' });
   };
   User.prototype.toSafeObject = function () {
     const { id, username, email } = this;
