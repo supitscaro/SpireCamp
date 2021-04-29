@@ -11,8 +11,8 @@ function DemoUser() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         const user = {
-            credential: 'HarryPhillips',
-            password: 'password8'
+            credential: 'SaraMarin',
+            password: 'password2'
         }
         await dispatch(login(user));
         history.push('/');

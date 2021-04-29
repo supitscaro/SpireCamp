@@ -4,11 +4,13 @@ import thunk from "redux-thunk";
 import sessionReducer from './session';
 import hostingReducer from './hostings';
 import bookingReducer from './bookings';
+import reviewReducer from './reviews';
 
 const rootReducer = combineReducers({
   session: sessionReducer,
   hosting: hostingReducer,
   bookings: bookingReducer,
+  reviews: reviewReducer,
 });
 
 let enhancer;
