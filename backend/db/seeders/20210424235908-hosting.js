@@ -114,7 +114,7 @@ module.exports = {
       },
       {
         name: 'Aspenglen Campground', // 10
-        description: 'Move over elk, you know you gotta share this space with campers too. Aspen Glen Campground in Rocky Mountain National Park is a popular hangout for elk, especially in the fall. You can catch them grazing in the open meadows nearby, or just a few feet from your tent.',
+        description: 'Move over elk, you know you gotta share this space with campers too. Aspen Glen Campground in Rocky Mountain National Park is a popular hangout for elk, especially in the fall.',
         locationDetails: 'Located in Colorado',
         states_id: 6,
         user_id: 7,

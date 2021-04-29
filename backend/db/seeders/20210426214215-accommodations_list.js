@@ -102,7 +102,103 @@ module.exports = {
         accommodations_id: 6,
         createdAt: new Date(),
         updatedAt: new Date()
-      }
+      },
+      {
+        hostings_id: 6,
+        accommodations_id: 5,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        hostings_id: 6,
+        accommodations_id: 1,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        hostings_id: 6,
+        accommodations_id: 4,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        hostings_id: 7,
+        accommodations_id: 2,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        hostings_id: 7,
+        accommodations_id: 4,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        hostings_id: 7,
+        accommodations_id: 5,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        hostings_id: 7,
+        accommodations_id: 6,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        hostings_id: 8,
+        accommodations_id: 2,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        hostings_id: 8,
+        accommodations_id: 4,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        hostings_id: 8,
+        accommodations_id: 6,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        hostings_id: 9,
+        accommodations_id: 2,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        hostings_id: 9,
+        accommodations_id: 4,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        hostings_id: 9,
+        accommodations_id: 3,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        hostings_id: 10,
+        accommodations_id: 1,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        hostings_id: 10,
+        accommodations_id: 5,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        hostings_id: 10,
+        accommodations_id: 4,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
     ], {});
   },
 
