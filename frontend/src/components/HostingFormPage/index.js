@@ -5,7 +5,7 @@ import { allActivities } from '../../store/hostings';
 
 function HostingForm() {
     const dispatch = useDispatch();
-    const activitiesList = useSelector(state => Object.values(state.hosting?.hostings?.allActivities));
+    const activitiesList = useSelector(state => Object.values(state.hosting?.hostings));
 
     const [name, setName] = useState('');
     const [desc, setDesc] = useState('');

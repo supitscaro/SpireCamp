@@ -66,8 +66,8 @@ router.get(
     requireAuth,
     asyncHandler(async (req, res, next) => {
         let host = Hosting.build();
-        let activities = Activity.findAll();
-        let accommodations = Accommodation.findAll();
+        let activities = await Activity.findAll();
+        let accommodations = await Accommodation.findAll();
         res.json({ host, activities, accommodations });
     })
 );
@@ -84,5 +84,15 @@ router.post(
         res.json(post);
     })
 );
+
+router.delete(
+    '/:id',
+    requireAuth,
+    asyncHandler(async (req, res, next) => {
+        let id = parseInt(req.params.id, 10);
+        let post = await Hosting.findByPk(id);
+        await post.destroy();
+    })
+)
 
 module.exports = router;

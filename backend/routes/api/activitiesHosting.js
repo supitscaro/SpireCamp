@@ -27,7 +27,6 @@ router.get(
     '/',
     asyncHandler(async (req, res, next) => {
         let activities = await Activity.findAll();
-
         res.json(activities);
     })
 );

@@ -6,6 +6,7 @@ const STATES = "hostings/STATES";
 const STATE = "hostings/STATE";
 const ACTIVITIES = "hostings/ACTIVITIES";
 const ALL_ACTIVITIES = "hostings/ALL_ACTIVITIES";
+const DELETE = "hostings/DELETE";
 
 const findHostings = (list) => {
     return {
@@ -46,6 +47,13 @@ const getAllActivities = (list) => {
     return {
         type: ALL_ACTIVITIES,
         list
+    }
+};
+
+const remove = (id) => {
+    return {
+        type: DELETE,
+        id
     }
 };
 
@@ -103,11 +111,21 @@ export const allActivities = () => async (dispatch) => {
     }
 };
 
+export const deleteSpot = (id) => async (dispatch) => {
+    const res = await csrfFetch(`/api/hostings/${id}`, {
+        method: 'DELETE',
+    });
+
+    if (res.ok) {
+        let spot = await res.json();
+        dispatch(remove(spot.id));
+    }
+}
+
 let initialState = {
     hostings: {
         state: {},
         activities: {},
-        allActivities: {},
     },
     states: {}
 };
@@ -164,7 +182,7 @@ const hostingReducer = (state = initialState, action) => {
             });
             return {
                 ...state,
-                hostings: { ...state.hostings, allActivities: listOfActivities }
+                hostings: { ...state.hostings, ...listOfActivities }
             }
         default:
             return state;
