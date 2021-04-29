@@ -14,11 +14,11 @@ function HostingPage() {
     const dispatch = useDispatch();
     const post = useSelector((state) => state.hosting[id]);
     const reviews = useSelector((state) => state.hosting.reviews);
-    const bookings = useSelector((state) => Object.values(state.bookings?.listOfBookings));
+    const bookings = useSelector((state) => Object.values(state.bookings.listOfBookings));
     const review = useSelector((state) => state.reviews);
     const sessionUser = useSelector(state => state.session.user);
 
-    console.log(review);
+    // console.log(bookings);
 
     // let hostingBooking;
     // bookings.forEach((booking) => {
@@ -39,7 +39,7 @@ function HostingPage() {
     // let startDay = Number(hostingBooking.start_date.slice(8, 10));
     // let endDay = Number(hostingBooking.end_date.slice(8, 10));
 
-    // console.log(startDay);
+    // // console.log(startDay);
 
     // const disabledDates = [
     //     new Date(startYear, startMonth, startDay),
@@ -89,14 +89,16 @@ function HostingPage() {
                     </div>
                 ))}
             </div>
-            {/* <Calendar tileDisabled={(date) => disabledDates.some(disabledDate =>
-                date.getFullYear() === disabledDate.getFullYear() &&
-                date.getMonth() === disabledDate.getMonth() &&
-                date.getDate() === disabledDate.getDate()
-            )} /> */}
+            <Calendar />
             <ReviewsForm />
         </div>
     )
 }
 
 export default HostingPage;
+
+// tileDisabled={(date) => disabledDates.some(disabledDate =>
+//     date.getFullYear() === disabledDate.getFullYear() &&
+//     date.getMonth() === disabledDate.getMonth() &&
+//     date.getDate() === disabledDate.getDate()
+// )}

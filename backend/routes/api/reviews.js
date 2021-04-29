@@ -17,23 +17,12 @@ router.get(
     })
 );
 
-// router.get(
-//     '/:id',
-//     asyncHandler(async (req, res, next) => {
-//         let id = parseInt(req.params.id, 10);
-//         let review = await Review.findByPk(id, {
-//             include: { model: User }
-//         });
-//         res.json({ review });
-//     })
-// );
-
 router.post(
     "/hostings/:id",
-    requireAuth,
+    // requireAuth,
     asyncHandler(async function (req, res) {
-        const { title, review, recommended } = req.body;
-        const newReview = await Review.create({ user_id, title, review, recommended });
+        const { title, review, recommended, hostings_id, user_id } = req.body;
+        const newReview = await Review.create({ title, review, recommended, hostings_id, user_id });
         console.log(newReview);
         const data = await Review.findByPk(newReview.id, { include: User });
         return res.json(data);
@@ -43,7 +32,7 @@ router.post(
 router.delete(
     '/:id',
     asyncHandler(async (req, res, next) => {
-        let id = parseInt(req.params.id, 10);
+        let { id } = req.params;
         let review = await Review.findByPk(id);
         await review.destroy();
         res.status(204).end();

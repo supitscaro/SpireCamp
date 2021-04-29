@@ -38,8 +38,8 @@ function HostingComponent() {
                         <div className="states-phrase">
                             <h2 className="title">Search For Best Spots in Colorado</h2>
                         </div>
-                        <div class="states-expo" onClick={handleSearch} id="6">
-                            <h2 className="states-title" >Explore</h2>
+                        <div class="states-expo">
+                            <h2 className="states-title" onClick={handleSearch} id="6">Explore</h2>
                         </div>
                     </div>
                 </span>
@@ -51,8 +51,8 @@ function HostingComponent() {
                         <div className="states-phrase">
                             <h2 className="title">Search For Best Spots in Georgia</h2>
                         </div>
-                        <div className="states-expo" onClick={handleSearch} id="10">
-                            <h2 className="states-title" >Explore</h2>
+                        <div className="states-expo">
+                            <h2 className="states-title" onClick={handleSearch} id="10">Explore</h2>
                         </div>
                     </div>
                 </span>
@@ -64,8 +64,8 @@ function HostingComponent() {
                         <div className="states-phrase">
                             <h2 className="title">Search For Best Spots in North Carolina</h2>
                         </div>
-                        <div className="states-expo" onClick={handleSearch} id="33" >
-                            <h2 className="states-title" >Explore</h2>
+                        <div className="states-expo" >
+                            <h2 className="states-title" onClick={handleSearch} id="33">Explore</h2>
                         </div>
                     </div>
                 </div>
