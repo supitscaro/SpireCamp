@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { stateHostings } from "../../store/hostings";
+import "./states.css";
 
 function StateHostings() {
     const { id } = useParams();
@@ -16,17 +17,14 @@ function StateHostings() {
     if (!states) return null;
 
     return (
-        <div>
-            state hosting page
+        <div className="card-component">
             {states.map((state) => (
-                <div>
-                    <div>{state.name}</div>
-                    <div>{state.description}</div>
-                    <div>{state.locationDetails}</div>
+                <div className="card">
+                    <div className="name">{state.name}</div>
+                    <div className="desc">{state.description}</div>
+                    <div className="deets">{state.locationDetails}</div>
                 </div>
             ))}
-            {/* <div>{state.locationDetails}</div> */}
-            {/* {console.log('test', state)} */}
         </div>
     )
 }

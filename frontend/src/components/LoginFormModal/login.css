@@ -1,0 +1,16 @@
+.form {
+    width: 500px;
+    min-height: 500px;
+}
+
+.outer-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.inputs-div {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+}

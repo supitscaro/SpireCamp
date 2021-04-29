@@ -1,23 +1,80 @@
 .filters {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+img {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
 }
 
 .states {
-    background-color: lightcoral;
-    width: 33%;
-    margin-right: 30px;
+    background-color: #B56576;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
 }
 
 .states-title {
-    font-size: 20px;
-    margin-right: 30px;
+    color: #ffffff;
+    padding: 0.8rem;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    font-weight: 400;
+    display: block;
+    width: 90%;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: transparent;
+    justify-content: center;
+    text-align: center;
+}
+
+.states-title:hover {
+    background-color: rgba(255, 255, 255, 0.12);
 }
 
 .activities {
-    background-color: lightcoral;
-    width: 33%;
-    margin-right: 30px;
+    background-color: #B56576;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+    padding-bottom: 18px;
+}
+
+.activities-title {
+    color: #ffffff;
+    padding: 0.8rem;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    font-weight: 400;
+    display: block;
+    width: 90%;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: transparent;
+    justify-content: center;
+    text-align: center;
+    margin-top: 14px;
 }
 
 .acc {
@@ -26,11 +83,28 @@
 }
 
 .hosting-post {
-    background-color: lightslategray;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .indiv-post {
-    padding-right: 30px;
+    background-color: #B56576;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+    padding-bottom: 18px;
+}
+
+.links {
+    text-decoration: none;
+    color: #333333;
 }
