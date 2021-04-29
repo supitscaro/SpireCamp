@@ -24,6 +24,22 @@ function HostingPage() {
 
     console.log(hostingBooking);
 
+    let startYear = Number(hostingBooking.start_date.slice(0, 4));
+    let endYear = Number(hostingBooking.end_date.slice(0, 4));
+
+    let startMonth = Number(hostingBooking.start_date.slice(5, 7));
+    let endMonth = Number(hostingBooking.end_date.slice(5, 7));
+
+    let startDay = Number(hostingBooking.start_date.slice(8, 10));
+    let endDay = Number(hostingBooking.end_date.slice(8, 10));
+
+    console.log(startDay);
+
+    const disabledDates = [
+        new Date(startYear, startMonth, startDay),
+        new Date(endYear, endMonth, endDay)
+    ]
+
     // activeStartDate => new Date(2017, 0, 1)
 
 
@@ -52,8 +68,11 @@ function HostingPage() {
                     </div>
                 ))}
             </div>
-            {/* {console.log('post[id]', reviews)} */}
-            <Calendar />
+            <Calendar tileDisabled={(date) => disabledDates.some(disabledDate =>
+                date.getFullYear() === disabledDate.getFullYear() &&
+                date.getMonth() === disabledDate.getMonth() &&
+                date.getDate() === disabledDate.getDate()
+            )} />
         </div>
     )
 }
