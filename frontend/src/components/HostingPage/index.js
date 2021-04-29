@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { oneHosting } from "../../store/hostings";
 import { getBookings } from "../../store/bookings";
+import { deleteReview } from "../../store/reviews";
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import './hosting.css';
@@ -14,6 +15,10 @@ function HostingPage() {
     const post = useSelector((state) => state.hosting[id]);
     const reviews = useSelector((state) => state.hosting.reviews);
     const bookings = useSelector((state) => Object.values(state.bookings?.listOfBookings));
+    const review = useSelector((state) => state.reviews);
+    const sessionUser = useSelector(state => state.session.user);
+
+    console.log(review);
 
     // let hostingBooking;
     // bookings.forEach((booking) => {
@@ -51,6 +56,20 @@ function HostingPage() {
 
     if (!post) return null;
 
+    const deleteRev = (e) => {
+        e.preventDefault();
+        dispatch(deleteReview());
+    }
+
+    let deleteBtn;
+
+    if (sessionUser) {
+        deleteBtn = (
+            <button onClick={deleteRev}>Delete Review!</button>
+        )
+    }
+
+
     return (
         <div className="hosting-component">
             <div className="host">
@@ -66,6 +85,7 @@ function HostingPage() {
                         <div>{review.review}</div>
                         <div>{review.recommended ? '💜' : '🤚🏼'}</div>
                         <div>{review.User.username}</div>
+                        {deleteBtn}
                     </div>
                 ))}
             </div>

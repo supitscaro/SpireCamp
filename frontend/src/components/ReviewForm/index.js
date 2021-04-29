@@ -1,12 +1,32 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { deleteReview } from "../../store/reviews";
+import { deleteReview, addReviews } from "../../store/reviews";
 
 function ReviewsForm() {
+    const sessionUser = useSelector(state => state.session.user);
+
+    const dispatch = useDispatch();
+    const reviewsList = useSelector((state) => state.reviews);
+
     const [title, setTitle] = useState('');
-    const [review, setReview] = useState('');
+    const [newReview, setNewReview] = useState('');
     const [recc, setRecc] = useState(true);
+
+    const addReview = async (e) => {
+        e.preventDefault();
+
+        let review = {
+            title: title,
+            review: newReview,
+            user_id: sessionUser.id,
+            recommended: recc
+        };
+
+        console.log(review);
+
+        dispatch(addReviews(review));
+    }
 
     return (
         <form className="" >
@@ -24,11 +44,11 @@ function ReviewsForm() {
                 </div>
                 <div className="">
                     <label>
-                        Password
+                        Review
                     <input
                             type="text"
-                            value={review}
-                            onChange={(e) => setReview(e.target.value)}
+                            value={newReview}
+                            onChange={(e) => setNewReview(e.target.value)}
                             required
                         />
                     </label>
@@ -55,7 +75,7 @@ function ReviewsForm() {
                         />
                     </label>
                 </div>
-                <button type="submit">Leave a review</button>
+                <button type="submit" onSubmit={addReview}>Leave a review</button>
             </div>
         </form>
     )
