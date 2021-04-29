@@ -5,7 +5,9 @@ module.exports = (sequelize, DataTypes) => {
     description: DataTypes.STRING,
     locationDetails: DataTypes.STRING,
     states_id: DataTypes.INTEGER,
-    user_id: DataTypes.INTEGER
+    user_id: DataTypes.INTEGER,
+    cost: DataTypes.INTEGER,
+    photoUrl: DataTypes.STRING,
   }, {});
   Hosting.associate = function (models) {
     // associations can be defined here

@@ -20,6 +20,7 @@ module.exports = {
         states_id: 47,
         user_id: 4,
         cost: 80,
+        photoUrl: 'https://images.unsplash.com/photo-1517792844039-e52afb564132?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=929&q=80',
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -30,6 +31,7 @@ module.exports = {
         states_id: 43,
         user_id: 2,
         cost: 50,
+        photoUrl: 'https://images.unsplash.com/photo-1601919051950-bb9f3ffb3fee?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80',
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -40,6 +42,7 @@ module.exports = {
         states_id: 33,
         user_id: 6,
         cost: 85,
+        photoUrl: '',
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -50,26 +53,29 @@ module.exports = {
         states_id: 6,
         user_id: 1,
         cost: 35,
+        photoUrl: 'https://images.unsplash.com/photo-1581636923345-c49610a4e0db?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80',
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         name: 'Stone Mill Camping', // 5
-        description: 'Perfect place for those seeking to completely disappear for a few days. Cell phone coverage is poor and there is no internet. There are hiking trails and a lake for fishing.',
-        locationDetails: 'Located in North Carolina',
+        description: 'This location provides a wonderful spot for those wanting some quiet time without being completely secluded. Tents are made available and food is also provided.',
+        locationDetails: 'Located in Georgia',
         states_id: 10,
         user_id: 5,
         cost: 45,
+        photoUrl: 'https://images.unsplash.com/photo-1605289609008-188320c69892?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1275&q=80',
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         name: 'Camping By The River', // 6
         description: 'Perfect place for those seeking to completely disappear for a few days. Cell phone coverage is poor and there is no internet. There are hiking trails and a lake for fishing.',
-        locationDetails: 'Located in North Carolina',
+        locationDetails: 'Located in Washington',
         states_id: 47,
         user_id: 3,
         cost: 70,
+        photoUrl: 'https://images.unsplash.com/photo-1576176539998-0237d1ac6a85?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=934&q=80',
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -80,6 +86,7 @@ module.exports = {
         states_id: 6,
         user_id: 8,
         cost: 35,
+        photoUrl: 'https://images.unsplash.com/photo-1574977622598-6c5c0fa4c0ac?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80',
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -90,26 +97,29 @@ module.exports = {
         states_id: 6,
         user_id: 9,
         cost: 30,
+        photoUrl: 'https://images.unsplash.com/photo-1525113990976-399835c43838?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1300&q=80',
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        name: 'Stone Mill Camping', // 9
-        description: 'Perfect place for those seeking to completely disappear for a few days. Cell phone coverage is poor and there is no internet. There are hiking trails and a lake for fishing.',
-        locationDetails: 'Located in North Carolina',
+        name: 'Watchman Campground', // 9
+        description: 'There are sites to for RVers, walk-in lovers, and first-come, first-served last-minute planners (you know who you are).',
+        locationDetails: 'Located in Georgia',
         states_id: 10,
         user_id: 10,
         cost: 45,
+        photoUrl: 'https://images.unsplash.com/photo-1516939884455-1445c8652f83?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80',
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        name: 'Stone Mill Camping', // 10
-        description: 'Perfect place for those seeking to completely disappear for a few days. Cell phone coverage is poor and there is no internet. There are hiking trails and a lake for fishing.',
-        locationDetails: 'Located in North Carolina',
-        states_id: 10,
+        name: 'Aspenglen Campground', // 10
+        description: 'Move over elk, you know you gotta share this space with campers too. Aspen Glen Campground in Rocky Mountain National Park is a popular hangout for elk, especially in the fall. You can catch them grazing in the open meadows nearby, or just a few feet from your tent.',
+        locationDetails: 'Located in Colorado',
+        states_id: 6,
         user_id: 7,
         cost: 45,
+        photoUrl: 'https://images.unsplash.com/photo-1565806946566-a16cc0092a73?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1339&q=80',
         createdAt: new Date(),
         updatedAt: new Date()
       }
