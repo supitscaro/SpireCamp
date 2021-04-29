@@ -25,7 +25,7 @@ module.exports = {
         start_date: "2021-05-12",
         end_date: "2021-05-14",
         user_id: 7,
-        hostings_id: 5,
+        hostings_id: 4,
         createdAt: new Date(),
         updatedAt: new Date()
       },
