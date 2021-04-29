@@ -62,6 +62,8 @@ function HostingComponent() {
                 {hostingLists.map((host => (
                     <div className="indiv-post" key={host.name}>
                         <Link className="links" to={`/postings/${host.id}`}>
+                            {console.log(host.photoUrl)}
+                            {/* <img src={require(`./${host.photoUrl}`)} alt="" /> */}
                             <div className="post-title">{host.name}</div>
                             <div className="post-desc">{host.description}</div>
                             <div className="post-location">{host.locationDetails}</div>
