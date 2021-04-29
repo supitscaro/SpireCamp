@@ -12,8 +12,20 @@ function HostingPage() {
     const dispatch = useDispatch();
     const post = useSelector((state) => state.hosting[id]);
     const reviews = useSelector((state) => state.hosting.reviews);
-    const bookings = useSelector((state) => state.bookings.listOfBookings[id]);
-    console.log('bookings', bookings)
+    const bookings = useSelector((state) => Object.values(state.bookings?.listOfBookings));
+
+    let hostingBooking;
+    bookings.forEach((booking) => {
+        if (booking.hostings_id === post.id) {
+            hostingBooking = booking;
+        }
+        return hostingBooking;
+    });
+
+    console.log(hostingBooking);
+
+    // activeStartDate => new Date(2017, 0, 1)
+
 
     useEffect(() => {
         dispatch(getBookings(id));

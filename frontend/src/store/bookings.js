@@ -26,12 +26,12 @@ const bookingReducer = (state = initialState, action) => {
         case GET_BOOKINGS:
             let allBookings = {};
             action.list.forEach((booking) => {
-                console.log('booking', booking);
+                // console.log('booking', booking);
                 allBookings[booking.id] = booking;
             });
             return {
                 ...state,
-                listOfBookings: { ...allBookings }
+                listOfBookings: { ...state.listOfBookings, ...allBookings }
             };
         default:
             return state;
