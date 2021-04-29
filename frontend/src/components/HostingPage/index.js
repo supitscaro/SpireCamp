@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import { oneHosting } from "../../store/hostings";
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
-
+import './hosting.css';
 
 function HostingPage() {
     const { id } = useParams();
@@ -19,11 +19,14 @@ function HostingPage() {
     if (!post) return null;
 
     return (
-        <div>
-            <div>{post.name}</div>
-            <div>{post.description}</div>
-            <div>{post.locationDetails}</div>
-            <div>
+        <div className="hosting-component">
+            <div className="host">
+                <div className="post-title">{post.name}</div>
+                <div className="post-desc">{post.description}</div>
+                <div className="post-deets">{post.locationDetails}</div>
+                <div>{post.User.username}</div>
+            </div>
+            <div className="reviews">
                 {reviews.map((review) => (
                     <div>
                         <div>{review.title}</div>

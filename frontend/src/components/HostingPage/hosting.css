@@ -1,0 +1,33 @@
+.hosting-component {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.host {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+.post-deets {
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.post-title {
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.desc {
+    line-height: 1.5px;
+    /* margin: 10px; */
+}
