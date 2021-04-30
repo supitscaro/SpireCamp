@@ -25,5 +25,14 @@ router.post(
     })
 );
 
+router.delete(
+    '/:id',
+    asyncHandler(async (req, res, next) => {
+        let { id } = req.params;
+        let booking = await Review.findByPk(id);
+        await booking.destroy();
+        res.status(204).end();
+    })
+);
 
 module.exports = router;
