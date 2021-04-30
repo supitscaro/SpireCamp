@@ -124,6 +124,97 @@ module.exports = {
         hashedPassword: bcrypt.hashSync('password15'),
         // profilePhoto: null,
       },
+      {
+        username: 'BobbieJenkins', // 18
+        // name: 'Harry Phillips',
+        email: faker.internet.email(),
+        hashedPassword: bcrypt.hashSync('password16'),
+        // profilePhoto: null,
+      },
+      {
+        username: 'AliciaFigueroa', // 19
+        // name: 'Harry Phillips',
+        email: faker.internet.email(),
+        hashedPassword: bcrypt.hashSync('password17'),
+        // profilePhoto: null,
+      },
+      {
+        username: 'RosemarieMack', // 20
+        // name: 'Harry Phillips',
+        email: faker.internet.email(),
+        hashedPassword: bcrypt.hashSync('password18'),
+        // profilePhoto: null,
+      },
+      {
+        username: 'HectorZimmerman', // 21
+        // name: 'Harry Phillips',
+        email: faker.internet.email(),
+        hashedPassword: bcrypt.hashSync('password19'),
+        // profilePhoto: null,
+      },
+      {
+        username: 'RogerRice', // 22
+        // name: 'Harry Phillips',
+        email: faker.internet.email(),
+        hashedPassword: bcrypt.hashSync('password20'),
+        // profilePhoto: null,
+      },
+      {
+        username: 'OrvilleDawson', // 23
+        // name: 'Harry Phillips',
+        email: faker.internet.email(),
+        hashedPassword: bcrypt.hashSync('password21'),
+        // profilePhoto: null,
+      },
+      {
+        username: 'DanaHall', // 24
+        // name: 'Harry Phillips',
+        email: faker.internet.email(),
+        hashedPassword: bcrypt.hashSync('password22'),
+        // profilePhoto: null,
+      },
+      {
+        username: 'JillWilliams', // 25
+        // name: 'Harry Phillips',
+        email: faker.internet.email(),
+        hashedPassword: bcrypt.hashSync('password23'),
+        // profilePhoto: null,
+      },
+      {
+        username: 'AndresButler', // 26
+        // name: 'Harry Phillips',
+        email: faker.internet.email(),
+        hashedPassword: bcrypt.hashSync('password24'),
+        // profilePhoto: null,
+      },
+      {
+        username: 'RosalieWheeler', // 27
+        // name: 'Harry Phillips',
+        email: faker.internet.email(),
+        hashedPassword: bcrypt.hashSync('password24'),
+        // profilePhoto: null,
+      },
+      {
+        username: 'ShelleyDay', // 29
+        // name: 'Harry Phillips',
+        email: faker.internet.email(),
+        hashedPassword: bcrypt.hashSync('password25'),
+        // profilePhoto: null,
+      },
+      {
+        username: 'SeanFrancis', // 29
+        // name: 'Harry Phillips',
+        email: faker.internet.email(),
+        hashedPassword: bcrypt.hashSync('password26'),
+        // profilePhoto: null,
+      },
+      {
+        username: 'KentCurtis', // 30
+        // name: 'Harry Phillips',
+        email: faker.internet.email(),
+        hashedPassword: bcrypt.hashSync('password27'),
+        // profilePhoto: null,
+      },
     ], {});
   },
 
