@@ -136,7 +136,7 @@ module.exports = {
       },
       {
         name: 'Woodland Valley', // 12
-        description: 'There’s a bit of magic here, along with some of the state’s best hiking trails. Shoulder your pack and hit the trails for the day, and the campground will welcome you home with a hot shower, private campsites, and a babbling stream to soothe your weary toes.',
+        description: 'There’s a bit of magic here. Hit the trails for the day, and the campground will welcome you home with a hot shower, private campsites, and a babbling stream to soothe your weary toes.',
         locationDetails: 'Located in New York',
         states_id: 32,
         user_id: 12,
