@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { getBookings } from "../../store/bookings";
 import DayPicker from 'react-day-picker';
+import BookingForm from "../HostingComponent/BookingForm";
+import "react-datepicker/dist/react-datepicker.css";
 
 function CalendarComponent() {
     const dispatch = useDispatch();
@@ -47,6 +49,7 @@ function CalendarComponent() {
     return (
         <>
             <DayPicker disabledDays={disabledDates} />
+            <BookingForm />
         </>
     )
 }

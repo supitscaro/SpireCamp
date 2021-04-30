@@ -15,7 +15,7 @@ function SpotsComponent() {
     return (
         <div className="hosting-post">
             {hostingLists.map((host => (
-                <div className="indiv-post" key={host.name}>
+                <div className="indiv-post" key={host.id}>
                     <Link className="links" to={`/postings/${host.id}`}>
                         <div className="spots-card">
                             <img className="spots-img" src={host.photoUrl} alt="" />
