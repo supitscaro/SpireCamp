@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { deleteReview, addReviews } from "../../store/reviews";
+import { addReviews } from "../../store/reviews";
 
 function ReviewsForm() {
+    const { id } = useParams();
     const sessionUser = useSelector(state => state.session.user);
 
     const dispatch = useDispatch();
-    const reviewsList = useSelector((state) => state.reviews);
 
     const [title, setTitle] = useState('');
     const [newReview, setNewReview] = useState('');
@@ -19,6 +19,7 @@ function ReviewsForm() {
         let review = {
             title: title,
             review: newReview,
+            hostings_id: id,
             user_id: sessionUser.id,
             recommended: recc
         };
@@ -29,7 +30,7 @@ function ReviewsForm() {
     }
 
     return (
-        <form className="" >
+        <form className="" onSubmit={addReview}>
             <div className="">
                 <div className="">
                     <label>
@@ -75,7 +76,7 @@ function ReviewsForm() {
                         />
                     </label>
                 </div>
-                <button type="submit" onSubmit={addReview}>Leave a review</button>
+                <button type="submit">Leave a review</button>
             </div>
         </form>
     )

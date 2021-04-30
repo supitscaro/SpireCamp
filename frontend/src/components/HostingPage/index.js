@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { oneHosting } from "../../store/hostings";
 import { getBookings } from "../../store/bookings";
+import { getReviews } from "../../store/reviews";
 import 'react-day-picker/lib/style.css';
 import './hosting.css';
 import ReviewsForm from "../ReviewForm";
@@ -13,12 +14,13 @@ function HostingPage() {
     const { id } = useParams();
     const dispatch = useDispatch();
     const post = useSelector((state) => state.hosting[id]);
-    const reviews = useSelector((state) => state.hosting.reviews);
+    const reviews = useSelector((state) => Object.values(state.reviews));
     const sessionUser = useSelector(state => state.session.user);
 
     useEffect(() => {
         dispatch(getBookings(id));
         dispatch(oneHosting(id));
+        dispatch(getReviews(id));
     }, [dispatch, id]);
 
     if (!post) return null;
@@ -39,9 +41,9 @@ function HostingPage() {
                         <div>{review.title}</div>
                         <div>{review.review}</div>
                         <div>{review.recommended ? '💜' : '🤚🏼'}</div>
-                        <div>{review.User.username}</div>
+                        <div>{review.username}</div>
                         { sessionUser.id === review.user_id &&
-                            <DeleteBtn />
+                            <DeleteBtn props={{ id, reviewId: review.id }} />
                         }
                     </div>
                 ))}

@@ -1,5 +1,6 @@
 import { csrfFetch } from './csrf';
 
+const POSTS_REVIEWS = "hostings/POSTS_REVIEWS"
 const DELETE_REVIEW = "/hostings/DELETE_REVIEW";
 const ADD_REVIEW = "hostings/ADD_REVIEW";
 
@@ -17,18 +18,27 @@ const addReview = (review) => {
     }
 };
 
-export const deleteReview = (id) => async (dispatch) => {
-    const res = await csrfFetch(`/api/reviews/${id}`, {
+const getAllReviews = (reviews) => {
+    return {
+        type: POSTS_REVIEWS,
+        reviews
+    }
+};
+
+export const deleteReview = (data) => async (dispatch) => {
+    console.log('data', data);
+    const res = await csrfFetch(`/api/reviews/${data.reviewId}`, {
         method: 'DELETE',
     });
     if (res.ok) {
-        let deletedReview = await res.json();
-        dispatch(removeReview(deletedReview));
+        // let deletedReview = await res.json();
+        dispatch(removeReview(data.reviewId));
     }
 };
 
 export const addReviews = (data) => async (dispatch) => {
-    const res = await fetch(`/api/reviews/hostings/${data.id}`, {
+    // console.log('data', data);
+    const res = await csrfFetch(`/api/reviews/hostings/${data.hostings_id}`, {
         method: 'post',
         headers: {
             'Content-Type': 'application/json',
@@ -43,7 +53,15 @@ export const addReviews = (data) => async (dispatch) => {
         dispatch(addReview(item));
         // return item;
     }
-}
+};
+
+export const getReviews = (id) => async (dispatch) => {
+    const res = await csrfFetch(`/api/reviews/hostings/${id}`);
+    if (res.ok) {
+        let reviews = await res.json();
+        dispatch(getAllReviews(reviews));
+    }
+};
 
 let initialState = {
     reviews: {},
@@ -54,12 +72,17 @@ const reviewReducer = (state = initialState, action) => {
     switch (action.type) {
         case DELETE_REVIEW:
             newStates = { ...state };
-            delete newStates[action.review.id];
+            delete newStates[action.review];
             return newStates;
         case ADD_REVIEW:
             const newState = { ...state }
             newState[action.review.id] = action.review
             return newState;
+        case POSTS_REVIEWS:
+            action.reviews.forEach((review) => {
+                newStates[review.id] = review;
+            });
+            return newStates;
         default:
             return state;
     }

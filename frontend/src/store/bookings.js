@@ -26,7 +26,8 @@ export const getBookings = () => async (dispatch) => {
 };
 
 export const createBooking = (data) => async (dispatch) => {
-    const res = await fetch(`/api/bookings/hostings/${data.id}`, {
+    console.log('data', data);
+    const res = await fetch(`/api/bookings/hostings/${data.hostings_id}`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -36,6 +37,7 @@ export const createBooking = (data) => async (dispatch) => {
 
     if (res.ok) {
         const booking = await res.json();
+        console.log('booking', booking);
         dispatch(addBooking(booking));
     }
 };
@@ -58,7 +60,8 @@ const bookingReducer = (state = initialState, action) => {
             };
         case CREATE_BOOKING:
             const newState = { ...state };
-            newState[action.booking.id] = action.booking;
+            console.log('bookings reducer', action.booking);
+            newState.listOfBookings[action.booking.id] = action.booking;
             return newState;
         default:
             return state;

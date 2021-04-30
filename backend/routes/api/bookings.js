@@ -18,10 +18,11 @@ router.get(
 router.post(
     '/hostings/:id',
     asyncHandler(async (req, res, next) => {
+        const { id } = req.params;
         const { start_date, end_date, hostings_id, user_id } = req.body;
-        const newBooking = await Booking.create({ start_date, end_date, hostings_id, user_id });
-        const booking = await Booking.findByPk(newBooking.id, { include: [User, Hosting] });
-        return res.json(booking);
+        const newBooking = await Booking.create({ start_date, end_date, hostings_id: id, user_id });
+        // const booking = await Booking.findByPk(newBooking.id, { include: [User, Hosting] });
+        return res.json(newBooking);
     })
 );
 

@@ -3,7 +3,7 @@ const router = express.Router();
 const asyncHandler = require('express-async-handler');
 const { requireAuth } = require('../../utils/auth');
 
-const { Review, User } = require('../../db/models');
+const { Review, User, Hosting } = require('../../db/models');
 
 
 // get all reviews
@@ -17,13 +17,25 @@ router.get(
     })
 );
 
+router.get(
+    '/hostings/:id',
+    asyncHandler(async (req, res, next) => {
+        let reviews = await Review.findAll({
+            where: {
+                hostings_id: req.params.id
+            }
+        });
+        res.json(reviews);
+    })
+);
+
 router.post(
     "/hostings/:id",
-    requireAuth,
+    // requireAuth,
     asyncHandler(async function (req, res) {
+        const { id } = req.params;
         const { title, review, recommended, hostings_id, user_id } = req.body;
-        const newReview = await Review.create({ title, review, recommended, hostings_id, user_id });
-        console.log(newReview);
+        const newReview = await Review.create({ title, review, recommended, hostings_id: id, user_id });
         const data = await Review.findByPk(newReview.id, { include: User });
         return res.json(data);
     })
@@ -33,8 +45,11 @@ router.delete(
     '/:id',
     asyncHandler(async (req, res, next) => {
         let { id } = req.params;
-        let review = await Review.findByPk(id);
-        await review.destroy();
+        let review = await Review.destroy({
+            where: {
+                id
+            }
+        });
         res.status(204).end();
     })
 )

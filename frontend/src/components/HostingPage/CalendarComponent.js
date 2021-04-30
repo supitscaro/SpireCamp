@@ -29,8 +29,8 @@ function CalendarComponent() {
             let startYear = Number(currentDate.start_date.slice(0, 4));
             let endYear = Number(currentDate.end_date.slice(0, 4));
 
-            let startMonth = Number(currentDate.start_date.slice(5, 7));
-            let endMonth = Number(currentDate.end_date.slice(5, 7));
+            let startMonth = Number(currentDate.start_date.slice(5, 7)) - 1;
+            let endMonth = Number(currentDate.end_date.slice(5, 7)) - 1;
 
             let startDay = Number(currentDate.start_date.slice(8, 10));
             let endDay = Number(currentDate.end_date.slice(8, 10));
@@ -40,6 +40,7 @@ function CalendarComponent() {
             const booking = { after, before };
             disabledDates.push(booking);
         }
+        console.log('disableddates', disabledDates);
     }
 
     useEffect(() => {
@@ -49,7 +50,7 @@ function CalendarComponent() {
     return (
         <>
             <DayPicker disabledDays={disabledDates} />
-            <BookingForm />
+            <BookingForm props={post.id} />
         </>
     )
 }
