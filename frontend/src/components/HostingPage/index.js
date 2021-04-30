@@ -1,53 +1,20 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { oneHosting } from "../../store/hostings";
 import { getBookings } from "../../store/bookings";
-import { deleteReview } from "../../store/reviews";
-import DayPicker from 'react-day-picker';
 import 'react-day-picker/lib/style.css';
 import './hosting.css';
 import ReviewsForm from "../ReviewForm";
 import DeleteBtn from "./DeleteBtn";
+import CalendarComponent from "./CalendarComponent";
 
 function HostingPage() {
     const { id } = useParams();
     const dispatch = useDispatch();
     const post = useSelector((state) => state.hosting[id]);
     const reviews = useSelector((state) => state.hosting.reviews);
-    const bookings = useSelector((state) => Object.values(state.bookings.listOfBookings));
     const sessionUser = useSelector(state => state.session.user);
-
-    let hostingBooking;
-
-    if (bookings.length > 0 && post) {
-        hostingBooking = bookings.filter((booking) => {
-            if (booking.hostings_id === post.id) {
-                return booking;
-            }
-        });
-    }
-
-    let disabledDates = [];
-
-    if (hostingBooking) {
-        for (let i = 0; i < hostingBooking.length; i++) {
-            let currentDate = hostingBooking[i];
-            let startYear = Number(currentDate.start_date.slice(0, 4));
-            let endYear = Number(currentDate.end_date.slice(0, 4));
-
-            let startMonth = Number(currentDate.start_date.slice(5, 7));
-            let endMonth = Number(currentDate.end_date.slice(5, 7));
-
-            let startDay = Number(currentDate.start_date.slice(8, 10));
-            let endDay = Number(currentDate.end_date.slice(8, 10));
-            const after = new Date(startYear, startMonth, startDay);
-            const before = new Date(endYear, endMonth, endDay);
-
-            const booking = { after, before };
-            disabledDates.push(booking);
-        }
-    }
 
     useEffect(() => {
         dispatch(getBookings(id));
@@ -79,7 +46,7 @@ function HostingPage() {
                     </div>
                 ))}
             </div>
-            <DayPicker disabledDays={disabledDates} />
+            <CalendarComponent />
             <ReviewsForm />
         </div>
     )
