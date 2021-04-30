@@ -1,6 +1,7 @@
 import { csrfFetch } from './csrf';
 
 const GET_BOOKINGS = "hostings/GET_BOOKINGS";
+const CREATE_BOOKING = "hostings/CREATE_BOOKING";
 
 const findBookings = (list) => {
     return {
@@ -9,11 +10,33 @@ const findBookings = (list) => {
     }
 };
 
+const addBooking = (booking) => {
+    return {
+        type: CREATE_BOOKING,
+        booking
+    }
+};
+
 export const getBookings = () => async (dispatch) => {
     const res = await csrfFetch('/api/bookings');
     if (res.ok) {
         let bookings = await res.json();
         dispatch(findBookings(bookings));
+    }
+};
+
+export const createBooking = (data) => async (dispatch) => {
+    const res = await fetch(`/api/bookings/hostings/${data.id}`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+    });
+
+    if (res.ok) {
+        const booking = await res.json();
+        dispatch(addBooking(booking));
     }
 };
 
@@ -33,6 +56,10 @@ const bookingReducer = (state = initialState, action) => {
                 ...state,
                 listOfBookings: { ...state.listOfBookings, ...allBookings }
             };
+        case CREATE_BOOKING:
+            const newState = { ...state };
+            newState[action.booking.id] = action.booking;
+            return newState;
         default:
             return state;
     }
