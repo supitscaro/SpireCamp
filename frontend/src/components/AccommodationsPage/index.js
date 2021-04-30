@@ -19,8 +19,10 @@ function AccommodationsHostings() {
         <div>
             {accommodations.map((accommodation) => (
                 <div>
-                    {/* {console.log(activity)} */}
-                    <div className={accommodation.icon}>{accommodation.name}</div>
+                    <div>
+                        <i className={accommodation.icon}></i>
+                        {accommodation.name}
+                    </div>
                     <div>{accommodation.description}</div>
                 </div>
             ))}
