@@ -10,6 +10,7 @@ import Hiking from "../../images/Hiking.jpeg";
 import Running from "../../images/Running.jpeg";
 import Biking from "../../images/Biking.jpeg";
 import StatesComponent from './StatesComponent';
+import ActivitiesComponent from './ActivitiesComponent';
 
 function HostingComponent() {
     const dispatch = useDispatch();
@@ -32,6 +33,7 @@ function HostingComponent() {
         <div>
             <div class="filters">
                 <StatesComponent />
+                <ActivitiesComponent />
                 <div className="activities-card">
                     <div className="activities">
                         <img src={Hiking} alt="" />
