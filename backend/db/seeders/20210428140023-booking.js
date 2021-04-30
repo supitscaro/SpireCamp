@@ -29,6 +29,38 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date()
       },
+      {
+        start_date: "2021-05-02",
+        end_date: "2021-05-10",
+        user_id: 2,
+        hostings_id: 4,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        start_date: "2021-05-28",
+        end_date: "2021-06-05",
+        user_id: 2,
+        hostings_id: 1,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        start_date: "2021-05-12",
+        end_date: "2021-05-14",
+        user_id: 9,
+        hostings_id: 10,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        start_date: "2021-04-12",
+        end_date: "2021-04-20",
+        user_id: 2,
+        hostings_id: 4,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
     ], {});
   },
 

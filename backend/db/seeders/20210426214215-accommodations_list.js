@@ -199,6 +199,222 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date()
       },
+      {
+        hostings_id: 11,
+        accommodations_id: 1,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        hostings_id: 11,
+        accommodations_id: 4,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        hostings_id: 11,
+        accommodations_id: 5,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        hostings_id: 12,
+        accommodations_id: 4,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        hostings_id: 12,
+        accommodations_id: 1,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        hostings_id: 12,
+        accommodations_id: 4,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        hostings_id: 13,
+        accommodations_id: 1,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        hostings_id: 13,
+        accommodations_id: 5,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        hostings_id: 13,
+        accommodations_id: 3,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        hostings_id: 14,
+        accommodations_id: 1,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        hostings_id: 14,
+        accommodations_id: 5,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        hostings_id: 14,
+        accommodations_id: 6,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        hostings_id: 15,
+        accommodations_id: 1,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        hostings_id: 15,
+        accommodations_id: 6,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        hostings_id: 15,
+        accommodations_id: 3,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        hostings_id: 16,
+        accommodations_id: 1,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        hostings_id: 16,
+        accommodations_id: 3,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        hostings_id: 16,
+        accommodations_id: 6,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        hostings_id: 17,
+        accommodations_id: 2,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        hostings_id: 17,
+        accommodations_id: 4,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        hostings_id: 17,
+        accommodations_id: 6,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        hostings_id: 18,
+        accommodations_id: 2,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        hostings_id: 18,
+        accommodations_id: 5,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        hostings_id: 18,
+        accommodations_id: 3,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        hostings_id: 19,
+        accommodations_id: 1,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        hostings_id: 19,
+        accommodations_id: 4,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        hostings_id: 19,
+        accommodations_id: 5,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        hostings_id: 20,
+        accommodations_id: 4,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        hostings_id: 20,
+        accommodations_id: 5,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        hostings_id: 20,
+        accommodations_id: 2,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        hostings_id: 21,
+        accommodations_id: 4,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        hostings_id: 21,
+        accommodations_id: 2,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        hostings_id: 21,
+        accommodations_id: 6,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        hostings_id: 22,
+        accommodations_id: 4,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        hostings_id: 22,
+        accommodations_id: 1,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        hostings_id: 22,
+        accommodations_id: 6,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
     ], {});
   },
 
