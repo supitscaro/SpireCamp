@@ -111,30 +111,3 @@ img {
     background-color: lightcoral;
     width: 33%;
 }
-
-.hosting-post {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.indiv-post {
-    background-color: #B56576;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 30%;
-    border-radius: 10px;
-    margin: 10px;
-    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
-    padding-bottom: 18px;
-}
-
-.links {
-    text-decoration: none;
-    color: #333333;
-}

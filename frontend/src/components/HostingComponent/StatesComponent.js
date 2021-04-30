@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import { Link, useHistory } from "react-router-dom";
+import React from 'react';
+import { useHistory } from "react-router-dom";
 import Colorado from "../../images/Colorado.jpeg";
 import Georgia from "../../images/Georgia.jpeg";
 import NorthC from "../../images/NorthC.jpeg";
