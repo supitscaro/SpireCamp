@@ -2,7 +2,7 @@ const express = require('express');
 const asyncHandler = require('express-async-handler');
 const { check } = require('express-validator');
 
-const { Booking } = require('../../db/models');
+const { Booking, User, Hosting } = require('../../db/models');
 
 const router = express.Router();
 
@@ -12,6 +12,16 @@ router.get(
         let bookings = await Booking.findAll({ attributes: ["id", "start_date", "end_date", "user_id", "hostings_id", "createdAt"] });
         // console.log('backend bookings', bookings);
         return res.json(bookings);
+    })
+);
+
+router.post(
+    '/hostings/:id',
+    asyncHandler(async (req, res, next) => {
+        const { start_date, end_date, hostings_id, user_id } = req.body;
+        const newBooking = await Booking.create({ start_date, end_date, hostings_id, user_id });
+        const booking = await Booking.findByPk(newBooking.id, { include: [User, Hosting] });
+        return res.json(booking);
     })
 );
 
