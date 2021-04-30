@@ -1,13 +1,14 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { oneHosting } from "../../store/hostings";
 import { getBookings } from "../../store/bookings";
 import { deleteReview } from "../../store/reviews";
-import Calendar from 'react-calendar';
-import 'react-calendar/dist/Calendar.css';
+import DayPicker from 'react-day-picker';
+import 'react-day-picker/lib/style.css';
 import './hosting.css';
 import ReviewsForm from "../ReviewForm";
+import DeleteBtn from "./DeleteBtn";
 
 function HostingPage() {
     const { id } = useParams();
@@ -18,36 +19,38 @@ function HostingPage() {
     const review = useSelector((state) => state.reviews);
     const sessionUser = useSelector(state => state.session.user);
 
-    // console.log(bookings);
+    // const [deletedReview, setDeletedReview] = useState('');
 
-    // let hostingBooking;
-    // bookings.forEach((booking) => {
-    //     if (booking.hostings_id === post.id) {
-    //         hostingBooking = booking;
-    //     }
-    //     return hostingBooking;
-    // });
+    let hostingBooking;
 
-    // console.log(hostingBooking);
+    if (bookings.length > 0 && post) {
+        hostingBooking = bookings.filter((booking) => {
+            if (booking.hostings_id === post.id) {
+                return booking;
+            }
+        });
+    }
 
-    // let startYear = Number(hostingBooking.start_date.slice(0, 4));
-    // let endYear = Number(hostingBooking.end_date.slice(0, 4));
+    let disabledDates = [];
 
-    // let startMonth = Number(hostingBooking.start_date.slice(5, 7));
-    // let endMonth = Number(hostingBooking.end_date.slice(5, 7));
+    if (hostingBooking) {
+        for (let i = 0; i < hostingBooking.length; i++) {
+            let currentDate = hostingBooking[i];
+            let startYear = Number(currentDate.start_date.slice(0, 4));
+            let endYear = Number(currentDate.end_date.slice(0, 4));
 
-    // let startDay = Number(hostingBooking.start_date.slice(8, 10));
-    // let endDay = Number(hostingBooking.end_date.slice(8, 10));
+            let startMonth = Number(currentDate.start_date.slice(5, 7));
+            let endMonth = Number(currentDate.end_date.slice(5, 7));
 
-    // // console.log(startDay);
+            let startDay = Number(currentDate.start_date.slice(8, 10));
+            let endDay = Number(currentDate.end_date.slice(8, 10));
+            const after = new Date(startYear, startMonth, startDay);
+            const before = new Date(endYear, endMonth, endDay);
 
-    // const disabledDates = [
-    //     new Date(startYear, startMonth, startDay),
-    //     new Date(endYear, endMonth, endDay)
-    // ]
-
-    // activeStartDate => new Date(2017, 0, 1)
-
+            const booking = { after, before };
+            disabledDates.push(booking);
+        }
+    }
 
     useEffect(() => {
         dispatch(getBookings(id));
@@ -56,19 +59,20 @@ function HostingPage() {
 
     if (!post) return null;
 
-    const deleteRev = (e) => {
-        e.preventDefault();
-        dispatch(deleteReview());
-    }
+    // const deleteRev = (e) => {
+    //     e.preventDefault();
+    //     dispatch(deleteReview(deletedReview));
+    // }
 
-    let deleteBtn;
+    // let deleteBtn;
 
-    if (sessionUser) {
-        deleteBtn = (
-            <button onClick={deleteRev}>Delete Review!</button>
-        )
-    }
-
+    // if (sessionUser) {
+    //     deleteBtn = (
+    //         <div onClick={deleteRev}>
+    //             <button onClick={(e) => setDeletedReview()}>Delete Review!</button>
+    //         </div>
+    //     )
+    // }
 
     return (
         <div className="hosting-component">
@@ -85,20 +89,16 @@ function HostingPage() {
                         <div>{review.review}</div>
                         <div>{review.recommended ? '💜' : '🤚🏼'}</div>
                         <div>{review.User.username}</div>
-                        {deleteBtn}
+                        { sessionUser.id === review.user_id &&
+                            <DeleteBtn />
+                        }
                     </div>
                 ))}
             </div>
-            <Calendar />
+            <DayPicker disabledDays={disabledDates} />
             <ReviewsForm />
         </div>
     )
 }
 
 export default HostingPage;
-
-// tileDisabled={(date) => disabledDates.some(disabledDate =>
-//     date.getFullYear() === disabledDate.getFullYear() &&
-//     date.getMonth() === disabledDate.getMonth() &&
-//     date.getDate() === disabledDate.getDate()
-// )}
