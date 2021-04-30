@@ -69,19 +69,47 @@ function HostingComponent() {
                         </div>
                     </div>
                 </div>
+                <div className="activities-card">
+                    <div className="activities">
+                        <img src={Hiking} alt="" />
+                    </div>
+                    <div className="activities-info-card">
+                        <div className="activities-phrase">
+                            Search By Hiking
+                        </div>
+                        <div className="activities-expo">
+                            <h2 onClick={handleActivities} id="2" className="activities-title">Explore</h2>
+                        </div>
+                    </div>
+                </div>
+                <div className="activities-card">
+                    <div className="activities">
+                        <img src={Running} alt="" />
+                    </div>
+                    <div className="activities-info-card">
+                        <div className="activities-phrase">
+                            Search By Running
+                        </div>
+                        <div className="activities-expo">
+                            <h2 onClick={handleActivities} id="7" className="activities-title">Explore</h2>
+                        </div>
+                    </div>
+                </div>
+                <div className="activities-card">
+                    <div className="activities">
+                        <img src={Biking} alt="" />
+                    </div>
+                    <div className="activities-info-card">
+                        <div className="activities-phrase">
+                            Search By Biking
+                        </div>
+                        <div className="activities-expo">
+                            <h2 onClick={handleActivities} id="5" className="activities-title">Explore</h2>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div className="activities">
-                <img src={Hiking} alt="" />
-                <div onClick={handleActivities} id="2" className="activities-title">Search By Hiking</div>
-            </div>
-            <div className="activities">
-                <img src={Running} alt="" />
-                <div onClick={handleActivities} id="7" className="activities-title">Search By Running</div>
-            </div>
-            <div className="activities">
-                <img src={Biking} alt="" />
-                <div onClick={handleActivities} id="5" className="activities-title">Search By Biking</div>
-            </div>
+
             <div className="acc">
                 <div>Search By Accommodations</div>
             </div>

@@ -26,7 +26,26 @@ img {
     box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
 }
 
+.activites {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+    height: 80%;
+    border-radius: 10px;
+    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+}
+
 .states-expo {
+    width: 50%;
+    height: 10%;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.activities-expo {
     width: 50%;
     height: 10%;
     border-radius: 10px;
@@ -41,7 +60,17 @@ img {
     margin-left: 20px;
 }
 
+.activities-phrase {
+    color: #161616;
+    width: 70%;
+    margin-left: 20px;
+}
+
 .states-card {
+    position: relative;
+}
+
+.activites-card {
     position: relative;
 }
 
@@ -54,7 +83,17 @@ img {
     width: 20%;
     bottom: 0;
     left: 0;
+}
 
+.activities-info-card {
+    background-color: #5C6D70;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-bottom: 150px;
+    position: absolute;
+    width: 20%;
+    bottom: 0;
+    left: 0;
 }
 
 .title {
