@@ -9,6 +9,7 @@ import NorthC from "../../images/NorthC.jpeg";
 import Hiking from "../../images/Hiking.jpeg";
 import Running from "../../images/Running.jpeg";
 import Biking from "../../images/Biking.jpeg";
+import StatesComponent from './StatesComponent';
 
 function HostingComponent() {
     const dispatch = useDispatch();
@@ -30,45 +31,7 @@ function HostingComponent() {
     return (
         <div>
             <div class="filters">
-                <span className="states-card">
-                    <div className="states">
-                        <img src={Colorado} alt="" />
-                    </div>
-                    <div className="states-info-card">
-                        <div className="states-phrase">
-                            <h2 className="title">Search For Best Spots in Colorado</h2>
-                        </div>
-                        <div class="states-expo">
-                            <h2 className="states-title" onClick={handleSearch} id="6">Explore</h2>
-                        </div>
-                    </div>
-                </span>
-                <span className="states-card">
-                    <div className="states">
-                        <img src={Georgia} alt="" />
-                    </div>
-                    <div className="states-info-card">
-                        <div className="states-phrase">
-                            <h2 className="title">Search For Best Spots in Georgia</h2>
-                        </div>
-                        <div className="states-expo">
-                            <h2 className="states-title" onClick={handleSearch} id="10">Explore</h2>
-                        </div>
-                    </div>
-                </span>
-                <div className="states-card">
-                    <div className="states">
-                        <img src={NorthC} alt="" />
-                    </div>
-                    <div className="states-info-card">
-                        <div className="states-phrase">
-                            <h2 className="title">Search For Best Spots in North Carolina</h2>
-                        </div>
-                        <div className="states-expo" >
-                            <h2 className="states-title" onClick={handleSearch} id="33">Explore</h2>
-                        </div>
-                    </div>
-                </div>
+                <StatesComponent />
                 <div className="activities-card">
                     <div className="activities">
                         <img src={Hiking} alt="" />
