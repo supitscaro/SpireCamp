@@ -16,7 +16,7 @@ function StatesComponent() {
         <>
             <span className="states-card">
                 <div className="states">
-                    <img src={Colorado} alt="" />
+                    <img className="states-img" src={Colorado} alt="" />
                 </div>
                 <div className="states-info-card">
                     <div className="states-phrase">
@@ -29,7 +29,7 @@ function StatesComponent() {
             </span>
             <span className="states-card">
                 <div className="states">
-                    <img src={Georgia} alt="" />
+                    <img className="states-img" src={Georgia} alt="" />
                 </div>
                 <div className="states-info-card">
                     <div className="states-phrase">
@@ -42,7 +42,7 @@ function StatesComponent() {
             </span>
             <div className="states-card">
                 <div className="states">
-                    <img src={NorthC} alt="" />
+                    <img className="states-img" src={NorthC} alt="" />
                 </div>
                 <div className="states-info-card">
                     <div className="states-phrase">

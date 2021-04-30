@@ -1,9 +1,10 @@
-import React, { useEffect } from 'react';
-import { Link, useHistory } from "react-router-dom";
+import React from 'react';
+import { useHistory } from "react-router-dom";
 import Hiking from "../../images/Hiking.jpeg";
 import Running from "../../images/Running.jpeg";
 import Biking from "../../images/Biking.jpeg";
 import "./hostingComponent.css";
+import "./activities.css";
 
 function ActivitiesComponent() {
     const history = useHistory();
@@ -14,42 +15,42 @@ function ActivitiesComponent() {
 
     return (
         <>
-            <div className="activities-card">
+            <span className="activities-card">
                 <div className="activities">
-                    <img src={Hiking} alt="" />
+                    <img className="activities-img" src={Hiking} alt="" />
                 </div>
                 <div className="activities-info-card">
                     <div className="activities-phrase">
-                        Search By Hiking
-                        </div>
-                    <div className="activities-expo">
-                        <h2 onClick={handleActivities} id="2" className="activities-title">Explore</h2>
+                        <h2 className="title">Search By Hiking</h2>
+                    </div>
+                    <div class="activities-expo">
+                        <h2 className="activities-title" onClick={handleActivities} id="2">Explore</h2>
                     </div>
                 </div>
-            </div>
-            <div className="activities-card">
+            </span>
+            <span className="activities-card-middle">
                 <div className="activities">
-                    <img src={Running} alt="" />
+                    <img className="activities-img" src={Running} alt="" />
                 </div>
                 <div className="activities-info-card">
                     <div className="activities-phrase">
-                        Search By Running
-                        </div>
+                        <h2 className="title">Search By Running</h2>
+                    </div>
                     <div className="activities-expo">
-                        <h2 onClick={handleActivities} id="7" className="activities-title">Explore</h2>
+                        <h2 className="activities-title" onClick={handleActivities} id="7">Explore</h2>
                     </div>
                 </div>
-            </div>
+            </span>
             <div className="activities-card">
                 <div className="activities">
-                    <img src={Biking} alt="" />
+                    <img className="activities-img" src={Biking} alt="" />
                 </div>
                 <div className="activities-info-card">
                     <div className="activities-phrase">
-                        Search By Biking
-                        </div>
-                    <div className="activities-expo">
-                        <h2 onClick={handleActivities} id="5" className="activities-title">Explore</h2>
+                        <h2 className="title">Search By Biking</h2>
+                    </div>
+                    <div className="activities-expo" >
+                        <h2 className="activities-title" onClick={handleActivities} id="5">Explore</h2>
                     </div>
                 </div>
             </div>
