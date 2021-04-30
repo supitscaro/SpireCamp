@@ -16,10 +16,7 @@ function HostingPage() {
     const post = useSelector((state) => state.hosting[id]);
     const reviews = useSelector((state) => state.hosting.reviews);
     const bookings = useSelector((state) => Object.values(state.bookings.listOfBookings));
-    const review = useSelector((state) => state.reviews);
     const sessionUser = useSelector(state => state.session.user);
-
-    // const [deletedReview, setDeletedReview] = useState('');
 
     let hostingBooking;
 
@@ -59,20 +56,6 @@ function HostingPage() {
 
     if (!post) return null;
 
-    // const deleteRev = (e) => {
-    //     e.preventDefault();
-    //     dispatch(deleteReview(deletedReview));
-    // }
-
-    // let deleteBtn;
-
-    // if (sessionUser) {
-    //     deleteBtn = (
-    //         <div onClick={deleteRev}>
-    //             <button onClick={(e) => setDeletedReview()}>Delete Review!</button>
-    //         </div>
-    //     )
-    // }
 
     return (
         <div className="hosting-component">
