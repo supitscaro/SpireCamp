@@ -60,6 +60,7 @@ function HostingPage() {
     return (
         <div className="hosting-component">
             <div className="host">
+                <img src={post.photoUrl} alt="" />
                 <div className="post-title">{post.name}</div>
                 <div className="post-desc">{post.description}</div>
                 <div className="post-deets">{post.locationDetails}</div>
