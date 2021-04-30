@@ -40,7 +40,6 @@ function CalendarComponent() {
             const booking = { after, before };
             disabledDates.push(booking);
         }
-        console.log('disableddates', disabledDates);
     }
 
     useEffect(() => {

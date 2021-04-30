@@ -1,7 +1,4 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
-import { getHostings } from "../../store/hostings";
+import React from 'react';
 import "./hostingComponent.css";
 import StatesComponent from './StatesComponent';
 import ActivitiesComponent from './ActivitiesComponent';
@@ -11,7 +8,7 @@ function HostingComponent() {
 
     return (
         <div>
-            <div class="filters">
+            <div className="filters">
                 <StatesComponent />
                 <ActivitiesComponent />
                 <SpotsComponent />

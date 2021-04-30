@@ -12,25 +12,27 @@ function SpotsComponent() {
     useEffect(() => {
         dispatch(getHostings());
     }, [dispatch]);
+
     return (
-        <div className="hosting-post">
+        <>
             {hostingLists.map((host => (
-                <div className="indiv-post" key={host.id}>
+                <div className="indiv-post" key={host.hostings_id}>
                     <Link className="links" to={`/postings/${host.id}`}>
-                        <div className="spots-card">
-                            <img className="spots-img" src={host.photoUrl} alt="" />
-                            <div className="spots-info-card">
-                                <div className="spots-phrase">
-                                    <h2 className="spots-title">{host.name}</h2>
-                                    <div className="post-desc">{host.description}</div>
-                                    <div className="post-location">{host.locationDetails}</div>
-                                </div>
-                            </div>
+                        {/* <div className="spots-card"> */}
+                        <img className="spots-img" src={host.photoUrl} alt="" />
+                        {/* <div className="spots-info-card"> */}
+                        <div className="spots-phrase">
+                            <h2 className="spots-title">{host.name}</h2>
+                            <p className="post-desc">{host.description}</p>
+                            <p className="post-location">{host.locationDetails}</p>
                         </div>
+                        {/* </div> */}
+                        {/* </div> */}
                     </Link>
                 </div>
             )))}
-        </div>
+
+        </>
     )
 }
 

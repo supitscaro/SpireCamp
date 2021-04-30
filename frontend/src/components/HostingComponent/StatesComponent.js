@@ -22,7 +22,7 @@ function StatesComponent() {
                     <div className="states-phrase">
                         <h2 className="title">Search For Best Spots in Colorado</h2>
                     </div>
-                    <div class="states-expo">
+                    <div className="states-expo">
                         <h2 className="states-title" onClick={handleSearch} id="6">Explore</h2>
                     </div>
                 </div>

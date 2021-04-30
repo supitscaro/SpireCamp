@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteReview } from "../../store/reviews";
 
@@ -6,8 +6,8 @@ import { deleteReview } from "../../store/reviews";
 function DeleteReview({ props }) {
     const sessionUser = useSelector(state => state.session.user);
     const dispatch = useDispatch();
-    const review = useSelector(state => state.reviews)
-    const [deletedReview, setDeletedReview] = useState('');
+    // const review = useSelector(state => state.reviews)
+    // const [deletedReview, setDeletedReview] = useState('');
 
     const deleteRev = (e) => {
         e.preventDefault();

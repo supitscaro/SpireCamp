@@ -62,6 +62,7 @@ function ReviewsForm() {
                             value={recc}
                             onChange={(e) => setRecc(e.target.value)}
                             required
+                            name="recc"
                         />
                     </label>
                 </div>
@@ -73,6 +74,7 @@ function ReviewsForm() {
                             value={recc}
                             onChange={(e) => setRecc(e.target.value)}
                             required
+                            name="recc"
                         />
                     </label>
                 </div>

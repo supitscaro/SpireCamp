@@ -23,7 +23,7 @@ function ActivitiesComponent() {
                     <div className="activities-phrase">
                         <h2 className="title">Search By Hiking</h2>
                     </div>
-                    <div class="activities-expo">
+                    <div className="activities-expo">
                         <h2 className="activities-title" onClick={handleActivities} id="2">Explore</h2>
                     </div>
                 </div>

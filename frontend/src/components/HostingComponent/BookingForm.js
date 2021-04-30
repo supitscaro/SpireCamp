@@ -20,7 +20,7 @@ function BookingForm({ props }) {
             hostings_id: props
         };
 
-        // dispatch(createBooking(booking));
+        dispatch(createBooking(booking));
     }
 
     return (
