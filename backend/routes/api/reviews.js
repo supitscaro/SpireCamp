@@ -19,7 +19,7 @@ router.get(
 
 router.post(
     "/hostings/:id",
-    // requireAuth,
+    requireAuth,
     asyncHandler(async function (req, res) {
         const { title, review, recommended, hostings_id, user_id } = req.body;
         const newReview = await Review.create({ title, review, recommended, hostings_id, user_id });
