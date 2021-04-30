@@ -23,7 +23,7 @@ router.get(
 
 router.get(
     '/',
-    async(async (req, res, next) => {
+    asyncHandler(async (req, res, next) => {
         const accommodations = await Accommodations_List.findAll();
 
         return res.json(accommodations);

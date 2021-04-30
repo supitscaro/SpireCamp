@@ -6,10 +6,10 @@ import HostingPage from "./components/HostingPage";
 import HostingComponent from './components/HostingComponent';
 import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
-import StateHostings from "./components/StateHostingsComponent";
+import StateHostings from "./components/StatesPage";
 import { findAllStates } from "./store/hostings";
-import ActivityHostings from "./components/ActivitiesComponent";
-import HostingForm from "./components/HostingFormPage";
+import ActivityHostings from "./components/ActivitiesPage";
+import AccommodationsHostings from "./components/AccommodationsPage";
 
 function App() {
   const dispatch = useDispatch();
@@ -43,8 +43,8 @@ function App() {
           <Route path="/activities/:id">
             <ActivityHostings />
           </Route>
-          <Route path="/start-hosting">
-            <HostingForm />
+          <Route path="/accommodations/:id">
+            <AccommodationsHostings />
           </Route>
         </Switch>
       )}

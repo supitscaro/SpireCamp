@@ -42,7 +42,7 @@ module.exports = {
         states_id: 33,
         user_id: 6,
         cost: 85,
-        photoUrl: '',
+        photoUrl: 'https://images.unsplash.com/photo-1562263734-459fd8638b0e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80',
         createdAt: new Date(),
         updatedAt: new Date()
       },

@@ -8,8 +8,6 @@ import "./spots.css";
 function SpotsComponent() {
     const dispatch = useDispatch();
     const hostingLists = useSelector((state) => Object.values(state.hosting.hostings));
-    const list = useSelector((state) => state.hosting.hostings);
-    console.log('list', list);
 
     useEffect(() => {
         dispatch(getHostings());

@@ -52,7 +52,7 @@ const getAllActivities = (list) => {
 
 const getAllAccommodations = (list) => {
     return {
-        type: ALL_ACTIVITIES,
+        type: ALL_ACCOMMODATIONS,
         list
     }
 }
@@ -111,13 +111,19 @@ export const allActivities = () => async (dispatch) => {
     }
 };
 
-export const allAccommodations = () => async (dispatch) => {
-    const res = await csrfFetch('/api/')
-}
+export const allAccommodations = (id) => async (dispatch) => {
+    const res = await csrfFetch(`/api/accommodations/${id}`);
+    if (res.ok) {
+        let accommodations = await res.json();
+        dispatch(getAllAccommodations(accommodations));
+    }
+};
 
 let initialState = {
     hostings: {
+        state: {},
         activities: {},
+        accommodations: {},
     },
     states: {},
 };
@@ -129,7 +135,6 @@ const hostingReducer = (state = initialState, action) => {
             action.list.forEach(hosting => {
                 allHostings[hosting.id] = hosting;
             });
-            // console.log('allHostings', allHostings);
             return {
                 ...state,
                 hostings: { ...action.hostings, ...allHostings, ...state.hostings }
@@ -168,7 +173,6 @@ const hostingReducer = (state = initialState, action) => {
             return {
                 ...state,
                 hostings: { ...state.hostings, activities: activitiesList },
-                // activities: { activitiesList }
             };
         case ALL_ACTIVITIES:
             let listOfActivities = {};
@@ -178,8 +182,17 @@ const hostingReducer = (state = initialState, action) => {
             return {
                 ...state,
                 hostings: { ...state.hostings, ...listOfActivities }
-            }
-
+            };
+        case ALL_ACCOMMODATIONS:
+            let listOfAccommodations = {};
+            action.list.forEach(accommodation => {
+                console.log(accommodation)
+                listOfAccommodations[accommodation.id] = accommodation;
+            });
+            return {
+                ...state,
+                hostings: { ...state.hostings, accommodations: listOfAccommodations }
+            };
         default:
             return state;
     }
