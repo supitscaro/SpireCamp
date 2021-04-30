@@ -1,26 +1,74 @@
 .hosting-post {
-    display: flex;
+    /* display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     max-width: 1200px;
     margin: 0 auto;
-}
-
-.indiv-post {
-    background-color: #B56576;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 30%;
-    border-radius: 10px;
-    margin: 10px;
-    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
-    padding-bottom: 18px;
+    position:relative;
+    display: inline-block; */
+    /* height: 20%; */
 }
 
 .links {
     text-decoration: none;
     color: #333333;
+    height: 50%;
+}
+
+.spots-img {
+    /* border-radius: 10px; */
+    /* height: 50%; */
+    /* width: 400px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: auto;
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+    margin-bottom: 80px;
+}
+
+/* .spots-card .spots {
+    height: 100%;
+} */
+
+.spots {
+    /* margin-top: 100px; */
+}
+
+.spots-phrase {
+    color: #161616;
+    width: 70%;
+    margin-left: 20px;
+}
+
+.spots-info-card {
+    border-radius: 10px;
+    margin-left: 100px;
+    /* margin-bottom: 150px; */
+    /* position: absolute; */
+    width: 50%;
+    bottom: 0;
+    left: 0;
+}
+
+.spots-title {
+    padding: 0.8rem;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    font-weight: 400;
+    display: block;
+    height: 10%;
+    width: 90%;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+}
+
+.spots-card {
+    display: flex;
+    /* height: 1500px; */
 }

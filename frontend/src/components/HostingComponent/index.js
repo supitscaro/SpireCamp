@@ -12,8 +12,9 @@ function HostingComponent() {
     return (
         <div>
             <div class="filters">
-                <StatesComponent />
-                <ActivitiesComponent />
+                {/* <StatesComponent /> */}
+                {/* <ActivitiesComponent /> */}
+                <SpotsComponent />
             </div>
             <div className="filters">
             </div>
@@ -21,7 +22,6 @@ function HostingComponent() {
             {/* <div className="acc">
                 <div>Search By Accommodations</div>
             </div> */}
-            <SpotsComponent />
         </div>
     )
 }

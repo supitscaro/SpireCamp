@@ -17,11 +17,16 @@ function SpotsComponent() {
             {hostingLists.map((host => (
                 <div className="indiv-post" key={host.name}>
                     <Link className="links" to={`/postings/${host.id}`}>
-                        {console.log(host.photoUr)}
-                        <img src={host.photoUrl} alt="" />
-                        <div className="post-title">{host.name}</div>
-                        <div className="post-desc">{host.description}</div>
-                        <div className="post-location">{host.locationDetails}</div>
+                        <div className="spots-card">
+                            <img className="spots-img" src={host.photoUrl} alt="" />
+                            <div className="spots-info-card">
+                                <div className="spots-phrase">
+                                    <h2 className="spots-title">{host.name}</h2>
+                                    <div className="post-desc">{host.description}</div>
+                                    <div className="post-location">{host.locationDetails}</div>
+                                </div>
+                            </div>
+                        </div>
                     </Link>
                 </div>
             )))}
