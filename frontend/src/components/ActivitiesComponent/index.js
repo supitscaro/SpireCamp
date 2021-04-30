@@ -19,6 +19,7 @@ function ActivityHostings() {
         <div>
             {activities.map((activity) => (
                 <div>
+                    {/* {console.log(activity)} */}
                     <div className={activity.icon}>{activity.name}</div>
                     <div>{activity.description}</div>
                 </div>

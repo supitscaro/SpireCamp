@@ -6,7 +6,7 @@ const STATES = "hostings/STATES";
 const STATE = "hostings/STATE";
 const ACTIVITIES = "hostings/ACTIVITIES";
 const ALL_ACTIVITIES = "hostings/ALL_ACTIVITIES";
-const DELETE = "hostings/DELETE";
+const ALL_ACCOMMODATIONS = "hostings/ALL_ACCOMMODATIONS";
 
 const findHostings = (list) => {
     return {
@@ -50,12 +50,12 @@ const getAllActivities = (list) => {
     }
 };
 
-const remove = (id) => {
+const getAllAccommodations = (list) => {
     return {
-        type: DELETE,
-        id
+        type: ALL_ACTIVITIES,
+        list
     }
-};
+}
 
 // for the list of hostings
 export const getHostings = () => async (dispatch) => {
@@ -111,23 +111,15 @@ export const allActivities = () => async (dispatch) => {
     }
 };
 
-export const deleteSpot = (id) => async (dispatch) => {
-    const res = await csrfFetch(`/api/hostings/${id}`, {
-        method: 'DELETE',
-    });
-
-    if (res.ok) {
-        let spot = await res.json();
-        dispatch(remove(spot.id));
-    }
+export const allAccommodations = () => async (dispatch) => {
+    const res = await csrfFetch('/api/')
 }
 
 let initialState = {
     hostings: {
-        state: {},
         activities: {},
     },
-    states: {}
+    states: {},
 };
 
 const hostingReducer = (state = initialState, action) => {
@@ -137,10 +129,10 @@ const hostingReducer = (state = initialState, action) => {
             action.list.forEach(hosting => {
                 allHostings[hosting.id] = hosting;
             });
-            console.log('...state.hostings', state.hostings);
+            // console.log('allHostings', allHostings);
             return {
                 ...state,
-                hostings: { ...allHostings, ...state.hostings }
+                hostings: { ...action.hostings, ...allHostings, ...state.hostings }
             };
         case HOSTING_PAGE:
             return {
@@ -172,9 +164,11 @@ const hostingReducer = (state = initialState, action) => {
             action.list.forEach(activity => {
                 activitiesList[activity.id] = activity;
             });
+            console.log(state);
             return {
                 ...state,
-                hostings: { ...state.hostings, activities: activitiesList }
+                hostings: { ...state.hostings, activities: activitiesList },
+                // activities: { activitiesList }
             };
         case ALL_ACTIVITIES:
             let listOfActivities = {};
@@ -185,14 +179,7 @@ const hostingReducer = (state = initialState, action) => {
                 ...state,
                 hostings: { ...state.hostings, ...listOfActivities }
             }
-        case DELETE:
-            return {
-                ...state,
-                [action.id]: {
-                    ...state[action.id],
-                    hostings: state[action.id].filter((spot) => spot.id !== action.id)
-                }
-            }
+
         default:
             return state;
     }
