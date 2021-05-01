@@ -46,18 +46,21 @@
     position:relative;
     margin-left: -350px;
     max-width: 50%;
+    height: 80%;
 }
 
 .states-card-1 {
     position:relative;
     margin-left: 200px;
     max-width: 50%;
+    height: 80%;
 }
 
 .states-card-2 {
     position:relative;
     margin-left: -350px;
     max-width: 50%;
+    height: 80%;
 }
 
 .states-info-card {
@@ -103,4 +106,5 @@
     /* padding-right: 40px; */
     min-width: 80%;
     overflow: hidden;
+    margin-bottom: 40px;
 }
