@@ -94,19 +94,6 @@ img {
     background-color: rgba(255, 255, 255, 0.137);
 }
 
-/* .activities {
-    background-color: #B56576;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 30%;
-    border-radius: 10px;
-    margin: 10px;
-    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
-    padding-bottom: 18px;
-} */
-
 .acc {
     background-color: lightcoral;
     width: 33%;

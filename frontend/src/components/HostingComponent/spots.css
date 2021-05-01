@@ -17,9 +17,6 @@
 }
 
 .spots-img {
-    /* border-radius: 10px; */
-    /* height: 50%; */
-    /* width: 400px; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -28,14 +25,6 @@
     border-radius: 10px;
     box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
     margin-bottom: 80px;
-}
-
-/* .spots-card .spots {
-    height: 100%;
-} */
-
-.spots {
-    /* margin-top: 100px; */
 }
 
 .spots-phrase {

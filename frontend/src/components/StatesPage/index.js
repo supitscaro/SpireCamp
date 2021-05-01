@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { stateHostings } from "../../store/hostings";
 import "./states.css";
@@ -19,10 +19,18 @@ function StateHostings() {
     return (
         <div className="card-component">
             {states.map((state) => (
-                <div className="card">
-                    <div className="name">{state.name}</div>
-                    <div className="desc">{state.description}</div>
-                    <div className="deets">{state.locationDetails}</div>
+                <div class="cards">
+                    <div className="card">
+                        <img className="card-img" src={state.photoUrl} alt="" />
+                    </div>
+                    <div className="spot-info">
+                        <div className="name">{state.name}</div>
+                        <div className="desc">{state.description}</div>
+                        <div className="deets">{state.locationDetails}</div>
+                        <Link className="state-link" to={`/postings/${state.id}`}>
+                            <h2>Explore</h2>
+                        </Link>
+                    </div>
                 </div>
             ))}
         </div>

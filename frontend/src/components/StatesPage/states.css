@@ -5,10 +5,16 @@
     justify-content: center;
     max-width: 1200px;
     margin: 0 auto;
+    height: 500px;
+}
+
+.cards {
+    display: flex;
+
 }
 
 .card {
-    background-color: #B56576;
+    /* background-color: #B56576; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -22,9 +28,37 @@
 .name {
     font-size: 18px;
     text-transform: uppercase;
+    margin-top: -30px;
+    margin-bottom: 40px;
+    top: 0;
+    left: 0;
+}
+
+.desc {
+    line-height: 2em;
 }
 
 .deets {
     font-size: 15px;
     text-transform: uppercase;
+    margin-top: 20px;
+}
+
+.card-img {
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+}
+
+.spot-info {
+    width: 40%;
+    margin-top: 50px;
+}
+
+.state-link {
+    text-decoration: none;
+    color: #333333;
+    height: 50%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
 }
