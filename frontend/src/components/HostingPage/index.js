@@ -16,6 +16,7 @@ function HostingPage() {
     const post = useSelector((state) => state.hosting[id]);
     const reviews = useSelector((state) => Object.values(state.reviews));
     const sessionUser = useSelector(state => state.session.user);
+    console.log(reviews);
 
     useEffect(() => {
         dispatch(getBookings(id));
@@ -42,7 +43,7 @@ function HostingPage() {
                         <div>{review.review}</div>
                         <div>{review.recommended ? '💜' : '🤚🏼'}</div>
                         <div>{review.username}</div>
-                        { sessionUser.id === review.user_id &&
+                        { sessionUser?.id === review.user_id &&
                             <DeleteBtn props={{ id, reviewId: review.id }} />
                         }
                     </div>

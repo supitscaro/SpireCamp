@@ -108,3 +108,37 @@
     overflow: hidden;
     margin-bottom: 40px;
 }
+
+.states-intro {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+    font-size: 30px;
+    text-transform: uppercase;
+    padding-left: 20px;
+}
+
+.activities-intro {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+    font-size: 30px;
+    text-transform: uppercase;
+    padding-left: 20px;
+}
+
+.accommodations-intro {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+    font-size: 30px;
+    text-transform: uppercase;
+    padding-left: 20px;
+}
+
+.accommodations-expo-intro {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+    font-size: 18px;
+    text-transform: uppercase;
+    width: 50%;
+    margin-top: -20px;
+    padding-left: 27px;
+}
