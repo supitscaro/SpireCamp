@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch } from 'react-redux';
 import * as sessionActions from '../../store/session';
+import "./navigation.css";
 
 function ProfileButton({ user }) {
     const dispatch = useDispatch();
@@ -30,17 +31,16 @@ function ProfileButton({ user }) {
 
     return (
         <>
-            <button onClick={openMenu}>
+            <button className="profile-btn" onClick={openMenu}>
                 <i className="fa fa-user-circle" />
             </button>
             {showMenu && (
-                <ul className="profile-dropdown">
-                    <li>{user.username}</li>
-                    <li>{user.email}</li>
-                    <li>
+                <div className="profile-dropdown">
+                    <div className="user-name">{user.username}</div>
+                    <div className="logout-btn">
                         <button onClick={logout}>Log Out</button>
-                    </li>
-                </ul>
+                    </div>
+                </div>
             )}
         </>
     );

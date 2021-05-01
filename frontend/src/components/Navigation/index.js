@@ -18,17 +18,20 @@ function Navigation({ isLoaded }) {
     } else {
         sessionLinks = (
             <>
-                <LoginFormModal className="login" />
-                <NavLink className="link signup" to="/signup">Sign Up</NavLink>
+                <div className="login">
+                    <LoginFormModal />
+                </div>
+                <div className="signup">
+                    <NavLink className="link" to="/signup">Sign Up</NavLink>
+                </div>
             </>
         );
     }
 
     return (
         <div className="navbar">
+            <NavLink className="logo" exact to="/">SpireCamp</NavLink>
             <div className="nav">
-                <NavLink className="logo" exact to="/">SpireCamp</NavLink>
-                <NavLink className="link" exact to="/start-hosting">Start Hosting</NavLink>
                 {isLoaded && sessionLinks}
             </div>
         </div>

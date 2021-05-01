@@ -7,7 +7,7 @@
     width: 1000px;
     height: 80%;
     /* height: 5000px; */
-    margin-left: 270px;
+    margin-left: 240px;
     /* box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25); */
 }
 
@@ -23,7 +23,7 @@
     border-radius: 12px;
     height: 200px;
     width: 600px;
-    z-index: 1;
+    /* z-index: 1; */
     margin-left: -190px;
     margin-top: 10px;
     /* box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25); */
@@ -43,6 +43,12 @@
 .slogan-title {
     color: #293241;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 100;
-    font-size: 20px;
+    font-weight: 400;
+    font-size: 40px;
+}
+
+.slogan-div {
+    margin-left: 500px;
+    margin-top: -50px;
+    margin-bottom: 50px;
 }

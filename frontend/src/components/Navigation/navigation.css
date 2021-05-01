@@ -3,7 +3,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content:space-around;
+    /* justify-content:space-between; */
     align-items: center;
 }
 
@@ -12,16 +12,82 @@
     color: #333333;
     margin-right: 40px;
     font-size: 20px;
-    padding-left: 400px;
+    /* padding-left: 400px; */
 }
 
-.signup {
-    /* margin-left: 40px; */
+.nav {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .logo {
+    font-size: 28px;
+    color: #333333;
+    margin-left: -400px;
+    margin-right: 850px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.profile-btn {
+    margin-left: 1200px;
+    border-radius: 50%;
+    width: 60px;
+    margin-top: -40px;
+    height: 60px;
+    border: 1px solid rgba(114, 112, 112, 0.2);
+}
+
+.profile-dropdown {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: #D3D3D3;
+    min-width: 160px;
+    border-radius: 3px;
+    /* border: 1px solid #212124; */
+    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 20px;
+    padding: 12px 0;
+    margin-right: -1200px;
+    z-index: 10000;
+}
+
+.user-btn {
+    /* width: 30%; */
+    padding-left: 30px;
+    /* background-color: black; */
+}
+
+.user-name {
+    margin: 0 auto;
+    font-size: 20px;
+}
+
+.logout-btn {
+    margin: 0 auto;
+}
+
+.signup {
+    text-decoration: none;
+    /* margin-left: -300px; */
+    margin-right: -300px;
+    margin-top: -30px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.login {
+    margin-left: 400px;
+    margin-right: 10px;
+    /* margin-left: 100px; */
+    /* margin-right: -100px; */
+    margin-top: -30px;
+    border: none;
+    background-color: #f8f8ff;
     font-size: 20px;
     color: #333333;
-    margin-left: -300px;
-    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
 }
