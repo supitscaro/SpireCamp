@@ -1,0 +1,11 @@
+.search-all {
+    width: 1300px;
+    height: 500px;
+}
+
+.search-img {
+    width: 90%;
+    border-radius: 10px;
+    /* height: 900px; */
+    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+}
