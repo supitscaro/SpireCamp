@@ -10,7 +10,7 @@ import SearchAllComponent from './AllSpots';
 function HostingComponent() {
 
     return (
-        <div>
+        <div className="body-div">
             <HeaderComponent />
             <div className="filters">
                 <StatesComponent />

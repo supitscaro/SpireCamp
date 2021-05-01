@@ -10,6 +10,7 @@ import StateHostings from "./components/StatesPage";
 import { findAllStates } from "./store/hostings";
 import ActivityHostings from "./components/ActivitiesPage";
 import AccommodationsHostings from "./components/AccommodationsPage";
+import SpotsComponent from "./components/HostingComponent/Spots";
 
 function App() {
   const dispatch = useDispatch();
@@ -45,6 +46,9 @@ function App() {
           </Route>
           <Route path="/accommodations/:id">
             <AccommodationsHostings />
+          </Route>
+          <Route path="/all-hostings">
+            <SpotsComponent />
           </Route>
         </Switch>
       )}
