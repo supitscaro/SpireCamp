@@ -14,42 +14,44 @@ function StatesComponent() {
 
     return (
         <>
-            <span className="states-card">
-                <div className="states">
-                    <img className="states-img" src={Colorado} alt="" />
-                </div>
-                <div className="states-info-card">
-                    <div className="states-phrase">
-                        <h2 className="title">Search For Best Spots in Colorado</h2>
+            <div className="states-div">
+                <span className="states-card-1">
+                    <div className="states">
+                        <img className="states-img" src={Colorado} alt="" />
                     </div>
-                    <div className="states-expo">
-                        <h2 className="states-title" onClick={handleSearch} id="6">Explore</h2>
+                    <div className="states-info-card">
+                        <div className="states-phrase">
+                            <h2 className="title">Search For Best Spots in Colorado</h2>
+                        </div>
+                        <div className="states-expo">
+                            <h2 className="states-title" onClick={handleSearch} id="6">Explore</h2>
+                        </div>
                     </div>
-                </div>
-            </span>
-            <span className="states-card">
-                <div className="states">
-                    <img className="states-img" src={Georgia} alt="" />
-                </div>
-                <div className="states-info-card">
-                    <div className="states-phrase">
-                        <h2 className="title">Search For Best Spots in Georgia</h2>
+                </span>
+                <span className="states-card-2">
+                    <div className="states">
+                        <img className="states-img" src={Georgia} alt="" />
                     </div>
-                    <div className="states-expo">
-                        <h2 className="states-title" onClick={handleSearch} id="10">Explore</h2>
+                    <div className="states-info-card">
+                        <div className="states-phrase">
+                            <h2 className="title">Search For Best Spots in Georgia</h2>
+                        </div>
+                        <div className="states-expo">
+                            <h2 className="states-title" onClick={handleSearch} id="10">Explore</h2>
+                        </div>
                     </div>
-                </div>
-            </span>
-            <div className="states-card">
-                <div className="states">
-                    <img className="states-img" src={NorthC} alt="" />
-                </div>
-                <div className="states-info-card">
-                    <div className="states-phrase">
-                        <h2 className="title">Search For Best Spots in North Carolina</h2>
+                </span>
+                <div className="states-card">
+                    <div className="states">
+                        <img className="states-img" src={NorthC} alt="" />
                     </div>
-                    <div className="states-expo" >
-                        <h2 className="states-title" onClick={handleSearch} id="33">Explore</h2>
+                    <div className="states-info-card">
+                        <div className="states-phrase">
+                            <h2 className="title">Search For Best Spots in North Carolina</h2>
+                        </div>
+                        <div className="states-expo" >
+                            <h2 className="states-title" onClick={handleSearch} id="33">Explore</h2>
+                        </div>
                     </div>
                 </div>
             </div>

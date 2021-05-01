@@ -14,7 +14,7 @@ function HostingComponent() {
             <HeaderComponent />
             <div className="filters">
                 <StatesComponent />
-                <ActivitiesComponent />
+                {/* <ActivitiesComponent /> */}
                 <AccommodationsComponent />
                 {/* <SpotsComponent /> */}
             </div>

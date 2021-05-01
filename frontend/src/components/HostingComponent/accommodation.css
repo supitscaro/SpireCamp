@@ -1,20 +1,20 @@
-.activities-img {
+.accommodation-img {
     border-radius: 10px;
     height: 100%;
     width: 100%;
 }
 
-
-.activities {
+.accommodations {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 40%;
+    width: 65%;
     height: 80%;
     border-radius: 10px;
+    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
 }
 
-.activities-expo {
+.accommodations-expo {
     width: 50%;
     height: 10%;
     border-radius: 10px;
@@ -23,55 +23,35 @@
     margin-left: 20px;
 }
 
-.activities-phrase {
+.accommodations-phrase {
     color: #161616;
     width: 70%;
     margin-left: 20px;
 }
 
-.activities-card-1 {
+.accommodation-card-1 {
     position:relative;
-    display: inline-block;
-    margin-right: -540px;
-    height: 100%;
-    margin-bottom: 50px;
+    /* margin-left: -20px; */
+    max-width: 50%;
 }
 
-.activities-card-2 {
+.accommodation-card-2 {
     position:relative;
-    display: inline-block;
-    margin-right: -540px;
-    height: 100%;
-    margin-bottom: 50px;
+    margin-left: -150px;
+    max-width: 50%;
 }
 
-
-.activities-card {
+.accommodation-card {
     position:relative;
-    display: inline-block;
-    margin-right: -240px;
-    height: 100%;
-    margin-bottom: 50px;
+    margin-left: -150px;
+    max-width: 50%;
 }
 
-
-.activities-div {
-    margin-left: 100px;
-}
-
-.activities-card-middle {
-    position:relative;
-    display: inline-block;
-    margin-top: 200px;
-    margin-right: -540px;
-    height: 100%;
-}
-
-.activities-info-card {
+.accommodation-info-card {
     background-color: #5C6D70;
     border-radius: 10px;
     margin-left: 20px;
-    margin-bottom: 70px;
+    margin-bottom: 150px;
     position: absolute;
     width: 20%;
     bottom: 0;
@@ -83,8 +63,7 @@
     font-weight: lighter;
 }
 
-.activities-title {
-    /* color: #ffffff; */
+.accommodations-title {
     border: 1px solid rgba(255, 255, 255, 0.2);
     background-color: #B7B7A4;
     padding: 0.8rem;
@@ -99,11 +78,15 @@
     text-align: center;
 }
 
-.activities-title:hover {
+.states-title:hover {
     background-color: rgba(255, 255, 255, 0.137);
 }
 
-.wide-divs {
+
+.acc-div {
     display: flex;
-    flex: row;
+    min-width: 80%;
+    overflow: hidden;
+    justify-content: center;
+
 }

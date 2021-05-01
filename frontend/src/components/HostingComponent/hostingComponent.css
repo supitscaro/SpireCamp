@@ -1,20 +1,10 @@
 .filters {
     display: flex;
-    flex-direction: row !important;
-    flex-wrap: wrap;
-    /* justify-content: center; */
-    /* min-width: 1200px; */
-    /* margin: 0 auto; */
+    flex-direction: column;
+    justify-content: center;
     margin-left: 200px;
     float: left;
 }
-/*
-img {
-    border-radius: 10px;
-    height: 100%;
-    width: 100%;
-    vertical-align: middle;
-} */
 
 .body-div {
     display: flex;
@@ -24,14 +14,14 @@ img {
 .states-img {
     border-radius: 10px;
     height: 100%;
-    width: 100%;
+    min-width: 100%;
 }
 
 .states {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 40%;
+    width: 50%;
     height: 80%;
     border-radius: 10px;
     box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
@@ -54,13 +44,20 @@ img {
 
 .states-card {
     position:relative;
-    display: inline-block;
-    /* margin-left: 200px; */
-    margin-right: -540px;
-    /* overflow: auto; */
-    /* height: 100%; */
-    /* width: 100%; */
-    /* max-width: fit-content; */
+    margin-left: -350px;
+    max-width: 50%;
+}
+
+.states-card-1 {
+    position:relative;
+    margin-left: 200px;
+    max-width: 50%;
+}
+
+.states-card-2 {
+    position:relative;
+    margin-left: -350px;
+    max-width: 50%;
 }
 
 .states-info-card {
@@ -80,7 +77,6 @@ img {
 }
 
 .states-title {
-    /* color: #ffffff; */
     border: 1px solid rgba(255, 255, 255, 0.2);
     background-color: #B7B7A4;
     padding: 0.8rem;
@@ -99,7 +95,12 @@ img {
     background-color: rgba(255, 255, 255, 0.137);
 }
 
-.acc {
-    background-color: lightcoral;
-    width: 33%;
+.states-div {
+    display: flex;
+    /* margin-left: 20px; */
+    /* padding-right: -140px; */
+    justify-content: center;
+    /* padding-right: 40px; */
+    min-width: 80%;
+    overflow: hidden;
 }

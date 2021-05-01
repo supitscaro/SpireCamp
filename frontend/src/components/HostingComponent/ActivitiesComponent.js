@@ -16,7 +16,7 @@ function ActivitiesComponent() {
     return (
         <>
             {/* <div className="wide-divs"> */}
-            <span className="activities-card">
+            <span className="activities-card-1">
                 <div className="activities">
                     <img className="activities-img" src={Running} alt="" />
                 </div>
@@ -29,7 +29,7 @@ function ActivitiesComponent() {
                     </div>
                 </div>
             </span>
-            <div className="activities-card">
+            <div className="activities-card-2">
                 <div className="activities">
                     <img className="activities-img" src={Biking} alt="" />
                 </div>
