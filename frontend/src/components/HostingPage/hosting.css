@@ -1,15 +1,24 @@
 .hosting-component {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
+    /* justify-content: center; */
+    /* max-width: 1200px; */
+    /* margin: 0 auto; */
+}
+
+.hosting-page {
+    /* max-width: 1200px;
+    margin-left: 40px; */
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
 .host {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     width: 40%;
 }
 
@@ -21,7 +30,7 @@
 }
 
 .post-title {
-    font-size: 18px;
+    font-size: 48px;
     text-transform: uppercase;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -30,4 +39,15 @@
 .desc {
     line-height: 1.5px;
     /* margin: 10px; */
+}
+
+.post-pic {
+    max-width: 60%;
+    justify-content: center;
+    margin-left: 150px;
+    /* margin-right: -300px; */
+}
+
+.reviews {
+    max-width: 40%;
 }

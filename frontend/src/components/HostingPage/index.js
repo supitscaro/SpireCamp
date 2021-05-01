@@ -28,13 +28,18 @@ function HostingPage() {
 
 
     return (
-        <div className="hosting-component">
-            <div className="host">
-                <img src={post.photoUrl} alt="" />
-                <div className="post-title">{post.name}</div>
-                <div className="post-desc">{post.description}</div>
-                <div className="post-deets">{post.locationDetails}</div>
-                <div>{post.User.username}</div>
+        <div className="hosting-page">
+            <div className="hosting-component">
+                <div className="host">
+                    <img className="post-pic" src={post.photoUrl} alt="" />
+                    <div className="post-title">{post.name}</div>
+                    <div className="post-desc">{post.description}</div>
+                    <div className="post-deets">{post.locationDetails}</div>
+                    <div>{post.User.username}</div>
+                </div>
+                <div className="cal">
+                    <CalendarComponent />
+                </div>
             </div>
             <div className="reviews">
                 {reviews.map((review) => (
@@ -48,9 +53,8 @@ function HostingPage() {
                         }
                     </div>
                 ))}
+                <ReviewsForm />
             </div>
-            <CalendarComponent />
-            <ReviewsForm />
         </div>
     )
 }
