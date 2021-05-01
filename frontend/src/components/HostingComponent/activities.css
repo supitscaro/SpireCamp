@@ -1,16 +1,9 @@
-/*
-img {
-    border-radius: 10px;
-    height: 100%;
-    width: 100%;
-    vertical-align: middle;
-} */
-
 .activities-img {
     border-radius: 10px;
     height: 100%;
     width: 100%;
 }
+
 
 .activities {
     display: flex;
@@ -19,7 +12,6 @@ img {
     width: 40%;
     height: 80%;
     border-radius: 10px;
-    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
 }
 
 .activities-expo {
@@ -40,12 +32,13 @@ img {
 .activities-card {
     position:relative;
     display: inline-block;
-    /* margin-left: 200px; */
     margin-right: -540px;
-    /* overflow: auto; */
     height: 100%;
-    /* width: 100%; */
-    /* max-width: fit-content; */
+    margin-bottom: 50px;
+}
+
+.activities-div {
+    margin-left: 100px;
 }
 
 .activities-card-middle {
@@ -53,10 +46,7 @@ img {
     display: inline-block;
     margin-top: 200px;
     margin-right: -540px;
-    /* overflow: auto; */
     height: 100%;
-    /* width: 100%;/ */
-    /* max-width: fit-content; */
 }
 
 .activities-info-card {
@@ -93,4 +83,9 @@ img {
 
 .activities-title:hover {
     background-color: rgba(255, 255, 255, 0.137);
+}
+
+.wide-divs {
+    display: flex;
+    flex: row;
 }

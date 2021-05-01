@@ -15,20 +15,8 @@ function ActivitiesComponent() {
 
     return (
         <>
+            {/* <div className="wide-divs"> */}
             <span className="activities-card">
-                <div className="activities">
-                    <img className="activities-img" src={Hiking} alt="" />
-                </div>
-                <div className="activities-info-card">
-                    <div className="activities-phrase">
-                        <h2 className="title">Search By Hiking</h2>
-                    </div>
-                    <div className="activities-expo">
-                        <h2 className="activities-title" onClick={handleActivities} id="2">Explore</h2>
-                    </div>
-                </div>
-            </span>
-            <span className="activities-card-middle">
                 <div className="activities">
                     <img className="activities-img" src={Running} alt="" />
                 </div>
@@ -54,6 +42,20 @@ function ActivitiesComponent() {
                     </div>
                 </div>
             </div>
+            {/* </div> */}
+            <span className="activities-card">
+                <div className="activities">
+                    <img className="activities-img" src={Hiking} alt="" />
+                </div>
+                <div className="activities-info-card">
+                    <div className="activities-phrase">
+                        <h2 className="title">Search By Hiking</h2>
+                    </div>
+                    <div className="activities-expo">
+                        <h2 className="activities-title" onClick={handleActivities} id="2">Explore</h2>
+                    </div>
+                </div>
+            </span>
         </>
     )
 }
