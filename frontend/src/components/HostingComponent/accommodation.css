@@ -8,7 +8,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 65%;
+    width: 70%;
     height: 80%;
     border-radius: 10px;
     box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
@@ -31,20 +31,20 @@
 
 .accommodation-card-1 {
     position:relative;
-    /* margin-left: -20px; */
-    max-width: 50%;
+    margin-left: 40px;
+    min-width: 40%;
 }
 
 .accommodation-card-2 {
     position:relative;
-    margin-left: -150px;
-    max-width: 50%;
+    margin-left: -130px;
+    min-width: 40%;
 }
 
 .accommodation-card {
     position:relative;
-    margin-left: -150px;
-    max-width: 50%;
+    margin-left: -130px;
+    min-width: 40%;
 }
 
 .accommodation-info-card {
@@ -85,8 +85,8 @@
 
 .acc-div {
     display: flex;
-    min-width: 80%;
+    max-width: 90%;
     overflow: hidden;
     justify-content: center;
-
+    margin-left: 50px;
 }
