@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { activityFilter } from "../../store/hostings";
+import "./activity.css";
 
 function ActivityHostings() {
     const { id } = useParams();
@@ -16,12 +17,20 @@ function ActivityHostings() {
     if (!activities) return null;
 
     return (
-        <div>
+        <div className="card-component">
             {activities.map((activity) => (
-                <div>
-                    {/* {console.log(activity)} */}
-                    <div className={activity.icon}>{activity.name}</div>
-                    <div>{activity.description}</div>
+                <div className="cards">
+                    <div className="card">
+                        <img className="card-img" src={activity.photoUrl} alt="" />
+                    </div>
+                    <div className="spot-info">
+                        <div className="name">{activity.name}</div>
+                        <div className="desc">{activity.description}</div>
+                        <div className="deets">{activity.locationDetails}</div>
+                        <Link className="activity-link" to={`/postings/${activity.id}`}>
+                            <h2>Explore</h2>
+                        </Link>
+                    </div>
                 </div>
             ))}
         </div>

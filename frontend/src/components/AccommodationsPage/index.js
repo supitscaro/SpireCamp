@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { allAccommodations } from "../../store/hostings";
+import "./acc.css";
 
 function AccommodationsHostings() {
     const { id } = useParams();
@@ -16,14 +17,20 @@ function AccommodationsHostings() {
     if (!accommodations) return null;
 
     return (
-        <div>
+        <div className="card-component">
             {accommodations.map((accommodation) => (
-                <div>
-                    <div>
-                        <i className={accommodation.icon}></i>
-                        {accommodation.name}
+                <div className="cards">
+                    <div className="card">
+                        <img className="card-img" src={accommodation.photoUrl} alt="" />
                     </div>
-                    <div>{accommodation.description}</div>
+                    <div className="spot-info">
+                        <div className="name">{accommodation.name}</div>
+                        <div className="desc">{accommodation.description}</div>
+                        <div className="deets">{accommodation.locationDetails}</div>
+                        <Link className="accommodation-link" to={`/postings/${accommodation.id}`}>
+                            <h2>Explore</h2>
+                        </Link>
+                    </div>
                 </div>
             ))}
         </div>
