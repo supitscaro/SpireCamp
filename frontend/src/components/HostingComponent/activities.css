@@ -32,7 +32,9 @@
 .activities-card-1 {
     position:relative;
     display: inline-block;
-    margin-right: -540px;
+    min-width: 70%;
+    margin-left: 450px;
+    margin-right: -550px;
     height: 100%;
     margin-bottom: 50px;
 }
@@ -40,7 +42,8 @@
 .activities-card-2 {
     position:relative;
     display: inline-block;
-    margin-right: -540px;
+    margin-right: -290px;
+    min-width: 70%;
     height: 100%;
     margin-bottom: 50px;
 }
@@ -49,7 +52,9 @@
 .activities-card {
     position:relative;
     display: inline-block;
-    margin-right: -240px;
+    min-width: 70%;
+    margin-left: -255px;
+    /* margin-right: -480px; */
     height: 100%;
     margin-bottom: 50px;
 }
@@ -103,7 +108,10 @@
     background-color: rgba(255, 255, 255, 0.137);
 }
 
-.wide-divs {
+.activities-divs {
     display: flex;
-    flex: row;
+    max-width: 90%;
+    overflow: hidden;
+    justify-content: center;
+    margin-left: 50px;
 }

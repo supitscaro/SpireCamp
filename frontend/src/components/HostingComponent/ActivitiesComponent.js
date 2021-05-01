@@ -15,47 +15,47 @@ function ActivitiesComponent() {
 
     return (
         <>
-            {/* <div className="wide-divs"> */}
-            <span className="activities-card-1">
-                <div className="activities">
-                    <img className="activities-img" src={Running} alt="" />
-                </div>
-                <div className="activities-info-card">
-                    <div className="activities-phrase">
-                        <h2 className="title">Search By Running</h2>
+            <div className="activities-divs">
+                <span className="activities-card-1">
+                    <div className="activities">
+                        <img className="activities-img" src={Running} alt="" />
                     </div>
-                    <div className="activities-expo">
-                        <h2 className="activities-title" onClick={handleActivities} id="7">Explore</h2>
+                    <div className="activities-info-card">
+                        <div className="activities-phrase">
+                            <h2 className="title">Search By Running</h2>
+                        </div>
+                        <div className="activities-expo">
+                            <h2 className="activities-title" onClick={handleActivities} id="7">Explore</h2>
+                        </div>
+                    </div>
+                </span>
+                <div className="activities-card-2">
+                    <div className="activities">
+                        <img className="activities-img" src={Biking} alt="" />
+                    </div>
+                    <div className="activities-info-card">
+                        <div className="activities-phrase">
+                            <h2 className="title">Search By Biking</h2>
+                        </div>
+                        <div className="activities-expo" >
+                            <h2 className="activities-title" onClick={handleActivities} id="5">Explore</h2>
+                        </div>
                     </div>
                 </div>
-            </span>
-            <div className="activities-card-2">
-                <div className="activities">
-                    <img className="activities-img" src={Biking} alt="" />
-                </div>
-                <div className="activities-info-card">
-                    <div className="activities-phrase">
-                        <h2 className="title">Search By Biking</h2>
+                <span className="activities-card">
+                    <div className="activities">
+                        <img className="activities-img" src={Hiking} alt="" />
                     </div>
-                    <div className="activities-expo" >
-                        <h2 className="activities-title" onClick={handleActivities} id="5">Explore</h2>
+                    <div className="activities-info-card">
+                        <div className="activities-phrase">
+                            <h2 className="title">Search By Hiking</h2>
+                        </div>
+                        <div className="activities-expo">
+                            <h2 className="activities-title" onClick={handleActivities} id="2">Explore</h2>
+                        </div>
                     </div>
-                </div>
+                </span>
             </div>
-            {/* </div> */}
-            <span className="activities-card">
-                <div className="activities">
-                    <img className="activities-img" src={Hiking} alt="" />
-                </div>
-                <div className="activities-info-card">
-                    <div className="activities-phrase">
-                        <h2 className="title">Search By Hiking</h2>
-                    </div>
-                    <div className="activities-expo">
-                        <h2 className="activities-title" onClick={handleActivities} id="2">Explore</h2>
-                    </div>
-                </div>
-            </span>
         </>
     )
 }
