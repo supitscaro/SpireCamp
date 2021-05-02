@@ -25,20 +25,20 @@ function BookingForm({ props }) {
 
     return (
         <form className="" onSubmit={addBooking}>
-            <div className="">
-                <div className="">
-                    <label>
+            <div className="booking-form">
+                <div className="booking-start">
+                    <label className="start-label">
                         Start Date
-                        <DatePicker selected={startDate} onChange={date => setStartDate(date)} />
+                        <DatePicker className="date-picker" selected={startDate} onChange={date => setStartDate(date)} />
                     </label>
                 </div>
-                <div className="">
-                    <label>
+                <div className="booking-end">
+                    <label className="end-label">
                         End Date
-                        <DatePicker selected={endDate} onChange={date => setEndDate(date)} />
+                        <DatePicker className="date-picker" selected={endDate} onChange={date => setEndDate(date)} />
                     </label>
                 </div>
-                <button type="submit" onSubmit={(e) => addBooking(e)}>Book Your Spot</button>
+                <button className="booking-btn" type="submit" onSubmit={(e) => addBooking(e)}>Book Your Spot</button>
             </div>
         </form>
     )
