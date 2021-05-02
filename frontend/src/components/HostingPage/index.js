@@ -30,16 +30,19 @@ function HostingPage() {
     return (
         <div className="hosting-page">
             <div className="hosting-component">
-                <div className="host">
+                <div className="pic-div">
                     <img className="post-pic" src={post.photoUrl} alt="" />
-                    <div className="post-title">{post.name}</div>
-                    <div className="post-desc">{post.description}</div>
-                    <div className="post-deets">{post.locationDetails}</div>
-                    <div>{post.User.username}</div>
                 </div>
                 <div className="cal">
                     <CalendarComponent />
+                    <div>{post.User.username}</div>
                 </div>
+            </div>
+            <div className="host">
+                <div className="post-title">{post.name}</div>
+                <div className="post-desc">{post.description}</div>
+                <div className="post-deets">{post.locationDetails}</div>
+                {/* <i>{post.Activity.icon}</i> */}
             </div>
             <div className="reviews">
                 {reviews.map((review) => (

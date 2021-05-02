@@ -16,6 +16,7 @@ module.exports = {
       accommodations_id: {
         type: Sequelize.INTEGER,
         allowNull: false,
+        // references: { model: "Accommodations" },
         references: { model: "Accommodations" }
       },
       createdAt: {

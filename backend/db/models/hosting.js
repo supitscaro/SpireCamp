@@ -14,14 +14,12 @@ module.exports = (sequelize, DataTypes) => {
 
     let activitiesMapping = {
       through: 'Activities_List',
-      as: 'Activities',
       foreignKey: 'hostings_id',
       otherKey: 'activities_id'
     };
 
     let accommodationsMapping = {
       through: 'Accommodations_List',
-      as: 'Accomm_List',
       foreignKey: 'hostings_id',
       otherKey: 'accommodations_id'
     }
@@ -34,15 +32,12 @@ module.exports = (sequelize, DataTypes) => {
     };
 
     Hosting.belongsToMany(models.Activity, activitiesMapping);
-    Hosting.belongsToMany(models.Accommodation, accommodationsMapping);
+    Hosting.belongsToMany(models.Accommodations, accommodationsMapping);
     Hosting.belongsToMany(models.User, bookingMapping);
 
     Hosting.hasMany(models.Review, { foreignKey: 'hostings_id' });
-    // Hosting.hasMany(models.Booking, { foreignKey: 'hostings_id' });
-    Hosting.hasMany(models.Activities_List, { foreignKey: 'hostings_id' });
-    // Hosting.hasMany(models.Activity, { foreignKey: 'hostings_id' });
+    // Hosting.hasMany(models.Activities_List, { foreignKey: 'hostings_id' });
     Hosting.hasMany(models.Accommodations_List, { foreignKey: 'hostings_id' });
-    // Hosting.hasMany(models.Accommodation, { foreignKey: 'hostings_id' });
     Hosting.belongsTo(models.State, { foreignKey: 'states_id' });
     Hosting.belongsTo(models.User, { foreignKey: 'user_id' });
   };

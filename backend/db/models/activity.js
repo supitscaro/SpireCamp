@@ -1,6 +1,7 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   const Activity = sequelize.define('Activity', {
+    icon: DataTypes.STRING,
     name: DataTypes.STRING,
     description: DataTypes.STRING
   }, {});
