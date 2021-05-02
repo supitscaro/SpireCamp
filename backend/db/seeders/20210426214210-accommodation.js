@@ -15,7 +15,7 @@ module.exports = {
     return queryInterface.bulkInsert('Accommodations', [
       {
         icon: 'fas fa-volume-mute', // 1
-        name: 'Silence',
+        name: 'Tranquility',
         description: 'Locations with this accommodation have a private space that is isolated. Good for those needing peaceful, quiet time',
         createdAt: new Date(),
         updatedAt: new Date()

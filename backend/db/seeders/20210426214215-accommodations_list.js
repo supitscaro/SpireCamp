@@ -32,6 +32,18 @@ module.exports = {
         updatedAt: new Date()
       },
       {
+        hostings_id: 1,
+        accommodations_id: 6,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        hostings_id: 1,
+        accommodations_id: 4,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
         hostings_id: 2,
         accommodations_id: 4,
         createdAt: new Date(),
