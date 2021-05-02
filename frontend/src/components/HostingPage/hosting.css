@@ -3,10 +3,6 @@
     flex-direction: row;
     margin: 0 300px;
     width: 1400px;
-    /* flex-wrap: wrap; */
-    /* justify-content: center; */
-    /* max-width: 1200px; */
-    /* margin: 0 auto; */
 }
 
 .cal {
@@ -15,8 +11,6 @@
 }
 
 .hosting-page {
-    /* max-width: 1200px;
-    margin-left: 40px; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -57,7 +51,6 @@
     line-height: 1.5em;
     font-size: 22px;
     font-family: 'Montserrat', sans-serif;
-    /* margin: 10px; */
 }
 
 .post-cost {
@@ -71,14 +64,11 @@
     justify-content: center;
     border-radius: 10px;
     box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
-    /* margin-left: 150px; */
-    /* margin-right: -300px; */
 }
 
 .host-name {
     font-size: 30px;
     font-family: 'Montserrat', sans-serif;
-
 }
 
 .reviews {
@@ -90,13 +80,72 @@
     font-size: 20px;
 }
 
-/* .activities-comp {
-    display: flex;
-} */
+.activity-icon {
+    font-size: 30px;
+    padding-right: 20px;
+}
 
+.activity-name {
+    font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
+}
 
+.act-div-title {
+    font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
+}
 
 .acts-div {
     display: flex;
     flex-direction: row;
+}
+
+.activities-div {
+    justify-content: center;
+    text-transform: uppercase;
+    width: 400px;
+}
+
+.activities-comp {
+    background-color: #565264;
+    padding-bottom: 20px;
+    width: 100%;
+    height: 90%;
+    padding-right: 80px;
+    border-radius: 10px;
+}
+
+.acc-icon {
+    font-size: 30px;
+    padding-right: 20px;
+}
+
+.acc-name {
+    font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.acc-div-title {
+    font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.acts-div {
+    display: flex;
+    flex-direction: row;
+}
+
+.accommodations-div {
+    justify-content: center;
+    text-transform: uppercase;
+    width: 400px;
+}
+
+.acc-comp {
+    background-color: #565264;
+    padding-bottom: 20px;
+    width: 100%;
+    height: 90%;
+    padding-right: 80px;
+    border-radius: 10px;
 }

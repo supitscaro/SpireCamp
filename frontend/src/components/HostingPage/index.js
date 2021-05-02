@@ -43,14 +43,28 @@ function HostingPage() {
                 <div className="post-desc">{post.description}</div>
                 <div className="post-deets">{post.locationDetails}</div>
                 <div className="post-cost">💲{post.cost}</div>
-                <div className="activities-comp">
-                    <div className="activities-div">
-                        {post.Activities.map((activity) => (
-                            <div className="acts-div">
-                                <i className={`${activity.icon}`} />
-                                <div>{activity.name}</div>
-                            </div>
-                        ))}
+                <div className="activities-accomm">
+                    <div className="activities-comp">
+                        <div className="activities-div">
+                            <h2 className="act-div-title">Campsite Activities</h2>
+                            {post.Activities.map((activity) => (
+                                <div className="acts-div">
+                                    <i className={`${activity.icon} activity-icon`} />
+                                    <div className="activity-name">{activity.name}</div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                    <div className="acc-comp">
+                        <div className="accommodations-div">
+                            <h2 className="acc-div-title">Campsite Activities</h2>
+                            {post.Accommodations.map((accomm) => (
+                                <div className="acts-div">
+                                    <i className={`${accomm.icon} acc-icon`} />
+                                    <div className="acc-name">{accomm.name}</div>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>
