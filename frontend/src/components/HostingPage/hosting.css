@@ -37,7 +37,7 @@
     margin-right: 30px;
     height: 200px;
     min-width: 400px;
-    background-color: #CFD2CD;
+    background-color: #f2f2f2;
     box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
     margin-top: 50px;
@@ -48,7 +48,7 @@
     flex-direction: column;
     min-width: 700px;
     margin-right: 50px;
-    background-color: #CFD2CD;
+    background-color: #f2f2f2;
     box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
 }
@@ -93,8 +93,9 @@
 }
 
 .post-cost {
-    font-size: 32px;
-    color: green;
+    font-size: 22px;
+    /* color: green; */
+    margin-left: 20px;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -151,7 +152,7 @@
 }
 
 .activities-comp {
-    background-color: #CFD2CD;
+    background-color: #f2f2f2;
     padding-bottom: 20px;
     width: 50%;
     height: 90%;
@@ -191,7 +192,7 @@
 }
 
 .acc-comp {
-    background-color: #CFD2CD;
+    background-color: #f2f2f2;
     padding-bottom: 20px;
     width: 50%;
     height: 90%;

@@ -46,7 +46,7 @@ function HostingPage() {
                     </div>
                     <div className="hoster-info">
                         <div className="host-name">Hosted By: {post.User.username}</div>
-                        <div className="post-cost"> 💲{post.cost}</div>
+                        <div className="post-cost">Cost: 💲{post.cost}</div>
                     </div>
                 </div>
                 <div className="activities-accomm">
