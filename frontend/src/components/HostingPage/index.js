@@ -39,11 +39,15 @@ function HostingPage() {
             </div>
             <div className="host">
                 <div className="hosting-post-div">
-                    <div className="post-title">{post.name}</div>
-                    <div className="host-name">Hosted By: {post.User.username}</div>
-                    <div className="post-desc">{post.description}</div>
-                    <div className="post-deets">{post.locationDetails}</div>
-                    <div className="post-cost">💲{post.cost}</div>
+                    <div className="spots-info">
+                        <div className="post-title">{post.name}</div>
+                        <div className="post-desc">{post.description}</div>
+                        <div className="post-deets">{post.locationDetails}</div>
+                    </div>
+                    <div className="hoster-info">
+                        <div className="host-name">Hosted By: {post.User.username}</div>
+                        <div className="post-cost"> 💲{post.cost}</div>
+                    </div>
                 </div>
                 <div className="activities-accomm">
                     <div className="activities-comp">

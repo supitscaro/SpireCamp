@@ -31,6 +31,28 @@
     margin-left: 300px;
 }
 
+.hoster-info {
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+    height: 200px;
+    min-width: 400px;
+    background-color: #CFD2CD;
+    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    margin-top: 50px;
+}
+
+.spots-info {
+    display: flex;
+    flex-direction: column;
+    min-width: 700px;
+    margin-right: 50px;
+    background-color: #CFD2CD;
+    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
 .pic-div {
     display: flex;
     flex-direction: column;
@@ -39,11 +61,11 @@
 }
 
 .hosting-post-div {
-    background-color: #CFD2CD;
+    display: flex;
+    flex-direction: row;
     margin-top: 20px;
     margin-bottom: 20px;
     border-radius: 10px;
-    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
 }
 
 .post-deets {
@@ -59,17 +81,19 @@
     text-transform: uppercase;
     margin-top: 10px;
     margin-bottom: 10px;
+    width: fit-content;
     font-family: 'Montserrat', sans-serif;
 }
 
 .post-desc {
     line-height: 1.5em;
     font-size: 22px;
+    width: 100%;
     font-family: 'Montserrat', sans-serif;
 }
 
 .post-cost {
-    font-size: 36px;
+    font-size: 32px;
     color: green;
     font-family: 'Montserrat', sans-serif;
 }
@@ -83,8 +107,11 @@
 }
 
 .host-name {
-    font-size: 30px;
+    font-size: 25px;
+    font-weight: 400;
     font-family: 'Montserrat', sans-serif;
+    margin-top: 30px;
+    margin-left: 20px;
 }
 
 .reviews {
