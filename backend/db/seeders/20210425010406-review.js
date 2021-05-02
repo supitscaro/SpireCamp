@@ -59,7 +59,7 @@ module.exports = {
         updatedAt: new Date()
       },
       {
-        title: 'Awesome little tent',
+        title: 'Awesome tent',
         review: 'Awesome way of going camping and getting away for a few things. All the amenities you could need or want.',
         recommended: true,
         hostings_id: 2,
@@ -95,7 +95,7 @@ module.exports = {
         updatedAt: new Date()
       },
       {
-        title: 'Plenty of ways to relax',
+        title: 'Loved this place',
         review: 'Full of activities nearby, amazing ways to de-stress, not too busy throughout the year.',
         recommended: true,
         hostings_id: 2,
