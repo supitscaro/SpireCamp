@@ -23,4 +23,11 @@ SpireCamp is a website dedicated to helping users find getaway spots to help the
 * Rankings
 * Allow users to create hostings
 
+#### Home Page
 ![splash page](splashpage.gif)
+
+#### Booking
+![booking](booking.gif)
+
+#### Commenting
+![comments](commenting.gif)
