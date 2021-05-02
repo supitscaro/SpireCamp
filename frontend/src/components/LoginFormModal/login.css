@@ -1,28 +1,71 @@
-.form {
-    width: 500px;
-    min-height: 500px;
+.login-form {
+    /* display: flex; */
+    /* flex-direction: column; */
+    max-width: 500px;
+    min-height: 200px;
     z-index: -100;
+    /* justify-content: center; */
+    /* border-radius: 10px; */
+}
+
+.loginform-div {
+    /* display: flex; */
+    /* justify-content: center; */
+    /* margin-left: -240px; */
 }
 
 .outer-div {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
 }
 
 .inputs-div {
-    display: flex;
-    flex-direction: row;
+    /* display: flex; */
+    /* flex-direction: column; */
     /* justify-content: space-between; */
 }
 
-.login {
-    /* margin-left: 20px;
-    border: none;
-    background-color: #f8f8ff;
-    font-size: 20px;
-    color: #333333;
+.username {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 400; */
-    /* margin-top: -10px; */
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    margin-left: -240px;
+    width: 50%;
+    text-align: center;
+}
+
+.username-input {
+    width: 90%;
+    margin: 0 auto;
+    /* text-align: center; */
+}
+
+.password {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    margin-left: -240px;
+    width: 50%;
+    text-align: center;
+}
+
+.password-input {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.login-btn {
+    width: 30%;
+    height: 30px;
+    border-radius: 10px;
+    margin-left: -140px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: none;
+    background-color: #5C6D70;
+    color: white;
+    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
 }

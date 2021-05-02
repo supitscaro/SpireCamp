@@ -3,6 +3,7 @@ import { useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 
 import { login } from '../../store/session';
+import "./demo.css";
 
 function DemoUser() {
     const history = useHistory();
@@ -21,7 +22,7 @@ function DemoUser() {
     return (
         <div className='splash-demo-btn'>
             <form onSubmit={handleSubmit}>
-                <button type='submit' id='demo-btn'>Demo User</button>
+                <button className="demo-btn" type='submit'>Demo User</button>
             </form>
         </div>
     )

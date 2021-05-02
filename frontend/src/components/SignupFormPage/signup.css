@@ -1,0 +1,82 @@
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin: 20px auto;
+    height: 780px;
+    /* box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25); */
+    /* justify-content: center; */
+}
+
+.email {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.email-input {
+    margin-top: 20px;
+    height: 30px;
+    border: 2px solid rgba(49, 49, 49, 0.2);
+}
+
+.username-signup {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    /* margin-top: 20px; */
+    font-family: 'Montserrat', sans-serif;
+}
+
+.username-input-signup {
+    margin-top: 20px;
+    height: 30px;
+    border: 2px solid rgba(49, 49, 49, 0.2);
+}
+
+.password-signup {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.password-input-signup {
+    margin-top: 20px;
+    height: 30px;
+    border: 2px solid rgba(49, 49, 49, 0.2);
+}
+
+.confirmed-password {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.password-conf-input {
+    margin-top: 20px;
+    height: 30px;
+    border: 2px solid rgba(49, 49, 49, 0.2);
+}
+
+.signup-btn {
+    /* width: 30%;
+    height: 30px;
+    border-radius: 10px;
+    margin-left: -140px;
+    margin-top: 20px;
+    margin-bottom: 20px; */
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    background-color: #5C6D70;
+    color: white;
+    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+}
