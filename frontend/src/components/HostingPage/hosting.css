@@ -31,6 +31,14 @@
     width: 60%;
 }
 
+.hosting-post-div {
+    background-color: #CFD2CD;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+}
+
 .post-deets {
     font-size: 14px;
     text-transform: uppercase;
@@ -81,18 +89,19 @@
 }
 
 .activity-icon {
-    font-size: 30px;
+    font-size: 20px;
     padding-right: 20px;
 }
 
 .activity-name {
-    font-size: 30px;
+    font-size: 20px;
     font-family: 'Montserrat', sans-serif;
 }
 
 .act-div-title {
-    font-size: 30px;
+    font-size: 25px;
     font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
 }
 
 .acts-div {
@@ -107,45 +116,56 @@
 }
 
 .activities-comp {
-    background-color: #565264;
+    background-color: #CFD2CD;
     padding-bottom: 20px;
-    width: 100%;
+    width: 50%;
     height: 90%;
     padding-right: 80px;
     border-radius: 10px;
+    margin-right: 30px;
+    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
 }
 
 .acc-icon {
-    font-size: 30px;
+    font-size: 20px;
     padding-right: 20px;
 }
 
 .acc-name {
-    font-size: 30px;
+    font-size: 20px;
     font-family: 'Montserrat', sans-serif;
 }
 
 .acc-div-title {
-    font-size: 30px;
+    font-size: 25px;
     font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
 }
 
 .acts-div {
     display: flex;
     flex-direction: row;
+    margin-top: 20px;
 }
 
 .accommodations-div {
     justify-content: center;
     text-transform: uppercase;
-    width: 400px;
+    width: 500px;
+    margin-left: 80px;
 }
 
 .acc-comp {
-    background-color: #565264;
+    background-color: #CFD2CD;
     padding-bottom: 20px;
-    width: 100%;
+    width: 50%;
     height: 90%;
     padding-right: 80px;
     border-radius: 10px;
+    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+}
+
+.activities-accomm {
+    display: flex;
+    flex-direction: row;
 }
