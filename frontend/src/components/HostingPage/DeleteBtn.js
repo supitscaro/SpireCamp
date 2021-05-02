@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteReview } from "../../store/reviews";
-
+import "./hosting.css";
 
 function DeleteReview({ props }) {
     const sessionUser = useSelector(state => state.session.user);
@@ -19,7 +19,7 @@ function DeleteReview({ props }) {
     if (sessionUser) {
         deleteBtn = (
             <div>
-                <button onClick={deleteRev}>Delete Review!</button>
+                <button className="delete-btn" onClick={deleteRev}>Delete Review!</button>
             </div>
         )
     }
