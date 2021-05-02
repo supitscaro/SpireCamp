@@ -5,6 +5,7 @@ import { getBookings } from "../../store/bookings";
 import DayPicker from 'react-day-picker';
 import BookingForm from "../HostingComponent/BookingForm";
 import "react-datepicker/dist/react-datepicker.css";
+import "./hosting.css";
 
 function CalendarComponent() {
     const dispatch = useDispatch();

@@ -1,10 +1,17 @@
 .hosting-component {
     display: flex;
     flex-direction: row;
+    margin: 0 300px;
+    width: 1400px;
     /* flex-wrap: wrap; */
     /* justify-content: center; */
     /* max-width: 1200px; */
     /* margin: 0 auto; */
+}
+
+.cal {
+    margin-left: 100px;
+    width: 800px;
 }
 
 .hosting-page {
@@ -20,13 +27,14 @@
     flex-direction: column;
     justify-content: center;
     width: 40%;
+    margin-left: 300px;
 }
 
 .pic-div {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 40%;
+    width: 60%;
 }
 
 .post-deets {
@@ -34,27 +42,61 @@
     text-transform: uppercase;
     margin-top: 10px;
     margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .post-title {
-    font-size: 48px;
+    font-size: 40px;
     text-transform: uppercase;
     margin-top: 10px;
     margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
 }
 
-.desc {
-    line-height: 1.5px;
+.post-desc {
+    line-height: 1.5em;
+    font-size: 22px;
+    font-family: 'Montserrat', sans-serif;
     /* margin: 10px; */
+}
+
+.post-cost {
+    font-size: 36px;
+    color: green;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .post-pic {
     width: 70%;
     justify-content: center;
-    margin-left: 150px;
+    border-radius: 10px;
+    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+    /* margin-left: 150px; */
     /* margin-right: -300px; */
+}
+
+.host-name {
+    font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
+
 }
 
 .reviews {
     max-width: 40%;
+}
+
+.DayPicker {
+    display: inline-block;
+    font-size: 20px;
+}
+
+/* .activities-comp {
+    display: flex;
+} */
+
+
+
+.acts-div {
+    display: flex;
+    flex-direction: row;
 }

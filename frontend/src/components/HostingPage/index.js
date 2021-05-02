@@ -35,14 +35,24 @@ function HostingPage() {
                 </div>
                 <div className="cal">
                     <CalendarComponent />
-                    <div>{post.User.username}</div>
                 </div>
             </div>
             <div className="host">
                 <div className="post-title">{post.name}</div>
+                <div className="host-name">Hosted By: {post.User.username}</div>
                 <div className="post-desc">{post.description}</div>
                 <div className="post-deets">{post.locationDetails}</div>
-                {/* <i>{post.Activity.icon}</i> */}
+                <div className="post-cost">💲{post.cost}</div>
+                <div className="activities-comp">
+                    <div className="activities-div">
+                        {post.Activities.map((activity) => (
+                            <div className="acts-div">
+                                <i className={`${activity.icon}`} />
+                                <div>{activity.name}</div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
             </div>
             <div className="reviews">
                 {reviews.map((review) => (
