@@ -27,7 +27,7 @@ module.exports = {
       {
         name: 'Glamping Glen', // 2
         description: 'A cozy home away from, experience glamping in your own private neck of the woods. This tent comes complete with your own bed, dresser, and just a short walk to a clean bathroom.',
-        locationDetails: 'Located in Texas.',
+        locationDetails: 'Located in Alaska.',
         states_id: 43,
         user_id: 2,
         cost: 50,
@@ -247,7 +247,7 @@ module.exports = {
       {
         name: 'Barefoot Gee\'s Tent Camping', // 22
         description: 'Overlooking the small artisan creek deep in the woods, Pitch your tent in our Oak Grove, You can walk Among the pines along the creek where the otters play on their journey through their territory.',
-        locationDetails: 'Located in South Carolina',
+        locationDetails: 'Located in Texas',
         states_id: 43,
         user_id: 22,
         cost: 35,
