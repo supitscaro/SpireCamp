@@ -37,6 +37,22 @@
     margin-top: -40px;
     height: 60px;
     border: 1px solid rgba(114, 112, 112, 0.2);
+    background-color: #6D597A;
+    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+}
+
+.fa-user-circle {
+    color: white;
+    font-size: 30px;
+}
+
+.logout-btn-circle {
+    background-color: #5C6D70;
+    color: white;
+    border: none;
+    height: 30px;
+    width: 80px;
+    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
 }
 
 .profile-dropdown {
