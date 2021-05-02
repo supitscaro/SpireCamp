@@ -23,7 +23,8 @@ router.get(
         let reviews = await Review.findAll({
             where: {
                 hostings_id: req.params.id
-            }
+            },
+            include: { model: User }
         });
         res.json(reviews);
     })

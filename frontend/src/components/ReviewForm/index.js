@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { addReviews } from "../../store/reviews";
+import "./review.css";
 
 function ReviewsForm() {
     const { id } = useParams();
@@ -30,20 +31,21 @@ function ReviewsForm() {
     }
 
     return (
-        <form className="" onSubmit={addReview}>
-            <div className="">
-                <div className="">
+        <form className="review-form" onSubmit={addReview}>
+            <div className="review-div">
+                <div className="reviewform-title">
                     <label>
                         Title
                     <input
                             type="text"
                             value={title}
+                            className="reviewtitle-input"
                             onChange={(e) => setTitle(e.target.value)}
                             required
                         />
                     </label>
                 </div>
-                <div className="">
+                <div className="reviewform-title">
                     <label>
                         Review
                     <input
@@ -51,34 +53,35 @@ function ReviewsForm() {
                             value={newReview}
                             onChange={(e) => setNewReview(e.target.value)}
                             required
+                            className="reviewtitle-input"
                         />
                     </label>
                 </div>
-                <div className="">
+                <div className="recommended-choice">
                     <label>
-                        💜
-                    <input
+                        <input
                             type="radio"
                             value={recc}
                             onChange={(e) => setRecc(e.target.value)}
                             required
                             name="recc"
                         />
+                        💜 Recommend
                     </label>
                 </div>
-                <div className="">
+                <div className="not-recommended">
                     <label>
-                        🤚🏼
-                    <input
+                        <input
                             type="radio"
                             value={recc}
                             onChange={(e) => setRecc(e.target.value)}
                             required
                             name="recc"
                         />
+                        🤚🏼 Don't Recommend
                     </label>
                 </div>
-                <button type="submit">Leave a review</button>
+                <button className="review-submit" type="submit">Leave a review</button>
             </div>
         </form>
     )

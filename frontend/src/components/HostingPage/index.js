@@ -77,9 +77,12 @@ function HostingPage() {
             <div className="reviews">
                 {reviews.map((review) => (
                     <div>
-                        <div>{review.title}</div>
-                        <div>{review.review}</div>
-                        <div>{review.recommended ? '💜' : '🤚🏼'}</div>
+                        <div className="review-comp">
+                            <div className="review-title">{review.title}</div>
+                            <div className="reviewer-name">By: {review.User.username}</div>
+                            <div className="review">{review.review}</div>
+                            <div className="rating">{review.recommended ? '💜 Recommended' : '🤚🏼 Not Recommended'}</div>
+                        </div>
                         <div>{review.username}</div>
                         { sessionUser?.id === review.user_id &&
                             <DeleteBtn props={{ id, reviewId: review.id }} />

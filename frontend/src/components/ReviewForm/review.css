@@ -1,0 +1,45 @@
+.reviewform-title {
+    display: flex;
+    flex-direction: row;
+    margin-left: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.reviewtitle-input {
+    /* width: 90%; */
+    height: 20px;
+    margin-left: 20px;
+}
+
+.recommended-choice {
+    margin-left: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+}
+
+.not-recommended {
+    margin-left: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+}
+
+.review-submit {
+    background-color: #847577;
+    border-radius: 10px;
+    border: none;
+    height: 30px;
+    width: 30%;
+    color: white;
+    margin-left: 30px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+
+.review-form {
+    margin-top: 20px;
+}
