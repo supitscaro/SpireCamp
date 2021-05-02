@@ -1,0 +1,31 @@
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+}
+
+.caro-links {
+    display: flex;
+    flex-direction: row;
+    /* justify-content:flex-end; */
+    /* margin-right: 30px; */
+    text-align: center;
+}
+
+.caro {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: lighter;
+    margin-right: 40px;
+}
+
+.fa-linkedin {
+    margin-right: 30px;
+    font-size: 30px;
+    margin-top: 5px;
+}
+
+.fa-github-square {
+    font-size: 30px;
+    margin-top: 5px;
+}

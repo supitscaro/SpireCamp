@@ -11,6 +11,7 @@ import { findAllStates } from "./store/hostings";
 import ActivityHostings from "./components/ActivitiesPage";
 import AccommodationsHostings from "./components/AccommodationsPage";
 import SpotsComponent from "./components/HostingComponent/Spots";
+import Footer from "./components/Footer";
 
 function App() {
   const dispatch = useDispatch();
@@ -52,6 +53,7 @@ function App() {
           </Route>
         </Switch>
       )}
+      <Footer />
     </>
   );
 }
