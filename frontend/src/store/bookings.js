@@ -27,7 +27,7 @@ export const getBookings = () => async (dispatch) => {
 
 export const createBooking = (data) => async (dispatch) => {
     console.log('data', data);
-    const res = await fetch(`/api/bookings/hostings/${data.hostings_id}`, {
+    const res = await csrfFetch(`/api/bookings/hostings/${data.hostings_id}`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
