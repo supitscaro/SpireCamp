@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { activityFilter } from "../../store/hostings";
 import "./activity.css";
+import Footer from '../Footer';
 
 function ActivityHostings() {
     const { id } = useParams();
@@ -33,6 +34,7 @@ function ActivityHostings() {
                     </div>
                 </div>
             ))}
+            <Footer />
         </div>
     )
 }

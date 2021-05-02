@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { allAccommodations } from "../../store/hostings";
 import "./acc.css";
+import Footer from '../Footer';
 
 function AccommodationsHostings() {
     const { id } = useParams();
@@ -33,6 +34,7 @@ function AccommodationsHostings() {
                     </div>
                 </div>
             ))}
+            <Footer />
         </div>
     )
 }

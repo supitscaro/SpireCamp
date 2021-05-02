@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { stateHostings } from "../../store/hostings";
 import "./states.css";
+import Footer from '../Footer';
 
 function StateHostings() {
     const { id } = useParams();
@@ -33,6 +34,7 @@ function StateHostings() {
                     </div>
                 </div>
             ))}
+            <Footer />
         </div>
     )
 }

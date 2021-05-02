@@ -5,6 +5,7 @@ import ActivitiesComponent from './ActivitiesComponent';
 import AccommodationsComponent from "./AccommComponent";
 import HeaderComponent from './HeaderComponent';
 import SearchAllComponent from './AllSpots';
+import Footer from '../Footer';
 
 function HostingComponent() {
 
@@ -22,6 +23,7 @@ function HostingComponent() {
                 {/* <SpotsComponent /> */}
             </div>
             <SearchAllComponent />
+            <Footer />
         </div>
     )
 }
