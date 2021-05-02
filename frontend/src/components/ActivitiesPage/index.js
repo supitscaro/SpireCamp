@@ -19,6 +19,7 @@ function ActivityHostings() {
 
     return (
         <div className="card-component">
+            <h2 className="spots-activities">Spots Based On Activities</h2>
             {activities.map((activity) => (
                 <div className="cards">
                     <div className="card">

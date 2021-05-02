@@ -1,13 +1,5 @@
-.hosting-post {
-    /* display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    position:relative;
-    display: inline-block; */
-    /* height: 20%; */
+.indiv-post {
+    margin-left: 400px;
 }
 
 .links {
@@ -40,8 +32,6 @@
 .spots-info-card {
     border-radius: 10px;
     margin-left: 100px;
-    /* margin-bottom: 150px; */
-    /* position: absolute; */
     width: 50%;
     bottom: 0;
     left: 0;
@@ -49,19 +39,31 @@
 
 .spots-title {
     padding: 0.8rem;
-    font-size: 14px;
+    font-size: 18px;
     text-transform: uppercase;
     border-radius: 4px;
     font-weight: 400;
     display: block;
     height: 10%;
     width: 90%;
-    justify-content: center;
-    text-align: center;
     text-decoration: none;
 }
 
 .spots-card {
     display: flex;
     /* height: 1500px; */
+}
+
+.post-desc {
+    margin-left: 10px;
+}
+
+.post-location {
+    margin-left: 10px;
+}
+
+.spots-all {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    margin-left: 400px;
 }

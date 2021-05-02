@@ -19,6 +19,7 @@ function StateHostings() {
 
     return (
         <div className="card-component">
+            <h2 className="spots-states">Spots Based On States</h2>
             {states.map((state) => (
                 <div class="cards">
                     <div className="card">

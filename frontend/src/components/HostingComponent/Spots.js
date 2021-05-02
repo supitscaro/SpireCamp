@@ -16,6 +16,7 @@ function SpotsComponent() {
 
     return (
         <>
+            <h2 className="spots-all">Search All Spots</h2>
             {hostingLists.map((host => !host.id ? null : (
                 <div className="indiv-post" key={host.hostings_id}>
                     <Link className="links" to={`/postings/${host.id}`} key={host.hostings_id}>

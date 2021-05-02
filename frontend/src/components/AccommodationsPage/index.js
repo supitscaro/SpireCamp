@@ -19,6 +19,7 @@ function AccommodationsHostings() {
 
     return (
         <div className="card-component">
+            <h2 className="spots-acc">Spots Based On Accommodations</h2>
             {accommodations.map((accommodation) => (
                 <div className="cards">
                     <div className="card">
